@@ -204,7 +204,7 @@
     <encoding>UTF-8</encoding>
     <addtoresult>N</addtoresult>
     <file>
-      <name>&#x2f;home&#x2f;azureuser&#x2f;git&#x2f;pentaho&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_json_output</name>
+      <name>&#x2f;home&#x2f;azureuser&#x2f;pentaho&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_json_output</name>
       <extention>js</extention>
       <append>N</append>
       <split>N</split>
