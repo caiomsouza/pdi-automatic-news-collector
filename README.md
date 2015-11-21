@@ -18,6 +18,8 @@ crontab -l
 # Run each 10 minutes
 */10 * * * * sh /home/azureuser/pentaho/pdi-automatic-news-collector/getRss.sh
 
+Link:<BR>
+https://help.ubuntu.com/community/CronHowto<BR>
 
 #Changelog
 0.1 - First Version - Nov, 21, 2015
