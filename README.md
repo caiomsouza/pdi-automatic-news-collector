@@ -8,6 +8,16 @@ It is a simple tool created based on Kettle/PDI to collect news from the Web.
 cd pdi-automatic-news-collector
 sudo sh getRss.sh
 
+#Cron
+
+```
+crontab -e
+crontab -l
+```
+
+# Run each 10 minutes
+*/10 * * * * sh /home/azureuser/pentaho/pdi-automatic-news-collector/getRss.sh
+
 
 #Changelog
 0.1 - First Version - Nov, 21, 2015
