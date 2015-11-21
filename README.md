@@ -5,8 +5,10 @@
 It is a simple tool created based on Kettle/PDI to collect news from the Web.
 
 ###How to use
+```
 cd pdi-automatic-news-collector
 sudo sh getRss.sh
+```
 
 ###Cron
 
