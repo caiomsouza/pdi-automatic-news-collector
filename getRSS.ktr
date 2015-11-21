@@ -232,7 +232,7 @@
     <encoding>UTF-8</encoding>
     <addtoresult>N</addtoresult>
     <file>
-      <name>&#x2f;Users&#x2f;caiomsouza&#x2f;Desktop&#x2f;rss_json_output</name>
+      <name>&#x2f;Users&#x2f;caiomsouza&#x2f;git&#x2f;github.com&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_json_output</name>
       <extention>js</extention>
       <append>N</append>
       <split>N</split>
@@ -298,7 +298,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>&#x2f;Users&#x2f;caiomsouza&#x2f;Desktop&#x2f;rss_excel_output</name>
+      <name>&#x2f;Users&#x2f;caiomsouza&#x2f;git&#x2f;github.com&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_excel_output</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
