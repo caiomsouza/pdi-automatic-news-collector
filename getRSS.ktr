@@ -140,9 +140,10 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>getRSS</from><to>Json output</to><enabled>Y</enabled> </hop>
-  <hop> <from>getRSS</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
-  <hop> <from>getRSS</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>getRSS</from><to>Rename Columns</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rename Columns</from><to>Json output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rename Columns</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rename Columns</from><to>Write RSS to PostgreSQL 9.3</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Json output</name>
@@ -184,12 +185,12 @@
         <element>Link</element>
     </field>
       <field>
-        <name>Description as text</name>
-        <element>Description as text</element>
+        <name>txtDescription</name>
+        <element>txtDescription</element>
     </field>
       <field>
-        <name>Description as HTML</name>
-        <element>Description as HTML</element>
+        <name>HTMLDescription</name>
+        <element>HTMLDescription</element>
     </field>
       <field>
         <name>Comments</name>
@@ -206,7 +207,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>448</xloc>
+      <xloc>512</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
       </GUI>
@@ -264,12 +265,12 @@
         <format/>
       </field>
       <field>
-        <name>Description as text</name>
+        <name>txtDescription</name>
         <type>String</type>
         <format/>
       </field>
       <field>
-        <name>Description as HTML</name>
+        <name>HTMLDescription</name>
         <type>String</type>
         <format/>
       </field>
@@ -308,8 +309,8 @@
       </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>448</xloc>
-      <yloc>224</yloc>
+      <xloc>512</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -442,14 +443,14 @@
     <limit>0</limit>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>128</yloc>
+      <xloc>32</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>Write RSS to PostgreSQL 9.3</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -480,8 +481,56 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>384</xloc>
-      <yloc>352</yloc>
+      <xloc>512</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rename Columns</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Link</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Description as text</name>
+        <rename>txtDescription</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Description as HTML</name>
+        <rename>HTMLDescription</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Comments</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>GUID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PubDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
