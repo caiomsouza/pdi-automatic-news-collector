@@ -23,5 +23,9 @@ crontab -l
 Link:<BR>
 https://help.ubuntu.com/community/CronHowto<BR>
 
+###Dependences
+* Kettle/PDI 5.4 or superior
+* Ubuntu 12.04 Server
+
 ###Changelog
 0.1 - First Version - Nov, 21, 2015
