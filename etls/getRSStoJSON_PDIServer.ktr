@@ -189,7 +189,7 @@
     <name>Json output</name>
     <type>JsonOutput</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -247,7 +247,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>512</xloc>
+      <xloc>608</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
@@ -295,7 +295,7 @@
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>224</xloc>
+      <xloc>320</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
@@ -429,7 +429,7 @@
     <limit>0</limit>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>32</xloc>
+      <xloc>96</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
