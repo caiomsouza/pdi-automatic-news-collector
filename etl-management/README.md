@@ -24,4 +24,41 @@ https://www.smsapi.com/pricing
 https://www.twilio.com/sms
 
 
+### Pan User Guide
+http://wiki.pentaho.com/display/EAI/Pan+User+Documentation
+
+### Spoon User Guide
+http://wiki.pentaho.com/display/EAI/Spoon+User+Guide
+
+### Kitchen User Documentation
+http://wiki.pentaho.com/display/EAI/Kitchen+User+Documentation
+
+### PDI Libs
+/data-integration/lib/
+
+### Drivers
+postgresql-9.3-1102-jdbc4.jar
+
+###PDI Samples
+/data-integration/samples
+
+
+### Transforma os arquivos .sh em executáveis
+chmod +x *.sh
+
+### Exemplo Real de Uso do Jenkins
+http://ci.pentaho.com
+
+###Site Jenkins
+https://jenkins-ci.org
+
+### Link para download
+http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+
+### JenkinsMobi (iPhone e Android)
+http://jenkins-ci.mobi
+
+
+
+
 
