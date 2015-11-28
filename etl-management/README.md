@@ -66,7 +66,15 @@ Feito isso, inicie o BI Server executando o arquivo start-pentaho.sh<BR>
 Endereço do Jenkins:<BR>
 http://localhost:8080/jenkins/<BR>
 
+### RSS Jenkins
+All builds<BR>
+http://localhost:8080/jenkins/rssAll<BR>
 
+All failed builds<BR>
+http://localhost:8080/jenkins/rssFailed<BR>
+
+All last builds only<BR>
+http://localhost:8080/jenkins/rssLatest<BR>
 
 
 
