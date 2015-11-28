@@ -204,7 +204,7 @@
     <encoding>UTF-8</encoding>
     <addtoresult>N</addtoresult>
     <file>
-      <name>&#x2f;home&#x2f;azureuser&#x2f;pentaho&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_json_output</name>
+      <name>&#x2f;Users&#x2f;caiomsouza&#x2f;git&#x2f;github.com&#x2f;pdi-automatic-news-collector&#x2f;output&#x2f;rss_json_output</name>
       <extention>js</extention>
       <append>N</append>
       <split>N</split>
@@ -248,6 +248,54 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>512</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rename Columns</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Link</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Description as text</name>
+        <rename>txtDescription</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Description as HTML</name>
+        <rename>HTMLDescription</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Comments</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>GUID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PubDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
@@ -382,54 +430,6 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>32</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Rename Columns</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>Title</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Link</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Description as text</name>
-        <rename>txtDescription</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Description as HTML</name>
-        <rename>HTMLDescription</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Comments</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>GUID</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>PubDate</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>224</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
