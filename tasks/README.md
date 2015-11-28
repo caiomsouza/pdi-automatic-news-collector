@@ -49,7 +49,8 @@ Todos os exercícios são opcionais e não valem nota, eles são importantes par
 http://www.it4biz.com.br/novosite/treinamentos/treinamentos/curso-de-etl-e-data-warehouse-usando-o-kettlepdi-pentaho-data-integration/
 
 
-### Task - 
+### Task Semana 3, 4, 5 e 6  - Criar um Data Mart com dados reais 
+Ao longo das semanas o aluno deverá ir melhorando seu Data Mart com os conhecimentos aprendidos em sala de aula.<BR>
 
 
 ### Tips
