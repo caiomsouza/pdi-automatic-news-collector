@@ -58,6 +58,15 @@ http://mirrors.jenkins-ci.org/war/latest/jenkins.war
 ### JenkinsMobi (iPhone e Android)
 http://jenkins-ci.mobi
 
+### Instalação do Jenkins no BI Server 5.4
+Copia o arquivo jenkins.war e coloca na pasta /tomcat/webapps<BR>
+Esta é a mesma pasta onde existe a pasta /pentaho<BR>
+Feito isso, inicie o BI Server executando o arquivo start-pentaho.sh<BR>
+
+Endereço do Jenkins:<BR>
+http://localhost:8080/jenkins/<BR>
+
+
 
 
 
