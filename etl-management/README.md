@@ -2,7 +2,13 @@
 
 Tenho diversas rotinas de ETL no PDI e não consigo ter uma visão gerencial dos processos.
 
-### Melhores soluções
+### Melhores soluções / Melhoras práticas / Soluções utilizadas na IT4biz
+* Serviço de envio de e-mail sobre as transformações e jobs;
+* Gravação de Logs em arquivos e banco de dados de Log utilizando o projeto PDI-ODM-CE;
+* Dashboard de ETL utilizando o Jenkins;
+* Documentação automática das ETLs utilizando o IT4biz Kettle CookBook;
+* Em alguns casos raros envio de SMS para alertar os usuários ou o admin das ETLs;
+* Em teste, rotinas de Notificações no formato PUSH (Android e iPhone);
 
 
 ### Soluções dadas pelos alunos:
@@ -10,7 +16,6 @@ Tenho diversas rotinas de ETL no PDI e não consigo ter uma visão gerencial dos
 * Serviço de envio de e-mail dentro das transformações; (Bruno)
 * Gravar os resultados em arquivos de log (Bruno);
 * Serviço de envio de SMS com o status das rotinas (João);
-
 
 
 ###Provedores
@@ -75,7 +80,3 @@ http://localhost:8080/jenkins/rssFailed<BR>
 
 All last builds only<BR>
 http://localhost:8080/jenkins/rssLatest<BR>
-
-
-
-
