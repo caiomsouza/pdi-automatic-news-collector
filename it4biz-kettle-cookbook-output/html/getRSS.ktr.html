@@ -1,0 +1,858 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Users/caiomsouza/git/github.com/pdi-automatic-news-collector/getRSS.ktr"
+            normalized_filename: "/Users/caiomsouza/git/github.com/pdi-automatic-news-collector/getRSS.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: ""
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>getRSS</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2015/11/21 13:46:26.157</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/11/21 15:20:13.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (3)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#getRSS-text">getRSS</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Json output-text">Json output</a></div>
+                  <div><a href="#Microsoft Excel Output-text">Microsoft Excel Output</a></div>
+                  <div><a href="#Write RSS to PostgreSQL 9.3-text">Write RSS to PostgreSQL 9.3</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 611px;&#xA;          height: 527px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 611px;&#xA;              height: 527px;&#xA;          "><a name="Json output-icon"></a><div id="Json output" class="&#xA;                      step-icon&#xA;                      step-icon-JsonOutput" style="&#xA;                      left:512px;&#xA;                      top:32px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Json output-text" style="&#xA;                      top:64px;&#xA;                      left:497.3333333333333px;                    &#xA;                  ">Json output</a><a name="Microsoft Excel Output-icon"></a><div id="Microsoft Excel Output" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelOutput" style="&#xA;                      left:512px;&#xA;                      top:192px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Microsoft Excel Output-text" style="&#xA;                      top:224px;&#xA;                      left:482.6666666666667px;                    &#xA;                  ">Microsoft Excel Output</a><a name="getRSS-icon"></a><div id="getRSS" class="&#xA;                      step-icon&#xA;                      step-icon-RssInput" style="&#xA;                      left:32px;&#xA;                      top:160px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Rename Columns"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#getRSS-text" style="&#xA;                      top:192px;&#xA;                      left:24px;                    &#xA;                  ">getRSS</a><a name="Write RSS to PostgreSQL 9.3-icon"></a><div id="Write RSS to PostgreSQL 9.3" class="&#xA;                      step-icon&#xA;                      step-icon-TableOutput" style="&#xA;                      left:512px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Write RSS to PostgreSQL 9.3-text" style="&#xA;                      top:352px;&#xA;                      left:476px;                    &#xA;                  ">Write RSS to PostgreSQL 9.3</a><a name="Rename Columns-icon"></a><div id="Rename Columns" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:224px;&#xA;                      top:160px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Json output"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Microsoft Excel Output"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Write RSS to PostgreSQL 9.3"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-disabled&#xA;                                      step-hop-copy-data " href="#MongoDB Output"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Rename Columns-text" style="&#xA;                      top:192px;&#xA;                      left:205.33333333333334px;                    &#xA;                  ">Rename Columns</a><a name="MongoDB Output-icon"></a><div id="MongoDB Output" class="&#xA;                      step-icon&#xA;                      step-icon-MongoDbOutput" style="&#xA;                      left:224px;&#xA;                      top:416px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#MongoDB Output-text" style="&#xA;                      top:448px;&#xA;                      left:205.33333333333334px;                    &#xA;                  ">MongoDB Output</a>
+            <pre class="note" style="&#xA;            left: 320px;&#xA;            top: 416px;&#xA;            width: 474px;&#xA;            height: px;&#xA;            font-family: Lucida Grande;&#xA;            font-size: 13;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Implement MongoDB Output:
+https://github.com/caiomsouza/pdi-automatic-news-collector/issues/1</pre>
+            <pre class="note" style="&#xA;            left: 29px;&#xA;            top: 17px;&#xA;            width: 413px;&#xA;            height: px;&#xA;            font-family: Lucida Grande;&#xA;            font-size: 13;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">PDI Automatic News Collector
+https://github.com/caiomsouza/pdi-automatic-news-collector</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>DW_HABITACAO_HOST</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_DATABASE</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_PORT</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_USERNAME</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_PASSWORD</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 3 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.dw_habitacao">dw_habitacao</a></th>
+               <td>POSTGRESQL</td>
+               <td>Native</td>
+               <td>${DW_HABITACAO_HOST}</td>
+               <td>${DW_HABITACAO_PORT}</td>
+               <td>${DW_HABITACAO_USERNAME}</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th><a href="#connection.dw_it4biz">dw_it4biz</a></th>
+               <td>POSTGRESQL</td>
+               <td>Native</td>
+               <td>ec2-54-147-206-66.compute-1.amazonaws.com</td>
+               <td>5432</td>
+               <td>dw_user</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th><a href="#connection.rss_db">rss_db</a></th>
+               <td>POSTGRESQL</td>
+               <td>Native</td>
+               <td>localhost</td>
+               <td>5432</td>
+               <td>nfe_user</td>
+               <td><a href="#Write RSS to PostgreSQL 9.3">Write RSS to PostgreSQL 9.3</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.dw_habitacao">dw_habitacao</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>dw_habitacao</td>
+            </tr>
+            <tr>
+               <td>server</td>
+               <td>${DW_HABITACAO_HOST}</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>POSTGRESQL</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>Native</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>${DW_HABITACAO_DATABASE}</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>${DW_HABITACAO_PORT}</td>
+            </tr>
+            <tr>
+               <td>username</td>
+               <td>${DW_HABITACAO_USERNAME}</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>${DW_HABITACAO_PASSWORD}</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4><a name="connection.dw_it4biz">dw_it4biz</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>dw_it4biz</td>
+            </tr>
+            <tr>
+               <td>server</td>
+               <td>ec2-54-147-206-66.compute-1.amazonaws.com</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>POSTGRESQL</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>Native</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>dw_it4biz</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>5432</td>
+            </tr>
+            <tr>
+               <td>username</td>
+               <td>dw_user</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted 2be98afc82ae3a5ad9f4dac79c4c3fafa</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4><a name="connection.rss_db">rss_db</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>rss_db</td>
+            </tr>
+            <tr>
+               <td>server</td>
+               <td>localhost</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>POSTGRESQL</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>Native</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>rss_db</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>5432</td>
+            </tr>
+            <tr>
+               <td>username</td>
+               <td>nfe_user</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted 2be98afc86aa7f2e4a51fab4fcb81aac8</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JsonOutput"></div>
+      <h3 class="step-heading"><a name="Json output-text" href="#Json output-icon">Json output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td>Title</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td>Link</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>txtDescription</td>
+               <td>txtDescription</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>HTMLDescription</td>
+               <td>HTMLDescription</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td>Comments</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td>GUID</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td>PubDate</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelOutput"></div>
+      <h3 class="step-heading"><a name="Microsoft Excel Output-text" href="#Microsoft Excel Output-icon">Microsoft Excel Output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>txtDescription</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>HTMLDescription</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td>String</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RssInput"></div>
+      <h3 class="step-heading"><a name="getRSS-text" href="#getRSS-icon">getRSS</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>column</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td>title</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td>link</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Description as text</td>
+               <td>descriptiontext</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Description as HTML</td>
+               <td>descriptionhtml</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td>comments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td>guid</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td>pubdate</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TableOutput"></div>
+      <h3 class="step-heading"><a name="Write RSS to PostgreSQL 9.3-text" href="#Write RSS to PostgreSQL 9.3-icon">Write RSS to PostgreSQL 9.3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.rss_db">rss_db</a></td>
+               <td>rss</td>
+               <td>tb_rss</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Rename Columns-text" href="#Rename Columns-icon">Rename Columns</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#getRSS-text">getRSS</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Json output-text">Json output</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Microsoft Excel Output-text">Microsoft Excel Output</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>To</td>
+               <td><a href="#Write RSS to PostgreSQL 9.3-text">Write RSS to PostgreSQL 9.3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>To</td>
+               <td><a href="#MongoDB Output-text">MongoDB Output</a></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Description as text</td>
+               <td>txtDescription</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Description as HTML</td>
+               <td>HTMLDescription</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-MongoDbOutput"></div>
+      <h3 class="step-heading"><a name="MongoDB Output-text" href="#MongoDB Output-icon">MongoDB Output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

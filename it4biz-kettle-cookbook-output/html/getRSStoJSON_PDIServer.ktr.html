@@ -1,0 +1,471 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Users/caiomsouza/git/github.com/pdi-automatic-news-collector/getRSStoJSON_PDIServer.ktr"
+            normalized_filename: "/Users/caiomsouza/git/github.com/pdi-automatic-news-collector/getRSStoJSON_PDIServer.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: ""
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>getRSStoJSON_PDIServer</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2015/11/21 13:46:26.157</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/11/28 14:20:15.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#getRSS-text">getRSS</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Json output-text">Json output</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 611px;&#xA;          height: 527px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 611px;&#xA;              height: 527px;&#xA;          "><a name="Json output-icon"></a><div id="Json output" class="&#xA;                      step-icon&#xA;                      step-icon-JsonOutput" style="&#xA;                      left:512px;&#xA;                      top:160px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Json output-text" style="&#xA;                      top:192px;&#xA;                      left:497.3333333333333px;                    &#xA;                  ">Json output</a><a name="Rename Columns-icon"></a><div id="Rename Columns" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:224px;&#xA;                      top:160px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Json output"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Rename Columns-text" style="&#xA;                      top:192px;&#xA;                      left:205.33333333333334px;                    &#xA;                  ">Rename Columns</a><a name="getRSS-icon"></a><div id="getRSS" class="&#xA;                      step-icon&#xA;                      step-icon-RssInput" style="&#xA;                      left:32px;&#xA;                      top:160px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Rename Columns"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#getRSS-text" style="&#xA;                      top:192px;&#xA;                      left:24px;                    &#xA;                  ">getRSS</a>
+            <pre class="note" style="&#xA;            left: 320px;&#xA;            top: 416px;&#xA;            width: 474px;&#xA;            height: px;&#xA;            font-family: Lucida Grande;&#xA;            font-size: 13;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Implement MongoDB Output:
+https://github.com/caiomsouza/pdi-automatic-news-collector/issues/1</pre>
+            <pre class="note" style="&#xA;            left: 29px;&#xA;            top: 17px;&#xA;            width: 413px;&#xA;            height: px;&#xA;            font-family: Lucida Grande;&#xA;            font-size: 13;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">PDI Automatic News Collector
+https://github.com/caiomsouza/pdi-automatic-news-collector</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>DW_HABITACAO_HOST</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_DATABASE</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_PORT</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_USERNAME</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>DW_HABITACAO_PASSWORD</th>
+               <td></td>
+               <td><a href="#connection.dw_habitacao">dw_habitacao</a></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JsonOutput"></div>
+      <h3 class="step-heading"><a name="Json output-text" href="#Json output-icon">Json output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td>Title</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td>Link</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>txtDescription</td>
+               <td>txtDescription</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>HTMLDescription</td>
+               <td>HTMLDescription</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td>Comments</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td>GUID</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td>PubDate</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Rename Columns-text" href="#Rename Columns-icon">Rename Columns</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#getRSS-text">getRSS</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Json output-text">Json output</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Description as text</td>
+               <td>txtDescription</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Description as HTML</td>
+               <td>HTMLDescription</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RssInput"></div>
+      <h3 class="step-heading"><a name="getRSS-text" href="#getRSS-icon">getRSS</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Rename Columns-text">Rename Columns</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>column</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Title</td>
+               <td>title</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Link</td>
+               <td>link</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Description as text</td>
+               <td>descriptiontext</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Description as HTML</td>
+               <td>descriptionhtml</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Comments</td>
+               <td>comments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>GUID</td>
+               <td>guid</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>PubDate</td>
+               <td>pubdate</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>
