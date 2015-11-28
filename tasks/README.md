@@ -17,6 +17,7 @@ Para a próxima aula por favor fazer o seguinte exercício:
 A próxima aula será no dia 28/11 às 9:00hs até as 13:00hs.
 
 ### Task - Week 02
+* Estudar sobre o funcionamento do Git;
 * Pesquisar melhor interface grafica para o MongoDB;
 * Gravar notícias no MongoDB;
 * Estudar o site http://www.kimballgroup.com e pesquisar sobre Modelagem Dimensional, ETL, DW, Data Mart;
@@ -29,6 +30,9 @@ git pull
 git add *
 git commit -m "Mensagem sobre o commit"
 git push origin master
+
+Tutorial do Github enviado pelo João Paulo:
+http://rogerdudler.github.io/git-guide/index.pt_BR.html<BR>
 
 ### MongoDB
 
