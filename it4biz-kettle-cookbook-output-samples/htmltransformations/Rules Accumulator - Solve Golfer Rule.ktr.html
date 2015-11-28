@@ -1,0 +1,482 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Rules Accumulator - Solve Golfer Rule.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Rules Accumulator - Solve Golfer Rule.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Rules Accumulator - Solve Golfer Rule</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/08/29 13:57:42.720</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate Color-text">Generate Color</a></div>
+                  <div><a href="#Generate Golfers-text">Generate Golfers</a></div>
+                  <div><a href="#Generate Position-text">Generate Position</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 956px;&#xA;          height: 378px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 956px;&#xA;              height: 378px;&#xA;          "><a name="Generate Color-icon"></a><div id="Generate Color" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:453px;&#xA;                      top:24px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Insert Color"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Color-text" style="&#xA;                      top:56px;&#xA;                      left:434.3333333333333px;                    &#xA;                  ">Generate Color</a><a name="Generate Golfers-icon"></a><div id="Generate Golfers" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:101px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Insert Position"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Golfers-text" style="&#xA;                      top:158px;&#xA;                      left:79.66666666666667px;                    &#xA;                  ">Generate Golfers</a><a name="Generate Position-icon"></a><div id="Generate Position" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:271px;&#xA;                      top:24px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Insert Position"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Position-text" style="&#xA;                      top:56px;&#xA;                      left:248.33333333333334px;                    &#xA;                  ">Generate Position</a><a name="Insert Color-icon"></a><div id="Insert Color" class="&#xA;                      step-icon&#xA;                      step-icon-JoinRows" style="&#xA;                      left:453px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Rule Accumulator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Insert Color-text" style="&#xA;                      top:158px;&#xA;                      left:437px;                    &#xA;                  ">Insert Color</a><a name="Insert Position-icon"></a><div id="Insert Position" class="&#xA;                      step-icon&#xA;                      step-icon-JoinRows" style="&#xA;                      left:271px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Insert Color"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Insert Position-text" style="&#xA;                      top:158px;&#xA;                      left:251px;                    &#xA;                  ">Insert Position</a><a name="Rule Accumulator-icon"></a><div id="Rule Accumulator" class="&#xA;                      step-icon&#xA;                      step-icon-RuleAccumulator" style="&#xA;                      left:656px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Rule Accumulator-text" style="&#xA;                      top:158px;&#xA;                      left:634.6666666666666px;                    &#xA;                  ">Rule Accumulator</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:846px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:158px;&#xA;                      left:834px;                    &#xA;                  ">Sort rows</a>
+            <pre class="note" style="&#xA;            left: 18px;&#xA;            top: 274px;&#xA;            width: 630px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Puzzle rules:
+
+- A foursome of golfers is standing at a tee, in a line from left to right.
+- Each golfer wears different colored pants; one is wearing red pants.
+- The golfer to Fred’s immediate right is wearing blue pants.
+- Joe is second in line.
+- Bob is wearing plaid pants.
+- Tom isn’t in position one or four, and he isn’t wearing the hideous orange pants.
+- In what order will the four golfers tee off, and what color are each golfer’s pants?”</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Generate Color-text" href="#Generate Color-icon">Generate Color</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Insert Color-text">Insert Color</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>color</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Generate Golfers-text" href="#Generate Golfers-icon">Generate Golfers</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Insert Position-text">Insert Position</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Generate Position-text" href="#Generate Position-icon">Generate Position</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Insert Position-text">Insert Position</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>position</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JoinRows"></div>
+      <h3 class="step-heading"><a name="Insert Color-text" href="#Insert Color-icon">Insert Color</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Insert Position-text">Insert Position</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate Color-text">Generate Color</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Rule Accumulator-text">Rule Accumulator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JoinRows"></div>
+      <h3 class="step-heading"><a name="Insert Position-text" href="#Insert Position-icon">Insert Position</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Golfers-text">Generate Golfers</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate Position-text">Generate Position</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Insert Color-text">Insert Color</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RuleAccumulator"></div>
+      <h3 class="step-heading"><a name="Rule Accumulator-text" href="#Rule Accumulator-icon">Rule Accumulator</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Insert Color-text">Insert Color</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>column-name</th>
+               <th>column-type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>position</td>
+               <td>Integer</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>name</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>color</td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Rule Accumulator-text">Rule Accumulator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>position</td>
+               <td>Y</td>
+               <td>N</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

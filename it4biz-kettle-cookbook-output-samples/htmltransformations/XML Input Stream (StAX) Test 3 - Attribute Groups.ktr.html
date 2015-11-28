@@ -1,0 +1,575 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 3 - Attribute Groups.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 3 - Attribute Groups.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream StAX Test 3 - Attribute Groups</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/01/14 13:37:59.729</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 1 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>FILENAME</th>
+               <td>C:\Pentaho\_external\CE\data\attributes\german_AttributeGroupDefinitions_FTP.xml</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 798px;&#xA;          height: 668px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 798px;&#xA;              height: 668px;&#xA;          "><a name="AttributeGroupList-icon"></a><div id="AttributeGroupList" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:480px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#User Defined Java Expression"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AttributeGroupList-text" style="&#xA;                      top:232px;&#xA;                      left:456px;                    &#xA;                  ">AttributeGroupList</a><a name="Document Details-icon"></a><div id="Document Details" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:280px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Document Details-text" style="&#xA;                      top:332px;&#xA;                      left:258.6666666666667px;                    &#xA;                  ">Document Details</a><a name="Filter AttributeGroupList-icon"></a><div id="Filter AttributeGroupList" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:280px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#AttributeGroupList"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Document Details"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter AttributeGroupList-text" style="&#xA;                      top:232px;&#xA;                      left:246.66666666666666px;                    &#xA;                  ">Filter AttributeGroupList</a><a name="Filter START/END ELEMENTS-icon"></a><div id="Filter START/END ELEMENTS" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:280px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter AttributeGroupList"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter START/END ELEMENTS-text" style="&#xA;                      top:152px;&#xA;                      left:246.66666666666666px;                    &#xA;                  ">Filter START/END ELEMENTS</a><a name="Row denormaliser-icon"></a><div id="Row denormaliser" class="&#xA;                      step-icon&#xA;                      step-icon-Denormaliser" style="&#xA;                      left:620px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select ID, Name"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Row denormaliser-text" style="&#xA;                      top:392px;&#xA;                      left:598.6666666666666px;                    &#xA;                  ">Row denormaliser</a><a name="Select ID, Name-icon"></a><div id="Select ID, Name" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:620px;&#xA;                      top:440px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select ID, Name-text" style="&#xA;                      top:472px;&#xA;                      left:600px;                    &#xA;                  ">Select ID, Name</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:620px;&#xA;                      top:280px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Row denormaliser"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:312px;&#xA;                      left:608px;                    &#xA;                  ">Sort rows</a><a name="User Defined Java Expression-icon"></a><div id="User Defined Java Expression" class="&#xA;                      step-icon&#xA;                      step-icon-Janino" style="&#xA;                      left:620px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#User Defined Java Expression-text" style="&#xA;                      top:232px;&#xA;                      left:582.6666666666666px;                    &#xA;                  ">User Defined Java Expression</a><a name="XML Input Stream (StAX)-icon"></a><div id="XML Input Stream (StAX)" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:80px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter START/END ELEMENTS"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX)-text" style="&#xA;                      top:152px;&#xA;                      left:49.33333333333333px;                    &#xA;                  ">XML Input Stream (StAX)</a>
+            <pre class="note" style="&#xA;            left: 514px;&#xA;            top: 140px;&#xA;            width: 261px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Name Elements are one level below the ID Element</pre>
+            <pre class="note" style="&#xA;            left: 20px;&#xA;            top: 24px;&#xA;            width: 570px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example parses the XML Input Stream (StAX) Test 3 - Attribute Groups.xml
+and returns ID and name pairs. When multiple names are given for one ID they are listed and separated by comma.</pre>
+            <pre class="note" style="&#xA;            left: 684px;&#xA;            top: 351px;&#xA;            width: 101px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">ID and Name pairs</pre>
+            <pre class="note" style="&#xA;            left: 255px;&#xA;            top: 355px;&#xA;            width: 97px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Document Details</pre>
+            <pre class="note" style="&#xA;            left: 14px;&#xA;            top: 564px;&#xA;            width: 175px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-06-20 Jens Bleuel: created
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#XML Input Stream (StAX)">XML Input Stream (StAX)</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="AttributeGroupList-text" href="#AttributeGroupList-icon">AttributeGroupList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter AttributeGroupList-text">Filter AttributeGroupList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#User Defined Java Expression-text">User Defined Java Expression</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Document Details-text" href="#Document Details-icon">Document Details</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter AttributeGroupList-text">Filter AttributeGroupList</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter AttributeGroupList-text" href="#Filter AttributeGroupList-icon">Filter AttributeGroupList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter START/END ELEMENTS-text">Filter START/END ELEMENTS</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#AttributeGroupList-text">AttributeGroupList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Document Details-text">Document Details</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter START/END ELEMENTS-text" href="#Filter START/END ELEMENTS-icon">Filter START/END ELEMENTS</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter AttributeGroupList-text">Filter AttributeGroupList</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Denormaliser"></div>
+      <h3 class="step-heading"><a name="Row denormaliser-text" href="#Row denormaliser-icon">Row denormaliser</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select ID, Name-text">Select ID, Name</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>key_value</th>
+               <th>target_name</th>
+               <th>target_type</th>
+               <th>target_format</th>
+               <th>target_length</th>
+               <th>target_precision</th>
+               <th>target_decimal_symbol</th>
+               <th>target_grouping_symbol</th>
+               <th>target_currency_symbol</th>
+               <th>target_null_string</th>
+               <th>target_aggregation_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data_value</td>
+               <td>ID</td>
+               <td>ID</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data_value</td>
+               <td>Name</td>
+               <td>Name</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select ID, Name-text" href="#Select ID, Name-icon">Select ID, Name</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Row denormaliser-text">Row denormaliser</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>ID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Name</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#User Defined Java Expression-text">User Defined Java Expression</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Row denormaliser-text">Row denormaliser</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group_element_id</td>
+               <td>Y</td>
+               <td>N</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Janino"></div>
+      <h3 class="step-heading"><a name="User Defined Java Expression-text" href="#User Defined Java Expression-icon">User Defined Java Expression</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AttributeGroupList-text">AttributeGroupList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>formula</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>formula_string</th>
+               <th>value_type</th>
+               <th>value_length</th>
+               <th>value_precision</th>
+               <th>replace_field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group_element_id</td>
+               <td>(xml_data_name.equals("ID")) ? xml_element_id : xml_parent_element_id</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX)-text" href="#XML Input Stream (StAX)-icon">XML Input Stream (StAX)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Filter START/END ELEMENTS-text">Filter START/END ELEMENTS</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

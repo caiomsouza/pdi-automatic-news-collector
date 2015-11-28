@@ -1,0 +1,482 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Data Validator - validate data against external reference data.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Data Validator - validate data against external reference data.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Data Validator - validate data against external reference data</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 14:49:49.010</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (4)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Australia-text">Australia</a></div>
+                  <div><a href="#EMEA-text">EMEA</a></div>
+                  <div><a href="#Territories.txt-text">Territories.txt</a></div>
+                  <div><a href="#USA-text">USA</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 573px;&#xA;          height: 310px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 573px;&#xA;              height: 310px;&#xA;          "><a name="Australia-icon"></a><div id="Australia" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:94px;&#xA;                      top:191px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Data Validator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Australia-text" style="&#xA;                      top:223px;&#xA;                      left:82px;                    &#xA;                  ">Australia</a><a name="Data Validator-icon"></a><div id="Data Validator" class="&#xA;                      step-icon&#xA;                      step-icon-Validator" style="&#xA;                      left:283px;&#xA;                      top:124px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#OK"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                  step-hop-error&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Errors"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Data Validator-text" style="&#xA;                      top:156px;&#xA;                      left:264.3333333333333px;                    &#xA;                  ">Data Validator</a><a name="EMEA-icon"></a><div id="EMEA" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:94px;&#xA;                      top:124px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Data Validator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#EMEA-text" style="&#xA;                      top:156px;&#xA;                      left:88.66666666666667px;                    &#xA;                  ">EMEA</a><a name="Errors-icon"></a><div id="Errors" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy&#xA;                          step-error&#xA;                      " style="&#xA;                      left:472px;&#xA;                      top:239px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Errors-text" style="&#xA;                      top:271px;&#xA;                      left:464px;                    &#xA;                  ">Errors</a><a name="OK-icon"></a><div id="OK" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:472px;&#xA;                      top:124px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OK-text" style="&#xA;                      top:156px;&#xA;                      left:469.3333333333333px;                    &#xA;                  ">OK</a><a name="Territories.txt-icon"></a><div id="Territories.txt" class="&#xA;                      step-icon&#xA;                      step-icon-CsvInput" style="&#xA;                      left:283px;&#xA;                      top:239px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Data Validator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Territories.txt-text" style="&#xA;                      top:271px;&#xA;                      left:263px;                    &#xA;                  ">Territories.txt</a><a name="USA-icon"></a><div id="USA" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:93px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Data Validator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#USA-text" style="&#xA;                      top:89px;&#xA;                      left:89px;                    &#xA;                  ">USA</a>
+            <pre class="note" style="&#xA;            left: 27px;&#xA;            top: 198px;&#xA;            width: 46px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Invalid</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Territories.txt">Territories.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Australia-text" href="#Australia-icon">Australia</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>territory</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>Australia</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Validator"></div>
+      <h3 class="step-heading"><a name="Data Validator-text" href="#Data Validator-icon">Data Validator</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#EMEA-text">EMEA</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Territories.txt-text">Territories.txt</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>From</td>
+               <td><a href="#Australia-text">Australia</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>From</td>
+               <td><a href="#USA-text">USA</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>To</td>
+               <td><a href="#OK-text">OK</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>To</td>
+               <td><a href="#Errors-text">Errors</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="EMEA-text" href="#EMEA-icon">EMEA</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>territory</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>EMEA</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Errors-text" href="#Errors-icon">Errors</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="OK-text" href="#OK-icon">OK</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-CsvInput"></div>
+      <h3 class="step-heading"><a name="Territories.txt-text" href="#Territories.txt-icon">Territories.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>T</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>5</td>
+               <td>-1</td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="USA-text" href="#USA-icon">USA</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Data Validator-text">Data Validator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>territory</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>USA</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/String date with time to Date using metadata conversion.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/String date with time to Date using metadata conversion.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>String date with time to Date using metadata conversion</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:07.880</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate a 10 character length date stored as a STRING-text">Generate a 10 character length date stored as a STRING</a></div>
+                  <div><a href="#Generate an 8 character length date stored in a STRING-text">Generate an 8 character length date stored in a STRING</a></div>
+                  <div><a href="#Generate an 9 character length date stored in a STRING-text">Generate an 9 character length date stored in a STRING</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 878px;&#xA;          height: 645px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 878px;&#xA;              height: 645px;&#xA;          "><a name="Calculator Step - Demonstrate some useful manipulations of the date.-icon"></a><div id="Calculator Step - Demonstrate some useful manipulations of the date." class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:363px;&#xA;                      top:535px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator Step - Demonstrate some useful manipulations of the date.-text" style="&#xA;                      top:567px;&#xA;                      left:272.3333333333333px;                    &#xA;                  ">Calculator Step - Demonstrate some useful manipulations of the date.</a><a name="Generate a 10 character length date stored as a STRING-icon"></a><div id="Generate a 10 character length date stored as a STRING" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:569px;&#xA;                      top:326px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values Step - Convert strings to dates including their time portions."></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate a 10 character length date stored as a STRING-text" style="&#xA;                      top:358px;&#xA;                      left:497px;                    &#xA;                  ">Generate a 10 character length date stored as a STRING</a><a name="Generate an 8 character length date stored in a STRING-icon"></a><div id="Generate an 8 character length date stored in a STRING" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:151px;&#xA;                      top:326px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values Step - Convert strings to dates including their time portions."></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate an 8 character length date stored in a STRING-text" style="&#xA;                      top:358px;&#xA;                      left:79px;                    &#xA;                  ">Generate an 8 character length date stored in a STRING</a><a name="Generate an 9 character length date stored in a STRING-icon"></a><div id="Generate an 9 character length date stored in a STRING" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:363px;&#xA;                      top:262px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values Step - Convert strings to dates including their time portions."></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate an 9 character length date stored in a STRING-text" style="&#xA;                      top:294px;&#xA;                      left:291px;                    &#xA;                  ">Generate an 9 character length date stored in a STRING</a><a name="One line javascript step to convert a string to a date type.-icon"></a><div id="One line javascript step to convert a string to a date type." class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod&#xA;                          step-hidden&#xA;                      " style="&#xA;                      left:828px;&#xA;                      top:215px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      &#xA;                          step-label-hidden&#xA;                      " href="#One line javascript step to convert a string to a date type.-text" style="&#xA;                      top:247px;&#xA;                      left:748px;                    &#xA;                  ">One line javascript step to convert a string to a date type.</a><a name="Select values Step - Convert strings to dates including their time portions.-icon"></a><div id="Select values Step - Convert strings to dates including their time portions." class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:363px;&#xA;                      top:436px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator Step - Demonstrate some useful manipulations of the date."></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values Step - Convert strings to dates including their time portions.-text" style="&#xA;                      top:468px;&#xA;                      left:261.6666666666667px;                    &#xA;                  ">Select values Step - Convert strings to dates including their time portions.</a>
+            <pre class="note" style="&#xA;            left: 78px;&#xA;            top: 18px;&#xA;            width: 662px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Date: Feb 25, 2010
+Created by: Brandon Jackson
+Special thanks to: wselwood on IRC for the tip that made this possible.
+
+It is often the case that somewhere along our journey dealing with streams we need to wrangle a date string.
+Here we are simulating the conversion of strings to date datatypes.  The real key to solving the problem is the
+formatting string used in the select step.  "M/d/yyyy h:m:s a"  This allows a single or double digit month and day.
+It also handles the time portion converting it correctly to a 24hour format in the date data type.
+
+http://java.sun.com/j2se/1.4.2/docs/api/java/text/SimpleDateFormat.html
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator Step - Demonstrate some useful manipulations of the date.-text" href="#Calculator Step - Demonstrate some useful manipulations of the date.-icon">Calculator Step - Demonstrate some useful manipulations of the date.</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Select values Step - Convert strings to dates including their time portions.-text">Select values Step - Convert strings to dates including their time portions.</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate a 10 character length date stored as a STRING-text" href="#Generate a 10 character length date stored as a STRING-icon">Generate a 10 character length date stored as a STRING</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Select values Step - Convert strings to dates including their time portions.-text">Select values Step - Convert strings to dates including their time portions.</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>transaction_date</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>12/25/2010 7:23:45 AM</td>
+               <td>40</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate an 8 character length date stored in a STRING-text" href="#Generate an 8 character length date stored in a STRING-icon">Generate an 8 character length date stored in a STRING</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Select values Step - Convert strings to dates including their time portions.-text">Select values Step - Convert strings to dates including their time portions.</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>transaction_date</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1/2/2010 9:23:45 PM</td>
+               <td>40</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate an 9 character length date stored in a STRING-text" href="#Generate an 9 character length date stored in a STRING-icon">Generate an 9 character length date stored in a STRING</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Select values Step - Convert strings to dates including their time portions.-text">Select values Step - Convert strings to dates including their time portions.</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>transaction_date</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>12/2/2010 10:23:45 PM</td>
+               <td>40</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values Step - Convert strings to dates including their time portions.-text" href="#Select values Step - Convert strings to dates including their time portions.-icon">Select values Step - Convert strings to dates including their time portions.</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate an 8 character length date stored in a STRING-text">Generate an 8 character length date stored in a STRING</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate an 9 character length date stored in a STRING-text">Generate an 9 character length date stored in a STRING</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>From</td>
+               <td><a href="#Generate a 10 character length date stored as a STRING-text">Generate a 10 character length date stored as a STRING</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>To</td>
+               <td><a href="#Calculator Step - Demonstrate some useful manipulations of the date.-text">Calculator Step - Demonstrate some useful manipulations of the date.</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>meta</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>conversion_mask</th>
+               <th>date_format_lenient</th>
+               <th>date_format_locale</th>
+               <th>date_format_timezone</th>
+               <th>lenient_string_to_number</th>
+               <th>encoding</th>
+               <th>decimal_symbol</th>
+               <th>grouping_symbol</th>
+               <th>currency_symbol</th>
+               <th>storage_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>transaction_date</td>
+               <td>transaction_date</td>
+               <td>Date</td>
+               <td>-2</td>
+               <td>-2</td>
+               <td>M/d/yyyy h:m:s a</td>
+               <td>false</td>
+               <td></td>
+               <td></td>
+               <td>false</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

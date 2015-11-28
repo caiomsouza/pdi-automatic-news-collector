@@ -1,0 +1,303 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Java Filter - Working with booleans.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Java Filter - Working with booleans.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>New boolean</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2012/03/16 10:30:08.060</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#My Friends-text">My Friends</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 1007px;&#xA;          height: 554px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 1007px;&#xA;              height: 554px;&#xA;          "><a name="Java Filter-icon"></a><div id="Java Filter" class="&#xA;                      step-icon&#xA;                      step-icon-JavaFilter" style="&#xA;                      left:610px;&#xA;                      top:343px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#We are friends"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#We are not friends"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Java Filter-text" style="&#xA;                      top:375px;&#xA;                      left:595.3333333333334px;                    &#xA;                  ">Java Filter</a><a name="My Friends-icon"></a><div id="My Friends" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:55px;&#xA;                      top:343px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Java Filter"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#My Friends-text" style="&#xA;                      top:375px;&#xA;                      left:41.666666666666664px;                    &#xA;                  ">My Friends</a><a name="We are friends-icon"></a><div id="We are friends" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:910px;&#xA;                      top:312px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#We are friends-text" style="&#xA;                      top:344px;&#xA;                      left:891.3333333333334px;                    &#xA;                  ">We are friends</a><a name="We are not friends-icon"></a><div id="We are not friends" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:912px;&#xA;                      top:405px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#We are not friends-text" style="&#xA;                      top:437px;&#xA;                      left:888px;                    &#xA;                  ">We are not friends</a>
+            <pre class="note" style="&#xA;            left: 443px;&#xA;            top: 120px;&#xA;            width: 418px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(171&#xA;                    ,241&#xA;                    ,176);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The Java Filter step exposes all of your fields as native Java types
+They are not wrapped up in some other kind of object where you need
+getters and setters.
+
+We use the java.lang.Boolean type in this example:
+http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Boolean.html
+
+True values are Boolean.TRUE
+False values are Boolean FALSE
+
+See the step below</pre>
+            <pre class="note" style="&#xA;            left: 33px;&#xA;            top: 467px;&#xA;            width: 933px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(171&#xA;                    ,241&#xA;                    ,176);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Deeper information:
+
+A row in PDI is comprised of one RowMetaInterface class to describe the row.  The row metadata contains everything you need to know about 
+the rows like the names of the fields, the data types, the lengths, descriptions and much more.  The row also contains 0, 1 or more rows of data in the form of a 
+simple Object[]: array of java.lang.Object where each value contains either null or one of the data types listed in the available data types section.
+
+http://wiki.pentaho.com/display/EAI/PDI+Rows+Of+Data</pre>
+            <pre class="note" style="&#xA;            left: 35px;&#xA;            top: 121px;&#xA;            width: 345px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(171&#xA;                    ,241&#xA;                    ,176);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">PDI's Boolean type accepts
+
+True when assigned the value "Y"
+False when assigned the value "N"
+
+Internally there is a plain java.lang.Boolean object which
+will be initialized to "Boolean.TRUE" or "Boolean.FALSE"
+whichever the initial values above suggest.
+
+Inspect the step below:</pre>
+            <pre class="note" style="&#xA;            left: 34px;&#xA;            top: 41px;&#xA;            width: 772px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Purpose: Demonstrate using a Java Filter step to evaluate outcomes to 'true' or 'false' values to direct the rows to a final destination.
+
+A test on a Boolean data type is demonstrated here. Only expressions are accepted.
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JavaFilter"></div>
+      <h3 class="step-heading"><a name="Java Filter-text" href="#Java Filter-icon">Java Filter</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#My Friends-text">My Friends</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#We are friends-text">We are friends</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#We are not friends-text">We are not friends</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="My Friends-text" href="#My Friends-icon">My Friends</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>NAMES</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>FRIEND</td>
+               <td>Boolean</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="We are friends-text" href="#We are friends-icon">We are friends</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="We are not friends-text" href="#We are not friends-icon">We are not friends</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

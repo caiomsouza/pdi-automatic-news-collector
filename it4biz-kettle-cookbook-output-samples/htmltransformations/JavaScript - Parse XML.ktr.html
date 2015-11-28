@@ -1,0 +1,297 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/JavaScript - Parse XML.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/JavaScript - Parse XML.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>example e4x - dialog</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 15:52:22.637</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Get File Names-text">Get File Names</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 301px;&#xA;          height: 389px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 301px;&#xA;              height: 389px;&#xA;          "><a name="E4X-icon"></a><div id="E4X" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:201px;&#xA;                      top:248px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#E4X-text" style="&#xA;                      top:280px;&#xA;                      left:197px;                    &#xA;                  ">E4X</a><a name="Get File Names-icon"></a><div id="Get File Names" class="&#xA;                      step-icon&#xA;                      step-icon-GetFileNames" style="&#xA;                      left:200px;&#xA;                      top:51px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get File Names-text" style="&#xA;                      top:83px;&#xA;                      left:181.33333333333334px;                    &#xA;                  ">Get File Names</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:200px;&#xA;                      top:150px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#E4X"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:182px;&#xA;                      left:182.66666666666666px;                    &#xA;                  ">Select values</a>
+            <pre class="note" style="&#xA;            left: 28px;&#xA;            top: 312px;&#xA;            width: 712px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This transformation reads an XML file in JavaScript and extracts information from it as well.
+Because of limitations inside of E4X, the header of the XML file needs to be stripped out before we can work with the data.
+
+The interesting E4X part is this :
+
+contentXML.levelTwo.level3.(@id == "2").@value;
+for each (var value in level3ID2Values) 
+{
+ /* Generate rows */
+}
+
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get File Names">Get File Names</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="E4X-text" href="#E4X-icon">E4X</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">if ("Rhino 1.7 release 1 2008 03 06" != Packages.org.mozilla.javascript.Context.getCurrentContext().getImplementationVersion())
+{
+	//Alert("Rhino js.jar must be version Rhino 1.7R1. Your version is:\n"+Packages.org.mozilla.javascript.Context.getCurrentContext().getImplementationVersion());
+}
+
+fileInputStream = new java.io.FileInputStream(filename);
+contentBytes = Packages.org.pentaho.di.core.Const.createByteArray(fileInputStream.available());
+fileInputStream.read(contentBytes);
+fileInputStream.close();
+
+var contentString = new java.lang.String(contentBytes);
+contentString = contentString.replaceFirst("&lt;\\?xml[^&gt;]*\\?&gt;\\s*", "");
+
+var contentXML = new XML(contentString);
+
+level3ID2Values = contentXML.levelTwo.level3.(@id == "2").@value;
+
+var level3ID2Value = "";
+for each (var value in level3ID2Values)
+{
+	level3ID2Value = value;
+	newRow = createRowCopy(getOutputRowMeta().size());
+	newRow[getInputRowMeta().size()] = java.lang.Double.valueOf(level3ID2Value);
+	putRow(newRow);
+}
+
+// Don't output the input row.
+trans_Status = SKIP_TRANSFORMATION;</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>level3ID2Value</td>
+               <td>level3ID2Value</td>
+               <td>Number</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetFileNames"></div>
+      <h3 class="step-heading"><a name="Get File Names-text" href="#Get File Names-icon">Get File Names</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get File Names-text">Get File Names</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#E4X-text">E4X</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

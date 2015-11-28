@@ -1,0 +1,235 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/evaluate-result-rows/Evaluate result rows.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/evaluate-result-rows/Evaluate result rows.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: Evaluate result rows
+            relative-path: "jobs/evaluate-result-rows"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "Evaluate result rows"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Evaluate result rows</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2008/01/16 14:18:39.155</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This job does not define any parameters.
+         
+      </p>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 613px;&#xA;            height: 241px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 613px;&#xA;              height: 241px;&#xA;          "><a name="START-icon"></a><div id="START" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:86px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#Create result rows"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:109px;&#xA;                      left:79.33333333333333px;&#xA;                  " href="#START-text">START</a><a name="Create result rows-icon"></a><div id="Create result rows" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:239px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#name = &#34;Foo&#34; ?"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:109px;&#xA;                      left:215px;&#xA;                  " href="Create result rows.ktr.html">Create result rows</a><a name="name = &#34;Foo&#34; ?-icon"></a><div id="name = &#34;Foo&#34; ?" class="&#xA;                      entry-icon&#xA;                      entry-icon-EVAL" style="&#xA;                      left:405px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#DUMMY 1"></a><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-false" href="#DUMMY 2"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:109px;&#xA;                      left:386.3333333333333px;&#xA;                  " href="#name = &#34;Foo&#34; ?-text">name = "Foo" ?</a><a name="DUMMY 1-icon"></a><div id="DUMMY 1" class="&#xA;                      entry-icon&#xA;                      entry-icon-DUMMY 1" style="&#xA;                      left:571px;&#xA;                      top:36px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:68px;&#xA;                      left:561.6666666666666px;&#xA;                  " href="#DUMMY 1-text">DUMMY 1</a><a name="DUMMY 2-icon"></a><div id="DUMMY 2" class="&#xA;                      entry-icon&#xA;                      entry-icon-DUMMY 2" style="&#xA;                      left:570px;&#xA;                      top:149px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:181px;&#xA;                      left:560.6666666666666px;&#xA;                  " href="#DUMMY 2-text">DUMMY 2</a></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Create result rows">Create result rows</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="START-text" href="#START-icon">START</a></h3><pre><p class="description">Special entries</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Create result rows-text">Create result rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="Create result rows-text" href="#Create result rows-icon">Create result rows</a></h3><pre><p class="description">Transformation</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#START-text">START</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#name = &#34;Foo&#34; ?-text">name = "Foo" ?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-EVAL"></div>
+      <h3 class="entry-heading"><a name="name = &#34;Foo&#34; ?-text" href="#name = &#34;Foo&#34; ?-icon">name = "Foo" ?</a></h3><pre><p class="description">JavaScript</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create result rows-text">Create result rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#DUMMY 1-text">DUMMY 1</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#DUMMY 2-text">DUMMY 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DUMMY 1"></div>
+      <h3 class="entry-heading"><a name="DUMMY 1-text" href="#DUMMY 1-icon">DUMMY 1</a></h3><pre><p class="description">Special entries</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#name = &#34;Foo&#34; ?-text">name = "Foo" ?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DUMMY 2"></div>
+      <h3 class="entry-heading"><a name="DUMMY 2-text" href="#DUMMY 2-icon">DUMMY 2</a></h3><pre><p class="description">Special entries</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#name = &#34;Foo&#34; ?-text">name = "Foo" ?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

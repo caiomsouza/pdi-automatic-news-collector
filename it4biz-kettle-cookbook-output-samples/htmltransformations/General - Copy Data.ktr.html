@@ -1,0 +1,553 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Copy Data.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Copy Data.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>General  Copy Data</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:01.830</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td></td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (3)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#RowA-text">RowA</a></div>
+                  <div><a href="#RowB-text">RowB</a></div>
+                  <div><a href="#RowC-text">RowC</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#FileA-text">FileA</a></div>
+                  <div><a href="#FileB-text">FileB</a></div>
+                  <div><a href="#FileC-text">FileC</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 392px;&#xA;          height: 319px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 392px;&#xA;              height: 319px;&#xA;          "><a name="FileA-icon"></a><div id="FileA" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:394px;&#xA;                      top:189px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#FileA-text" style="&#xA;                      top:221px;&#xA;                      left:387.3333333333333px;                    &#xA;                  ">FileA</a><a name="FileB-icon"></a><div id="FileB" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:395px;&#xA;                      top:268px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#FileB-text" style="&#xA;                      top:300px;&#xA;                      left:388.3333333333333px;                    &#xA;                  ">FileB</a><a name="FileC-icon"></a><div id="FileC" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:396px;&#xA;                      top:363px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#FileC-text" style="&#xA;                      top:395px;&#xA;                      left:389.3333333333333px;                    &#xA;                  ">FileC</a><a name="RowA-icon"></a><div id="RowA" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:133px;&#xA;                      top:172px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Unit"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#RowA-text" style="&#xA;                      top:204px;&#xA;                      left:127.66666666666667px;                    &#xA;                  ">RowA</a><a name="RowB-icon"></a><div id="RowB" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:132px;&#xA;                      top:266px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Unit"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#RowB-text" style="&#xA;                      top:298px;&#xA;                      left:126.66666666666667px;                    &#xA;                  ">RowB</a><a name="RowC-icon"></a><div id="RowC" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:133px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Unit"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#RowC-text" style="&#xA;                      top:392px;&#xA;                      left:127.66666666666667px;                    &#xA;                  ">RowC</a><a name="Unit-icon"></a><div id="Unit" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:286px;&#xA;                      top:269px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#FileA"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#FileB"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#FileC"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Unit-text" style="&#xA;                      top:301px;&#xA;                      left:280.6666666666667px;                    &#xA;                  ">Unit</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>java.io.tmpdir</th>
+               <td></td>
+               <td></td>
+               <td><a href="#FileA">FileA</a>, <a href="#FileB">FileB</a>, <a href="#FileC">FileC</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="FileA-text" href="#FileA-icon">FileA</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>None</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="FileB-text" href="#FileB-icon">FileB</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>None</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="FileC-text" href="#FileC-icon">FileC</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>None</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="RowA-text" href="#RowA-icon">RowA</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="RowB-text" href="#RowB-icon">RowB</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>2</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="RowC-text" href="#RowC-icon">RowC</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Unit-text">Unit</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>3</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Unit-text" href="#Unit-icon">Unit</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#RowA-text">RowA</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#RowB-text">RowB</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>From</td>
+               <td><a href="#RowC-text">RowC</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>To</td>
+               <td><a href="#FileA-text">FileA</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>To</td>
+               <td><a href="#FileB-text">FileB</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>To</td>
+               <td><a href="#FileC-text">FileC</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

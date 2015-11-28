@@ -1,0 +1,187 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/parallel synchronized jobs/SyncJobs Example2.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/parallel synchronized jobs/SyncJobs Example2.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: SyncJobs Example2
+            relative-path: "jobs/parallel synchronized jobs"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "SyncJobs Example2"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>SyncJobs Example2</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2007/09/06 08:47:57.426</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 587px;&#xA;            height: 266px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 587px;&#xA;              height: 266px;&#xA;          "><a name="Start-icon"></a><div id="Start" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:44px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#Dummy Wait for 10 seconds"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:138px;&#xA;                      left:37.333333333333336px;&#xA;                  " href="#Start-text">Start</a><a name="Dummy Wait for 10 seconds-icon"></a><div id="Dummy Wait for 10 seconds" class="&#xA;                      entry-icon&#xA;                      entry-icon-DELAY" style="&#xA;                      left:238px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Create file  &#34;Job2Ready.tmp&#34;"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:138px;&#xA;                      left:204.66666666666666px;&#xA;                  " href="#Dummy Wait for 10 seconds-text">Dummy Wait for 10 seconds</a><a name="Create file  &#34;Job2Ready.tmp&#34;-icon"></a><div id="Create file  &#34;Job2Ready.tmp&#34;" class="&#xA;                      entry-icon&#xA;                      entry-icon-CREATE_FILE" style="&#xA;                      left:481px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:138px;&#xA;                      left:443.6666666666667px;&#xA;                  " href="#Create file  &#34;Job2Ready.tmp&#34;-text">Create file  "Job2Ready.tmp"</a><pre class="note" style="&#xA;            left: 22px;&#xA;            top: 28px;&#xA;            width: 401px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">This Job will create a file when it is ready (in the example after 10 seconds).</pre><pre class="note" style="&#xA;            left: 127px;&#xA;            top: 166px;&#xA;            width: 264px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">You can run other Jobs or Transformations here.</pre><pre class="note" style="&#xA;            left: 454px;&#xA;            top: 166px;&#xA;            width: 90px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">Signal finished.</pre></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Create file  &#34;Job2Ready.tmp&#34;">Create file  "Job2Ready.tmp"</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="Start-text" href="#Start-icon">Start</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy Wait for 10 seconds-text">Dummy Wait for 10 seconds</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DELAY"></div>
+      <h3 class="entry-heading"><a name="Dummy Wait for 10 seconds-text" href="#Dummy Wait for 10 seconds-icon">Dummy Wait for 10 seconds</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Start-text">Start</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Create file  &#34;Job2Ready.tmp&#34;-text">Create file  "Job2Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-CREATE_FILE"></div>
+      <h3 class="entry-heading"><a name="Create file  &#34;Job2Ready.tmp&#34;-text" href="#Create file  &#34;Job2Ready.tmp&#34;-icon">Create file  "Job2Ready.tmp"</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Dummy Wait for 10 seconds-text">Dummy Wait for 10 seconds</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

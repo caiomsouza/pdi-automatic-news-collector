@@ -1,0 +1,406 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Repository Import.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Repository Import.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Repository Import</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2011/01/24 13:12:50.000</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>admin</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 5 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>DIRECTORY</th>
+               <td>/auto-import</td>
+               <td>The repository directory to import into</td>
+            </tr>
+            <tr>
+               <th>FILENAME</th>
+               <td>/tmp/export.xml</td>
+               <td>The export file</td>
+            </tr>
+            <tr>
+               <th>JOBDIROVERRIDE</th>
+               <td></td>
+               <td>The dir to override the default for sub-jobs</td>
+            </tr>
+            <tr>
+               <th>OVERWRITE</th>
+               <td>false</td>
+               <td>Overwrite existing repository objects?</td>
+            </tr>
+            <tr>
+               <th>TRANSDIROVERRIDE</th>
+               <td></td>
+               <td>The dir to override the default for mapping/sub-transformations</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (0)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 609px;&#xA;          height: 484px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 609px;&#xA;              height: 484px;&#xA;          "><a name="Get Variables-icon"></a><div id="Get Variables" class="&#xA;                      step-icon&#xA;                      step-icon-GetVariable" style="&#xA;                      left:283px;&#xA;                      top:281px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Import Repository"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get Variables-text" style="&#xA;                      top:313px;&#xA;                      left:265.6666666666667px;                    &#xA;                  ">Get Variables</a><a name="Import Repository-icon"></a><div id="Import Repository" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:499px;&#xA;                      top:281px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Import Repository-text" style="&#xA;                      top:313px;&#xA;                      left:476.3333333333333px;                    &#xA;                  ">Import Repository</a>
+            <pre class="note" style="&#xA;            left: 18px;&#xA;            top: 24px;&#xA;            width: 772px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This transformation shows how to to use the JavaScript step to import objects into a repository.
+
+1) Import this transformation into your repository.
+2) Run the transformation and provide the following parameters in the run dialog:
+
+DIRECTORY:  The directory in the repository to import into.
+FILENAME: The file or directory name to import from. (If a directory is used all files within that directory will be imported.)
+OVERWRITE: Overwrite existing objects in the repository?
+
+Optional parameters, if used will override DIRECTORY.
+TRANSDIROVERRIDE: Directory to import transformations into.
+JOBDIROVERRIDE: Directory to import jobs into.</pre>
+            <pre class="note" style="&#xA;            left: 84px;&#xA;            top: 380px;&#xA;            width: 635px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">You may use the ./samples/transformations/jobs/sample-export.xml as a sample export to import.</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>DIRECTORY</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get Variables">Get Variables</a></td>
+            </tr>
+            <tr>
+               <th>FILENAME</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get Variables">Get Variables</a></td>
+            </tr>
+            <tr>
+               <th>TRANSDIROVERRIDE</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get Variables">Get Variables</a></td>
+            </tr>
+            <tr>
+               <th>JOBDIROVERRIDE</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get Variables">Get Variables</a></td>
+            </tr>
+            <tr>
+               <th>OVERWRITE</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Get Variables">Get Variables</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetVariable"></div>
+      <h3 class="step-heading"><a name="Get Variables-text" href="#Get Variables-icon">Get Variables</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Import Repository-text">Import Repository</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>variable</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>directory</td>
+               <td>${DIRECTORY}</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>0</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>filename</td>
+               <td>${FILENAME}</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>0</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>transDirOverride</td>
+               <td>${TRANSDIROVERRIDE}</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>0</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>jobDirOverride</td>
+               <td>${JOBDIROVERRIDE}</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>0</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>overwrite</td>
+               <td>${OVERWRITE}</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>0</td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Import Repository-text" href="#Import Repository-icon">Import Repository</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get Variables-text">Get Variables</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">// Get the repository we're connected to
+var rep = _step_.getTrans().getRepository();
+// Load the repository directory structure
+var root = rep.loadRepositoryDirectoryTree();
+
+// Find the directory we want to import into in the repository and create it if it doesn't exist.
+//
+var repdir = root.findDirectory(directory);
+if (repdir==null) {
+ repdir = rep.createRepositoryDirectory(root, directory);
+}
+// Ask the repository for its importer
+var importer = rep.getImporter();
+
+// Set the directory overrides if they're being used
+if (transDirOverride != null &amp;&amp; !"".equals(transDirOverride)) {
+  importer.setTransDirOverride(transDirOverride);
+}
+if (jobDirOverride != null &amp;&amp; !"".equals(jobDirOverride)) {
+  importer.setJobDirOverride(jobDirOverride);
+}
+
+// Get the file that was specified as FILENAME
+var file = new Packages.java.io.File(filename);
+
+// Must pass file names to import as an array
+var filenames = null;
+// Check if the filename is a directory
+if (file.isDirectory()) {
+  // If the file is a directory find all the files inside of it
+  // and use those for the import
+  var files = file.listFiles();
+  filenames = java.lang.reflect.Array.newInstance(
+    java.lang.String, // Element type, do not change
+    files.length  // Number of file names to pass in
+  );
+  for (i=0;i&lt;files.length;i++) {
+    filenames[i] = files[i].getAbsolutePath();
+  }
+} else {
+  // If the file is not a directory it is the only file to be used
+  // for importing
+  filenames = java.lang.reflect.Array.newInstance(
+    java.lang.String, // Element type, do not change
+    1  // Number of file names to pass in
+  );
+  filenames[0] = filename;
+}
+
+// Set the overwrite flag
+var overwrite = Packages.java.lang.Boolean.parseBoolean(overwrite);
+
+// Perform the import
+//
+importer.importAll(
+   importer,        // The feedback object
+   null,            // Relative file directory of filenames (next parameter)
+   filenames,       // The export files to import
+   repdir,          // The directory to import into
+   overwrite,            // Overwrite existing objects
+   true,            // Continue on error
+   "Batch import"); // Version comment
+</pre><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

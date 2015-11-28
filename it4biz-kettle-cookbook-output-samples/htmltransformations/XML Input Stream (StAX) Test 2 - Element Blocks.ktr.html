@@ -1,0 +1,1189 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 2 - Element Blocks.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 2 - Element Blocks.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream (StAX) Test 2 - Element Blocks</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/01/14 13:37:59.729</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 1 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>FILENAME</th>
+               <td>C:\Pentaho\_external\CE\data\shops\D-Brutto-ONLINESHOPS-incr.xml</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 883px;&#xA;          height: 690px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 883px;&#xA;              height: 690px;&#xA;          "><a name="Analyzer Result: default-icon"></a><div id="Analyzer Result: default" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:500px;&#xA;                      top:340px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Analyzer Result: default-text" style="&#xA;                      top:372px;&#xA;                      left:468px;                    &#xA;                  ">Analyzer Result: default</a><a name="AnalyzerLists-icon"></a><div id="AnalyzerLists" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:420px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#AnalyzerLists: default"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#item_type=add"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#item_type=del"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AnalyzerLists-text" style="&#xA;                      top:232px;&#xA;                      left:402.6666666666667px;                    &#xA;                  ">AnalyzerLists</a><a name="AnalyzerLists: default-icon"></a><div id="AnalyzerLists: default" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:420px;&#xA;                      top:280px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AnalyzerLists: default-text" style="&#xA;                      top:312px;&#xA;                      left:390.6666666666667px;                    &#xA;                  ">AnalyzerLists: default</a><a name="AnalyzerResult: Switch / Case (xml_path_level2)-icon"></a><div id="AnalyzerResult: Switch / Case (xml_path_level2)" class="&#xA;                      step-icon&#xA;                      step-icon-SwitchCase" style="&#xA;                      left:300px;&#xA;                      top:340px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#AnalyzerLists"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Analyzer Result: default"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AnalyzerResult: Switch / Case (xml_path_level2)-text" style="&#xA;                      top:372px;&#xA;                      left:237.33333333333334px;                    &#xA;                  ">AnalyzerResult: Switch / Case (xml_path_level2)</a><a name="Document Details-icon"></a><div id="Document Details" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:80px;&#xA;                      top:460px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Document Details-text" style="&#xA;                      top:492px;&#xA;                      left:58.66666666666667px;                    &#xA;                  ">Document Details</a><a name="Filter ProductID-icon"></a><div id="Filter ProductID" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:660px;&#xA;                      top:240px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values: item"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter ProductID-text" style="&#xA;                      top:272px;&#xA;                      left:638.6666666666666px;                    &#xA;                  ">Filter ProductID</a><a name="Filter START/END ELEMENTS-icon"></a><div id="Filter START/END ELEMENTS" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:80px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Split xml_parent_path to levels"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter START/END ELEMENTS-text" style="&#xA;                      top:232px;&#xA;                      left:46.666666666666664px;                    &#xA;                  ">Filter START/END ELEMENTS</a><a name="Filter Value-icon"></a><div id="Filter Value" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:500px;&#xA;                      top:560px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values: product, attribute"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter Value-text" style="&#xA;                      top:592px;&#xA;                      left:484px;                    &#xA;                  ">Filter Value</a><a name="Filter name-icon"></a><div id="Filter name" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:500px;&#xA;                      top:500px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values: product"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter name-text" style="&#xA;                      top:532px;&#xA;                      left:485.3333333333333px;                    &#xA;                  ">Filter name</a><a name="Products-icon"></a><div id="Products" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:360px;&#xA;                      top:500px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Filter Value"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Filter name"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Products-text" style="&#xA;                      top:532px;&#xA;                      left:349.3333333333333px;                    &#xA;                  ">Products</a><a name="Select values: item-icon"></a><div id="Select values: item" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:760px;&#xA;                      top:240px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values: item-text" style="&#xA;                      top:272px;&#xA;                      left:734.6666666666666px;                    &#xA;                  ">Select values: item</a><a name="Select values: product-icon"></a><div id="Select values: product" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:640px;&#xA;                      top:500px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values: product-text" style="&#xA;                      top:532px;&#xA;                      left:610.6666666666666px;                    &#xA;                  ">Select values: product</a><a name="Select values: product, attribute-icon"></a><div id="Select values: product, attribute" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:640px;&#xA;                      top:560px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values: product, attribute-text" style="&#xA;                      top:592px;&#xA;                      left:596px;                    &#xA;                  ">Select values: product, attribute</a><a name="Split xml_parent_path to levels-icon"></a><div id="Split xml_parent_path to levels" class="&#xA;                      step-icon&#xA;                      step-icon-FieldSplitter" style="&#xA;                      left:80px;&#xA;                      top:260px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Switch / Case (xml_path_level1)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Split xml_parent_path to levels-text" style="&#xA;                      top:292px;&#xA;                      left:38.666666666666664px;                    &#xA;                  ">Split xml_parent_path to levels</a><a name="Switch / Case (xml_path_level1)-icon"></a><div id="Switch / Case (xml_path_level1)" class="&#xA;                      step-icon&#xA;                      step-icon-SwitchCase" style="&#xA;                      left:80px;&#xA;                      top:340px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#AnalyzerResult: Switch / Case (xml_path_level2)"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Document Details"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Products"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Switch / Case (xml_path_level1)-text" style="&#xA;                      top:372px;&#xA;                      left:38.666666666666664px;                    &#xA;                  ">Switch / Case (xml_path_level1)</a><a name="XML Input Stream (StAX)-icon"></a><div id="XML Input Stream (StAX)" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:80px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter START/END ELEMENTS"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX)-text" style="&#xA;                      top:172px;&#xA;                      left:49.33333333333333px;                    &#xA;                  ">XML Input Stream (StAX)</a><a name="item_type=add-icon"></a><div id="item_type=add" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:580px;&#xA;                      top:200px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter ProductID"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#item_type=add-text" style="&#xA;                      top:232px;&#xA;                      left:562.6666666666666px;                    &#xA;                  ">item_type=add</a><a name="item_type=del-icon"></a><div id="item_type=del" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:580px;&#xA;                      top:280px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter ProductID"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#item_type=del-text" style="&#xA;                      top:312px;&#xA;                      left:562.6666666666666px;                    &#xA;                  ">item_type=del</a>
+            <pre class="note" style="&#xA;            left: 5px;&#xA;            top: 5px;&#xA;            width: 549px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example parses the XML Input Stream (StAX) Test 2 - Element Blocks.xml
+and has 2 main sample data blocks (Analyzer Lists &amp; Products).
+
+The different data blocks are separated by splitting the parent XML path to levels and the Switch / Case steps.
+This separation can also be solved by the 'string contains' option of the Switch / Case step or other steps.
+
+In more complex processings, Mappings (sub transformations) should be used for the different data blocks
+to have it clearly represented.</pre>
+            <pre class="note" style="&#xA;            left: 13px;&#xA;            top: 567px;&#xA;            width: 169px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-06-20 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 251px;&#xA;            top: 140px;&#xA;            width: 273px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Split by name Attributes (e.g. items.added) and route
+these rows to the appropriate steps.</pre>
+            <pre class="note" style="&#xA;            left: 559px;&#xA;            top: 141px;&#xA;            width: 211px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Processing example
+to have the new and deleted products
+in one stream with an item_type (add/del)</pre>
+            <pre class="note" style="&#xA;            left: 312px;&#xA;            top: 448px;&#xA;            width: 168px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Repeat id and name in each row</pre>
+            <pre class="note" style="&#xA;            left: 501px;&#xA;            top: 415px;&#xA;            width: 183px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Processing example
+to have two data streams for 
+a) the product_id/_name
+b) the attributes for each product_id</pre>
+            <pre class="note" style="&#xA;            left: 190px;&#xA;            top: 304px;&#xA;            width: 136px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,255&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The 'Analyzer Lists' block:</pre>
+            <pre class="note" style="&#xA;            left: 235px;&#xA;            top: 507px;&#xA;            width: 111px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,255&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The 'Products' block:</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#XML Input Stream (StAX)">XML Input Stream (StAX)</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Analyzer Result: default-text" href="#Analyzer Result: default-icon">Analyzer Result: default</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AnalyzerResult: Switch / Case (xml_path_level2)-text">AnalyzerResult: Switch / Case (xml_path_level2)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="AnalyzerLists-text" href="#AnalyzerLists-icon">AnalyzerLists</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AnalyzerResult: Switch / Case (xml_path_level2)-text">AnalyzerResult: Switch / Case (xml_path_level2)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#AnalyzerLists: default-text">AnalyzerLists: default</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#item_type=add-text">item_type=add</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>To</td>
+               <td><a href="#item_type=del-text">item_type=del</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>Processor</h5><pre class="brush: java;">private int pos_xml_data_type_numeric;
+private int pos_xml_element_level;
+private int pos_xml_data_name;
+private int pos_xml_data_value;
+private int pos_xml_path;
+
+private Long xml_data_type_numeric;
+private Long xml_element_level;
+private String xml_data_name;
+private String xml_path;
+
+private final static String DEFAULT="default";
+private String set_value=DEFAULT;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException 
+{
+  Object[] r=getRow();
+  if (r==null)
+  {
+    setOutputDone();
+	return false;
+  }
+
+  if (first) {
+	 // get field positions
+     pos_xml_data_type_numeric = getInputRowMeta().indexOfValue("xml_data_type_numeric");
+     pos_xml_element_level = getInputRowMeta().indexOfValue("xml_element_level");
+     pos_xml_data_name = getInputRowMeta().indexOfValue("xml_data_name");
+	 pos_xml_data_value = getInputRowMeta().indexOfValue("xml_data_value");
+     pos_xml_path = getInputRowMeta().indexOfValue("xml_path");
+     if (pos_xml_data_type_numeric&lt;0 || pos_xml_element_level&lt;0 || pos_xml_data_name&lt;0 || pos_xml_data_value&lt;0 || pos_xml_path&lt;0) {
+         throw new KettleException("One of the xml_ fields was not found.");
+     }
+	 
+     // get parameters
+	 xml_data_type_numeric=new Long(getParameter("xml_data_type_numeric"));
+     xml_element_level=new Long(getParameter("xml_element_level"));
+     xml_data_name=getParameter("xml_data_name");
+     xml_path=getParameter("xml_path");
+
+     first=false;
+  }
+ 
+  // set
+  if(r[pos_xml_data_type_numeric].equals(xml_data_type_numeric)) {
+    if(r[pos_xml_element_level].equals(xml_element_level)) {
+      if(r[pos_xml_data_name].equals(xml_data_name)) {
+        if(r[pos_xml_path].equals(xml_path)) {
+          set_value=(String)r[pos_xml_data_value];
+        }
+      }
+    }
+  }
+  // reset when level goes down again
+  if(((Long)r[pos_xml_element_level]).compareTo(xml_element_level)&lt;0) set_value=DEFAULT;
+
+  // find it in the Target steps definitions
+  RowSet targetRowSet=null;
+  try {
+    targetRowSet=findTargetRowSet(set_value);
+  } catch (Exception e) {
+    // not found: set it to default
+    targetRowSet=findTargetRowSet(DEFAULT);
+  }
+
+  putRowTo(getInputRowMeta(), r, targetRowSet);
+
+  return true;
+}</pre><hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="AnalyzerLists: default-text" href="#AnalyzerLists: default-icon">AnalyzerLists: default</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AnalyzerLists-text">AnalyzerLists</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SwitchCase"></div>
+      <h3 class="step-heading"><a name="AnalyzerResult: Switch / Case (xml_path_level2)-text" href="#AnalyzerResult: Switch / Case (xml_path_level2)-icon">AnalyzerResult: Switch / Case (xml_path_level2)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Switch / Case (xml_path_level1)-text">Switch / Case (xml_path_level1)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#AnalyzerLists-text">AnalyzerLists</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Analyzer Result: default-text">Analyzer Result: default</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Document Details-text" href="#Document Details-icon">Document Details</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Switch / Case (xml_path_level1)-text">Switch / Case (xml_path_level1)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter ProductID-text" href="#Filter ProductID-icon">Filter ProductID</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#item_type=add-text">item_type=add</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#item_type=del-text">item_type=del</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Select values: item-text">Select values: item</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter START/END ELEMENTS-text" href="#Filter START/END ELEMENTS-icon">Filter START/END ELEMENTS</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Split xml_parent_path to levels-text">Split xml_parent_path to levels</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter Value-text" href="#Filter Value-icon">Filter Value</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Products-text">Products</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values: product, attribute-text">Select values: product, attribute</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter name-text" href="#Filter name-icon">Filter name</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Products-text">Products</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values: product-text">Select values: product</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="Products-text" href="#Products-icon">Products</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Switch / Case (xml_path_level1)-text">Switch / Case (xml_path_level1)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter Value-text">Filter Value</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Filter name-text">Filter name</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>Processor</h5><pre class="brush: java;">// Repeat id and name in each row
+
+private int pos_xml_data_name;
+private int pos_xml_data_value;
+
+private int pos_new_field_1;
+private int pos_new_field_2;
+
+private String xml_data_name_1;
+private String xml_data_name_2;
+
+private String last_value_1;
+private String last_value_2;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException 
+{
+  Object[] r=getRow();
+  if (r==null)
+  {
+    setOutputDone();
+	return false;
+  }
+
+  if (first) {
+	 // get field positions (input)
+     pos_xml_data_name = getInputRowMeta().indexOfValue("xml_data_name");
+	 pos_xml_data_value = getInputRowMeta().indexOfValue("xml_data_value");
+
+     // get parameters
+     xml_data_name_1=getParameter("xml_data_name_1");
+     xml_data_name_2=getParameter("xml_data_name_2");
+
+	 // get field positions (output)
+     pos_new_field_1 = data.outputRowMeta.indexOfValue(xml_data_name_1);
+     pos_new_field_2 = data.outputRowMeta.indexOfValue(xml_data_name_2);
+
+     first=false;
+  }
+ 
+  // set
+  if(r[pos_xml_data_name].equals(xml_data_name_1)) {
+    last_value_1=(String)r[pos_xml_data_value];
+  }
+  if(r[pos_xml_data_name].equals(xml_data_name_2)) {
+    last_value_2=(String)r[pos_xml_data_value];
+  }
+
+  Object[] outputRowData = createOutputRow(r, data.outputRowMeta.size());
+
+  // append it to all rows
+  outputRowData[pos_new_field_1]=new String(Const.NVL((String)last_value_1,""));
+  outputRowData[pos_new_field_2]=new String(Const.NVL((String)last_value_2,""));
+
+  putRow(data.outputRowMeta, outputRowData);
+
+  return true;
+}</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>field_type</th>
+               <th>field_length</th>
+               <th>field_precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>AttributeID</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values: item-text" href="#Select values: item-icon">Select values: item</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter ProductID-text">Filter ProductID</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>item_type</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data_value</td>
+               <td>item_product_id</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values: product-text" href="#Select values: product-icon">Select values: product</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter name-text">Filter name</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>product_id</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data_value</td>
+               <td>product_name</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values: product, attribute-text" href="#Select values: product, attribute-icon">Select values: product, attribute</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter Value-text">Filter Value</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>product_id</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>AttributeID</td>
+               <td>attribute_id</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>xml_data_value</td>
+               <td>attribute_value</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FieldSplitter"></div>
+      <h3 class="step-heading"><a name="Split xml_parent_path to levels-text" href="#Split xml_parent_path to levels-icon">Split xml_parent_path to levels</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter START/END ELEMENTS-text">Filter START/END ELEMENTS</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Switch / Case (xml_path_level1)-text">Switch / Case (xml_path_level1)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>id</th>
+               <th>idrem</th>
+               <th>type</th>
+               <th>format</th>
+               <th>group</th>
+               <th>decimal</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>trimtype</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_path_level_empty_dummy</td>
+               <td></td>
+               <td>N</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_path_level0</td>
+               <td></td>
+               <td>N</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>xml_path_level1</td>
+               <td></td>
+               <td>N</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>xml_path_level2</td>
+               <td></td>
+               <td>N</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>xml_path_level3</td>
+               <td></td>
+               <td>N</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SwitchCase"></div>
+      <h3 class="step-heading"><a name="Switch / Case (xml_path_level1)-text" href="#Switch / Case (xml_path_level1)-icon">Switch / Case (xml_path_level1)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Split xml_parent_path to levels-text">Split xml_parent_path to levels</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#AnalyzerResult: Switch / Case (xml_path_level2)-text">AnalyzerResult: Switch / Case (xml_path_level2)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Document Details-text">Document Details</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>To</td>
+               <td><a href="#Products-text">Products</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX)-text" href="#XML Input Stream (StAX)-icon">XML Input Stream (StAX)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Filter START/END ELEMENTS-text">Filter START/END ELEMENTS</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="item_type=add-text" href="#item_type=add-icon">item_type=add</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AnalyzerLists-text">AnalyzerLists</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter ProductID-text">Filter ProductID</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>item_type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>add</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="item_type=del-text" href="#item_type=del-icon">item_type=del</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#AnalyzerLists-text">AnalyzerLists</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter ProductID-text">Filter ProductID</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>item_type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>del</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

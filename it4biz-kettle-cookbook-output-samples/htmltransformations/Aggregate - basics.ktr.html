@@ -1,0 +1,979 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Aggregate - basics.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Aggregate - basics.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Aggregate - basics</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 14:38:13.959</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td></td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (2)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Text file input-text">Text file input</a></div>
+                  <div><a href="#Text file input 2-text">Text file input 2</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 796px;&#xA;          height: 634px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 796px;&#xA;              height: 634px;&#xA;          "><a name="Aggregate Rows-icon"></a><div id="Aggregate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-AggregateRows" style="&#xA;                      left:128px;&#xA;                      top:210px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Aggregate Rows-text" style="&#xA;                      top:242px;&#xA;                      left:109.33333333333333px;                    &#xA;                  ">Aggregate Rows</a><a name="CalculateSum-icon"></a><div id="CalculateSum" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:683px;&#xA;                      top:221px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Result"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#CalculateSum-text" style="&#xA;                      top:253px;&#xA;                      left:667px;                    &#xA;                  ">CalculateSum</a><a name="Dummy (do nothing)-icon"></a><div id="Dummy (do nothing)" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:128px;&#xA;                      top:388px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing)-text" style="&#xA;                      top:420px;&#xA;                      left:104px;                    &#xA;                  ">Dummy (do nothing)</a><a name="Result-icon"></a><div id="Result" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:684px;&#xA;                      top:400px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Result-text" style="&#xA;                      top:432px;&#xA;                      left:676px;                    &#xA;                  ">Result</a><a name="Text file input-icon"></a><div id="Text file input" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileInput" style="&#xA;                      left:128px;&#xA;                      top:74px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Aggregate Rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Text file input-text" style="&#xA;                      top:106px;&#xA;                      left:108px;                    &#xA;                  ">Text file input</a><a name="Text file input 2-icon"></a><div id="Text file input 2" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileInput" style="&#xA;                      left:680px;&#xA;                      top:79px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#CalculateSum"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Text file input 2-text" style="&#xA;                      top:111px;&#xA;                      left:657.3333333333334px;                    &#xA;                  ">Text file input 2</a>
+            <pre class="note" style="&#xA;            left: 196px;&#xA;            top: 379px;&#xA;            width: 307px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">To see the result, do a preview on this Dummy step
+... or add an output step.</pre>
+            <pre class="note" style="&#xA;            left: 60px;&#xA;            top: 22px;&#xA;            width: 229px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Load the example fixed length textfile.</pre>
+            <pre class="note" style="&#xA;            left: 16px;&#xA;            top: 528px;&#xA;            width: 409px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2006-08-07 Jens Bleuel: created
+2006-09-08 Matt Casters: set input file location using Internal variable</pre>
+            <pre class="note" style="&#xA;            left: 197px;&#xA;            top: 177px;&#xA;            width: 370px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Count all not null values, BUT:
+This step type is deprecated --&gt; DON'T USE IT ANY MORE !!! 
+Please use the “Group By” step for a more powerful way of 
+aggregating rows of data.
+
+THE AGGREGATE STEP WILL BE REMOVED IN A
+FUTURE VERSION.</pre>
+            <pre class="note" style="&#xA;            left: 541px;&#xA;            top: 27px;&#xA;            width: 279px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This is the task done with the "Group By" step</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Text file input">Text file input</a>, <a href="#Text file input 2">Text file input 2</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AggregateRows"></div>
+      <h3 class="step-heading"><a name="Aggregate Rows-text" href="#Aggregate Rows-icon">Aggregate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Text file input-text">Text file input</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>InternetIsKnown</td>
+               <td>NumberOfRows</td>
+               <td>COUNT</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="CalculateSum-text" href="#CalculateSum-icon">CalculateSum</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Text file input 2-text">Text file input 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Result-text">Result</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Sum</td>
+               <td>InternetIsKnown</td>
+               <td>SUM</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing)-text" href="#Dummy (do nothing)-icon">Dummy (do nothing)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Aggregate Rows-text">Aggregate Rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Result-text" href="#Result-icon">Result</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#CalculateSum-text">CalculateSum</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileInput"></div>
+      <h3 class="step-heading"><a name="Text file input-text" href="#Text file input-icon">Text file input</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Aggregate Rows-text">Aggregate Rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>position</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>NotUsed</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>InternetIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>CompuServeIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>2</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>BTXIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>3</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>JoguBitsIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>4</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>InternetUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>5</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>CompuServeUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>8</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>BTXUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>11</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>JoguBitsReading</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>14</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>Status</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>15</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>Faculty</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>16</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>Semester</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>18</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>Age</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>20</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>Gender</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>22</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>15</th>
+               <td>Question1</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>23</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>16</th>
+               <td>Question2</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>24</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>17</th>
+               <td>Reserved</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>26</td>
+               <td>4</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>18</th>
+               <td>Remarks</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>30</td>
+               <td>32</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileInput"></div>
+      <h3 class="step-heading"><a name="Text file input 2-text" href="#Text file input 2-icon">Text file input 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#CalculateSum-text">CalculateSum</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>position</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>NotUsed</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>InternetIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>CompuServeIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>2</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>BTXIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>3</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>JoguBitsIsKnown</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>4</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>InternetUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>5</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>CompuServeUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>8</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>BTXUsagePerWeek</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td>.</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>11</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>JoguBitsReading</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>14</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>Status</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>15</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>Faculty</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>16</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>Semester</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>18</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>Age</td>
+               <td>Number</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>20</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>both</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>Gender</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>22</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>15</th>
+               <td>Question1</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>23</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>16</th>
+               <td>Question2</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>24</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>17</th>
+               <td>Reserved</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>26</td>
+               <td>4</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>18</th>
+               <td>Remarks</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>30</td>
+               <td>32</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

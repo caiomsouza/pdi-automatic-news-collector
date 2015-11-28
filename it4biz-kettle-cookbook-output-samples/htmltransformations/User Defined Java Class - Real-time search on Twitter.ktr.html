@@ -1,0 +1,482 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/User Defined Java Class - Real-time search on Twitter.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/User Defined Java Class - Real-time search on Twitter.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Twitter demo</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2012/02/24 11:35:52.416</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (0)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td></td>
+               <td></td>
+               <td>
+                  <div><a href="#pentaho_tweets-text">pentaho_tweets</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 516px;&#xA;          height: 254px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 516px;&#xA;              height: 254px;&#xA;          "><a name="Get Twitter Search results-icon"></a><div id="Get Twitter Search results" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:192px;&#xA;                      top:176px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#pentaho_tweets"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get Twitter Search results-text" style="&#xA;                      top:208px;&#xA;                      left:157.33333333333334px;                    &#xA;                  ">Get Twitter Search results</a><a name="pentaho_tweets-icon"></a><div id="pentaho_tweets" class="&#xA;                      step-icon&#xA;                      step-icon-InsertUpdate" style="&#xA;                      left:436px;&#xA;                      top:176px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#pentaho_tweets-text" style="&#xA;                      top:208px;&#xA;                      left:417.3333333333333px;                    &#xA;                  ">pentaho_tweets</a>
+            <pre class="note" style="&#xA;            left: 48px;&#xA;            top: 50px;&#xA;            width: 618px;&#xA;            height: px;&#xA;            font-family: SansSerif;&#xA;            font-size: 12;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,255&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">For this sample to work, you'll need to put the JTwitter jar into libext and restart  spoon
+JTwitter is hosted at http://www.winterwell.com/software/jtwitter.php 
+
+The sample is tested to work against JTwitter 2.4
+Don't forget to specify your username, password and search term on the paramters pane
+of the UDJC step!</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 1 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.Sampledata">Sampledata</a></th>
+               <td>H2</td>
+               <td>JNDI</td>
+               <td></td>
+               <td>1521</td>
+               <td></td>
+               <td><a href="#pentaho_tweets">pentaho_tweets</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.Sampledata">Sampledata</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>Sampledata</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>H2</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>JNDI</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="Get Twitter Search results-text" href="#Get Twitter Search results-icon">Get Twitter Search results</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#pentaho_tweets-text">pentaho_tweets</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>RowProcessor</h5><pre class="brush: java;">import java.util.*;
+import winterwell.jtwitter.*;
+import java.math.BigInteger;
+
+private Twitter twitter;
+private BigInteger lastId;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException 
+{
+  // java.util.List timeLine = twitter.getUserTimeline();
+
+  java.util.List timeLine = twitter.search(getParameter("SEARCH"));
+  logBasic("Received "+timeLine.size()+" tweets!");
+
+  // First see if we need to look at any of the status' reports
+  // Determine the maximum ID and compare it to last times status ID
+  //
+  BigInteger maxId=BigInteger.valueOf(-1L);
+  for (int i=0;i&lt;timeLine.size();i++) {
+    Status status = (Status)timeLine.get(i);
+    if (maxId.compareTo(status.getId()) == -1) {
+      maxId=status.getId();
+    }
+  }
+  
+  logBasic("Last processed id: "+lastId+", highest incoming is: "+maxId);
+  // Do we have anything to do with this batch of statuses?
+  //
+  if (maxId.compareTo(lastId) == 1) {
+    // Process all the status reports...
+    //
+    for (int i=0;i&lt;timeLine.size();i++) {
+      Status status = (Status)timeLine.get(i);
+      
+      // If the id is recent, process it
+      //
+      if (status.getId().compareTo(lastId) == 1) {
+        // New things to report...
+        //
+        Object[] rowData = RowDataUtil.allocateRowData(data.outputRowMeta.size());
+        int index = 0;
+
+        rowData[index++] = status.createdAt;
+        rowData[index++] = Long.valueOf(status.getId().longValue());
+        rowData[index++] = (status.inReplyToStatusId!=null)?Long.valueOf(status.inReplyToStatusId.longValue()):null;
+        rowData[index++] = status.getText();
+        rowData[index++] = status.getUser().toString();
+	    rowData[index++] = Boolean.valueOf(status.isFavorite());
+	
+        putRow(data.outputRowMeta, rowData);    
+      }
+    } 
+  } else {
+    // Wait for DELAY seconds before retrying
+    //
+    int delay = Integer.parseInt(getParameter("DELAY"));
+    for (int s=0;s&lt;1000 &amp;&amp; !isStopped();s++) {
+      try {
+	      Thread.sleep(delay);
+      } catch(Exception e) {
+          // Ignore
+      }
+    }
+  }
+
+  lastId=maxId;
+
+  // Never end, keep running indefinitely, always return true
+  //
+  return true;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface) {
+   if (super.init(stepMetaInterface, stepDataInterface)) {
+     twitter = new Twitter(getParameter("USER"), getParameter("PASSWD"));
+     lastId=BigInteger.valueOf(-1L);
+     return true;
+   }
+   return false;
+}
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>field_type</th>
+               <th>field_length</th>
+               <th>field_precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>createdAt</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>id</td>
+               <td>Integer</td>
+               <td>15</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>inReplyToStatusId</td>
+               <td>Integer</td>
+               <td>15</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>tweet</td>
+               <td>String</td>
+               <td>1000</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>username</td>
+               <td>String</td>
+               <td>1000</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>favorite</td>
+               <td>Boolean</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-InsertUpdate"></div>
+      <h3 class="step-heading"><a name="pentaho_tweets-text" href="#pentaho_tweets-icon">pentaho_tweets</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get Twitter Search results-text">Get Twitter Search results</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.Sampledata">Sampledata</a></td>
+               <td></td>
+               <td>pentaho_tweets</td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+               <th>condition</th>
+               <th>name2</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>=</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>update</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>inReplyToStatusId</td>
+               <td>inReplyToStatusId</td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>createdAt</td>
+               <td>createdAt</td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>tweet</td>
+               <td>tweet</td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>username</td>
+               <td>username</td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>favorite</td>
+               <td>favorite</td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

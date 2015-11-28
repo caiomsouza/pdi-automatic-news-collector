@@ -1,0 +1,300 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 1 - Basic Tests.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 1 - Basic Tests.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream StAX Test 1 - Basic Tests</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/05/20 01:55:17.431</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></div>
+                  <div><a href="#XML Input Stream (StAX) 2-text">XML Input Stream (StAX) 2</a></div>
+                  <div><a href="#XML Input Stream (StAX) 2 2-text">XML Input Stream (StAX) 2 2</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 555px;&#xA;          height: 690px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 555px;&#xA;              height: 690px;&#xA;          "><a name="Dummy (do nothing)-icon"></a><div id="Dummy (do nothing)" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:440px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing)-text" style="&#xA;                      top:152px;&#xA;                      left:416px;                    &#xA;                  ">Dummy (do nothing)</a><a name="XML Input Stream (StAX)-icon"></a><div id="XML Input Stream (StAX)" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:280px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX)-text" style="&#xA;                      top:152px;&#xA;                      left:249.33333333333334px;                    &#xA;                  ">XML Input Stream (StAX)</a><a name="Dummy (do nothing) 2-icon"></a><div id="Dummy (do nothing) 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:440px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2-text" style="&#xA;                      top:252px;&#xA;                      left:413.3333333333333px;                    &#xA;                  ">Dummy (do nothing) 2</a><a name="XML Input Stream (StAX) 2-icon"></a><div id="XML Input Stream (StAX) 2" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:280px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX) 2-text" style="&#xA;                      top:252px;&#xA;                      left:246.66666666666666px;                    &#xA;                  ">XML Input Stream (StAX) 2</a><a name="Dummy (do nothing) 2 2-icon"></a><div id="Dummy (do nothing) 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:440px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2 2-text" style="&#xA;                      top:332px;&#xA;                      left:410.6666666666667px;                    &#xA;                  ">Dummy (do nothing) 2 2</a><a name="XML Input Stream (StAX) 2 2-icon"></a><div id="XML Input Stream (StAX) 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:280px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX) 2 2-text" style="&#xA;                      top:332px;&#xA;                      left:244px;                    &#xA;                  ">XML Input Stream (StAX) 2 2</a>
+            <pre class="note" style="&#xA;            left: 13px;&#xA;            top: 12px;&#xA;            width: 382px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example parses the XML Input Stream (StAX) Test 1 - Basic Tests.xml
+and just returns all Elements and Attributes as they are in the file.
+Please see also the other more complex samples in the samples folder.</pre>
+            <pre class="note" style="&#xA;            left: 15px;&#xA;            top: 574px;&#xA;            width: 169px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-05-23 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 18px;&#xA;            top: 120px;&#xA;            width: 198px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Add all extra information to the stream:</pre>
+            <pre class="note" style="&#xA;            left: 24px;&#xA;            top: 212px;&#xA;            width: 132px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Limit Elements/Attributes</pre>
+            <pre class="note" style="&#xA;            left: 23px;&#xA;            top: 301px;&#xA;            width: 130px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Skip Elements/Attributes</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#XML Input Stream (StAX)">XML Input Stream (StAX)</a>, <a href="#XML Input Stream (StAX) 2">XML Input Stream (StAX) 2</a>, <a href="#XML Input Stream (StAX) 2 2">XML Input Stream (StAX) 2 2</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing)-text" href="#Dummy (do nothing)-icon">Dummy (do nothing)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX)-text" href="#XML Input Stream (StAX)-icon">XML Input Stream (StAX)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2-text" href="#Dummy (do nothing) 2-icon">Dummy (do nothing) 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX) 2-text">XML Input Stream (StAX) 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX) 2-text" href="#XML Input Stream (StAX) 2-icon">XML Input Stream (StAX) 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2-text">Dummy (do nothing) 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2 2-text" href="#Dummy (do nothing) 2 2-icon">Dummy (do nothing) 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX) 2 2-text">XML Input Stream (StAX) 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX) 2 2-text" href="#XML Input Stream (StAX) 2 2-icon">XML Input Stream (StAX) 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2 2-text">Dummy (do nothing) 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

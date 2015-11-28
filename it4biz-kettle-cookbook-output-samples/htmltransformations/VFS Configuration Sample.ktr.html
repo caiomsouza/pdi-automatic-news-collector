@@ -1,0 +1,410 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/VFS Configuration Sample.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/VFS Configuration Sample.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>VFS Configuration Sample</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2010/12/07 11:00:27.510</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 10 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>sftp_authkey_host</th>
+               <td>192.168.56.101</td>
+               <td>Key Authentication example host</td>
+            </tr>
+            <tr>
+               <th>sftp_authkey_path</th>
+               <td>home</td>
+               <td>Key Authentication example path on sftp server</td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_host</th>
+               <td></td>
+               <td>Username/Password  example host</td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_path</th>
+               <td></td>
+               <td>Username/Password Authentication example path on sftp server</td>
+            </tr>
+            <tr>
+               <th>vfs.http.proxyHost</th>
+               <td>192.168.1.250</td>
+               <td>A parameter that exists but is not used by any steps in this transformation</td>
+            </tr>
+            <tr>
+               <th>vfs.sftp.StrictHostKeyChecking</th>
+               <td>no</td>
+               <td>Accept the encryption key of any SFTP server</td>
+            </tr>
+            <tr>
+               <th>vfs.sftp.authkeypassphrase.192.168.56.101</th>
+               <td>password</td>
+               <td>The passphrase for the private key used for authentication to the specified SFTP host</td>
+            </tr>
+            <tr>
+               <th>vfs.sftp.identity.192.168.56.101</th>
+               <td>C:\temp\auth\private_key</td>
+               <td>The private key used for authentication to the specified SFTP host</td>
+            </tr>
+            <tr>
+               <th>zip_file_path</th>
+               <td>/c:/temp/temp.zip</td>
+               <td>Local path to a zip file</td>
+            </tr>
+            <tr>
+               <th>zip_internal_path</th>
+               <td></td>
+               <td>Path inside of zip file to extract</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#SFTP - Key Authentication-text">SFTP - Key Authentication</a></div>
+                  <div><a href="#SFTP - Standard Authentication-text">SFTP - Standard Authentication</a></div>
+                  <div><a href="#ZIP - Simple-text">ZIP - Simple</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 645px;&#xA;          height: 785px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 645px;&#xA;              height: 785px;&#xA;          "><a name="Preview Me-icon"></a><div id="Preview Me" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:445px;&#xA;                      top:189px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Preview Me-text" style="&#xA;                      top:221px;&#xA;                      left:431.6666666666667px;                    &#xA;                  ">Preview Me</a><a name="SFTP - Key Authentication-icon"></a><div id="SFTP - Key Authentication" class="&#xA;                      step-icon&#xA;                      step-icon-GetFileNames" style="&#xA;                      left:212px;&#xA;                      top:88px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview Me"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#SFTP - Key Authentication-text" style="&#xA;                      top:120px;&#xA;                      left:178.66666666666666px;                    &#xA;                  ">SFTP - Key Authentication</a><a name="SFTP - Standard Authentication-icon"></a><div id="SFTP - Standard Authentication" class="&#xA;                      step-icon&#xA;                      step-icon-GetFileNames" style="&#xA;                      left:210px;&#xA;                      top:189px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview Me"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#SFTP - Standard Authentication-text" style="&#xA;                      top:221px;&#xA;                      left:170px;                    &#xA;                  ">SFTP - Standard Authentication</a><a name="ZIP - Simple-icon"></a><div id="ZIP - Simple" class="&#xA;                      step-icon&#xA;                      step-icon-GetFileNames" style="&#xA;                      left:210px;&#xA;                      top:295px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview Me"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ZIP - Simple-text" style="&#xA;                      top:327px;&#xA;                      left:194px;                    &#xA;                  ">ZIP - Simple</a>
+            <pre class="note" style="&#xA;            left: 523px;&#xA;            top: 6px;&#xA;            width: 536px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The following MUST be set through variables for this example to run:
+sftp_authkey_username
+sftp_stdauth_username
+sftp_stdauth_password</pre>
+            <pre class="note" style="&#xA;            left: 9px;&#xA;            top: 459px;&#xA;            width: 721px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The VFS configuration options follow the format:
+vfs.scheme.parameter...
+
+Where:
+' vfs ' is required to indicate a VFS configuration option
+' scheme ' is required to indicate the VFS scheme against which the parameter will be applied
+' parameter ' is the name of the VFS-Scheme configuration parameter to apply
+
+Note: This is case sensitive.</pre>
+            <pre class="note" style="&#xA;            left: 10px;&#xA;            top: 410px;&#xA;            width: 585px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Any string configuration parameter of a VFS scheme is supported by default.</pre>
+            <pre class="note" style="&#xA;            left: 6px;&#xA;            top: 663px;&#xA;            width: 1283px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">SFTP Notes:
+The standard SFTP URL format is sftp://username:password@host:port/path
+If you are using private key authentication, password is not supported. If your key requires a passphrase you must use the 'authkeypassphrase' configuration parameter.
+
+The configuration options support limiting of the option to a specific host.
+This is accomplished by adding the hostname, seperated by a ' . ' after the parameter name.
+For instance, you may wish to turn of StrictHostKeyChecking for a specific host only.
+Examples:
+vfs.sftp.StrictHostKeyChecking.sftp.myhost.net
+vfs.sftp.StrictHostKeyChecking.192.168.1.5
+
+SFTP supports the following options:
+StrictHostKeyChecking - If 'no', the certificate of any remote host will be accepted. If 'yes', the remote host must exist in the known hosts file (~/.ssh/known_hosts).
+authkeypassphrase - An optional passphrase that may be required to use the identity key
+identity - The fully qualified path to the private key used for SFTP authentication
+</pre>
+            <pre class="note" style="&#xA;            left: 523px;&#xA;            top: 109px;&#xA;            width: 835px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example may be run using the following steps:
+1) From the menu: Transformation-&gt;Settings...
+2) Goto tab: Parameters
+3) Set the parameters to appropriate values
+4) Press OK
+5) Select 'Preview Me' and right click
+6) Select 'Preview' from the bottom of the menu
+7) Click 'Configure'
+8) Fill out the username and password variables appropriately
+    sftp_authkey_username
+    sftp_stdauth_username
+    sftp_stdauth_password
+    - WARNING: If there is a Parameter defined with the same name as a Variable, it WILL take prescedence.
+9) Click 'Launch'</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>sftp_authkey_username</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Key Authentication">SFTP - Key Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_authkey_host</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Key Authentication">SFTP - Key Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_authkey_path</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Key Authentication">SFTP - Key Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_username</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Standard Authentication">SFTP - Standard Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_password</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Standard Authentication">SFTP - Standard Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_host</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Standard Authentication">SFTP - Standard Authentication</a></td>
+            </tr>
+            <tr>
+               <th>sftp_stdauth_path</th>
+               <td></td>
+               <td></td>
+               <td><a href="#SFTP - Standard Authentication">SFTP - Standard Authentication</a></td>
+            </tr>
+            <tr>
+               <th>zip_file_path</th>
+               <td></td>
+               <td></td>
+               <td><a href="#ZIP - Simple">ZIP - Simple</a></td>
+            </tr>
+            <tr>
+               <th>zip_internal_path</th>
+               <td></td>
+               <td></td>
+               <td><a href="#ZIP - Simple">ZIP - Simple</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Preview Me-text" href="#Preview Me-icon">Preview Me</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#SFTP - Key Authentication-text">SFTP - Key Authentication</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#SFTP - Standard Authentication-text">SFTP - Standard Authentication</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>From</td>
+               <td><a href="#ZIP - Simple-text">ZIP - Simple</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetFileNames"></div>
+      <h3 class="step-heading"><a name="SFTP - Key Authentication-text" href="#SFTP - Key Authentication-icon">SFTP - Key Authentication</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Preview Me-text">Preview Me</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetFileNames"></div>
+      <h3 class="step-heading"><a name="SFTP - Standard Authentication-text" href="#SFTP - Standard Authentication-icon">SFTP - Standard Authentication</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Preview Me-text">Preview Me</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetFileNames"></div>
+      <h3 class="step-heading"><a name="ZIP - Simple-text" href="#ZIP - Simple-icon">ZIP - Simple</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Preview Me-text">Preview Me</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

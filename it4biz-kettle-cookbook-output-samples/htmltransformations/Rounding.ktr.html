@@ -1,0 +1,725 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Rounding.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Rounding.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Rounding</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2013/04/29 09:56:59.714</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (2)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#round_half_even.txt-text">round_half_even.txt</a></div>
+                  <div><a href="#round_half_up.txt-text">round_half_up.txt</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 796px;&#xA;          height: 613px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 796px;&#xA;              height: 613px;&#xA;          "><a name="Calculator ROUND-icon"></a><div id="Calculator ROUND" class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:220px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Check with precision"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator ROUND-text" style="&#xA;                      top:112px;&#xA;                      left:198.66666666666666px;                    &#xA;                  ">Calculator ROUND</a><a name="Calculator STDROUND-icon"></a><div id="Calculator STDROUND" class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:220px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Check with precision 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator STDROUND-text" style="&#xA;                      top:392px;&#xA;                      left:194.66666666666666px;                    &#xA;                  ">Calculator STDROUND</a><a name="Check no precision-icon"></a><div id="Check no precision" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:520px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#OK ROUND"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Filter rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Check no precision-text" style="&#xA;                      top:112px;&#xA;                      left:496px;                    &#xA;                  ">Check no precision</a><a name="Check no precision 2-icon"></a><div id="Check no precision 2" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:520px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#ERROR 2"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#OK STDROUND"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Check no precision 2-text" style="&#xA;                      top:392px;&#xA;                      left:493.3333333333333px;                    &#xA;                  ">Check no precision 2</a><a name="Check with precision-icon"></a><div id="Check with precision" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:380px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Check no precision"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#ERROR"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Check with precision-text" style="&#xA;                      top:112px;&#xA;                      left:353.3333333333333px;                    &#xA;                  ">Check with precision</a><a name="Check with precision 2-icon"></a><div id="Check with precision 2" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:380px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Check no precision 2"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#ERROR 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Check with precision 2-text" style="&#xA;                      top:392px;&#xA;                      left:350.6666666666667px;                    &#xA;                  ">Check with precision 2</a><a name="ERROR-icon"></a><div id="ERROR" class="&#xA;                      step-icon&#xA;                      step-icon-Abort" style="&#xA;                      left:380px;&#xA;                      top:180px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ERROR-text" style="&#xA;                      top:212px;&#xA;                      left:373.3333333333333px;                    &#xA;                  ">ERROR</a><a name="ERROR 2-icon"></a><div id="ERROR 2" class="&#xA;                      step-icon&#xA;                      step-icon-Abort" style="&#xA;                      left:440px;&#xA;                      top:500px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ERROR 2-text" style="&#xA;                      top:532px;&#xA;                      left:430.6666666666667px;                    &#xA;                  ">ERROR 2</a><a name="Filter rows-icon"></a><div id="Filter rows" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:520px;&#xA;                      top:180px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#ERROR"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#OK ROUND no decimals"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter rows-text" style="&#xA;                      top:212px;&#xA;                      left:505.3333333333333px;                    &#xA;                  ">Filter rows</a><a name="OK ROUND-icon"></a><div id="OK ROUND" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:680px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OK ROUND-text" style="&#xA;                      top:112px;&#xA;                      left:669.3333333333334px;                    &#xA;                  ">OK ROUND</a><a name="OK ROUND no decimals-icon"></a><div id="OK ROUND no decimals" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:680px;&#xA;                      top:180px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OK ROUND no decimals-text" style="&#xA;                      top:212px;&#xA;                      left:653.3333333333334px;                    &#xA;                  ">OK ROUND no decimals</a><a name="OK STDROUND-icon"></a><div id="OK STDROUND" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:680px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OK STDROUND-text" style="&#xA;                      top:392px;&#xA;                      left:665.3333333333334px;                    &#xA;                  ">OK STDROUND</a><a name="round_half_even.txt-icon"></a><div id="round_half_even.txt" class="&#xA;                      step-icon&#xA;                      step-icon-CsvInput" style="&#xA;                      left:80px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator ROUND"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#round_half_even.txt-text" style="&#xA;                      top:112px;&#xA;                      left:54.66666666666667px;                    &#xA;                  ">round_half_even.txt</a><a name="round_half_up.txt-icon"></a><div id="round_half_up.txt" class="&#xA;                      step-icon&#xA;                      step-icon-CsvInput" style="&#xA;                      left:80px;&#xA;                      top:360px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator STDROUND"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#round_half_up.txt-text" style="&#xA;                      top:392px;&#xA;                      left:57.33333333333333px;                    &#xA;                  ">round_half_up.txt</a>
+            <pre class="note" style="&#xA;            left: 12px;&#xA;            top: 15px;&#xA;            width: 484px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">ROUND functions, see http://wiki.pentaho.com/display/EAI/Calculator for details.</pre>
+            <pre class="note" style="&#xA;            left: 517px;&#xA;            top: 242px;&#xA;            width: 383px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Different rounding results with no decimals, see Documentation:&#xD;
+Returns the closest Integer to the argument for ROUND(A).</pre>
+            <pre class="note" style="&#xA;            left: 63px;&#xA;            top: 309px;&#xA;            width: 232px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">STDROUND function (round_half_up)</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#round_half_even.txt">round_half_even.txt</a>, <a href="#round_half_up.txt">round_half_up.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator ROUND-text" href="#Calculator ROUND-icon">Calculator ROUND</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#round_half_even.txt-text">round_half_even.txt</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Check with precision-text">Check with precision</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator STDROUND-text" href="#Calculator STDROUND-icon">Calculator STDROUND</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#round_half_up.txt-text">round_half_up.txt</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Check with precision 2-text">Check with precision 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Check no precision-text" href="#Check no precision-icon">Check no precision</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check with precision-text">Check with precision</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#OK ROUND-text">OK ROUND</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Filter rows-text">Filter rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Check no precision 2-text" href="#Check no precision 2-icon">Check no precision 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check with precision 2-text">Check with precision 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#ERROR 2-text">ERROR 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#OK STDROUND-text">OK STDROUND</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Check with precision-text" href="#Check with precision-icon">Check with precision</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Calculator ROUND-text">Calculator ROUND</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Check no precision-text">Check no precision</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#ERROR-text">ERROR</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Check with precision 2-text" href="#Check with precision 2-icon">Check with precision 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Calculator STDROUND-text">Calculator STDROUND</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Check no precision 2-text">Check no precision 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#ERROR 2-text">ERROR 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Abort"></div>
+      <h3 class="step-heading"><a name="ERROR-text" href="#ERROR-icon">ERROR</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check with precision-text">Check with precision</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Filter rows-text">Filter rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Abort"></div>
+      <h3 class="step-heading"><a name="ERROR 2-text" href="#ERROR 2-icon">ERROR 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check no precision 2-text">Check no precision 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Check with precision 2-text">Check with precision 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter rows-text" href="#Filter rows-icon">Filter rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check no precision-text">Check no precision</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#ERROR-text">ERROR</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#OK ROUND no decimals-text">OK ROUND no decimals</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="OK ROUND-text" href="#OK ROUND-icon">OK ROUND</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check no precision-text">Check no precision</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="OK ROUND no decimals-text" href="#OK ROUND no decimals-icon">OK ROUND no decimals</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter rows-text">Filter rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="OK STDROUND-text" href="#OK STDROUND-icon">OK STDROUND</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Check no precision 2-text">Check no precision 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-CsvInput"></div>
+      <h3 class="step-heading"><a name="round_half_even.txt-text" href="#round_half_even.txt-icon">round_half_even.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Calculator ROUND-text">Calculator ROUND</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>precision_round</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>value</td>
+               <td>BigNumber</td>
+               <td>0.000</td>
+               <td>$</td>
+               <td>.</td>
+               <td>,</td>
+               <td>4</td>
+               <td>3</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>expected_with_precision_round</td>
+               <td>BigNumber</td>
+               <td>0.000</td>
+               <td>$</td>
+               <td>.</td>
+               <td>,</td>
+               <td>4</td>
+               <td>3</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>exception_no_precision_round</td>
+               <td>BigNumber</td>
+               <td>0.000</td>
+               <td>$</td>
+               <td>.</td>
+               <td>,</td>
+               <td>4</td>
+               <td>3</td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-CsvInput"></div>
+      <h3 class="step-heading"><a name="round_half_up.txt-text" href="#round_half_up.txt-icon">round_half_up.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Calculator STDROUND-text">Calculator STDROUND</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>precision_round</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>value</td>
+               <td>BigNumber</td>
+               <td>0.000</td>
+               <td>$</td>
+               <td>.</td>
+               <td>,</td>
+               <td>4</td>
+               <td>3</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>expected_with_precision_round</td>
+               <td>BigNumber</td>
+               <td>0.000</td>
+               <td>$</td>
+               <td>.</td>
+               <td>,</td>
+               <td>4</td>
+               <td>3</td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

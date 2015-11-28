@@ -1,0 +1,320 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Pentaho Reporting Output Example.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Pentaho Reporting Output Example.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Pentaho Reporting Output Example</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/08/09 10:07:36.830</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Generate Reports-text">Generate Reports</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 639px;&#xA;          height: 324px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 639px;&#xA;              height: 324px;&#xA;          "><a name="Create Template and Output paths-icon"></a><div id="Create Template and Output paths" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:341px;&#xA;                      top:184px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate Reports"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Create Template and Output paths-text" style="&#xA;                      top:216px;&#xA;                      left:298.3333333333333px;                    &#xA;                  ">Create Template and Output paths</a><a name="Generate Reports-icon"></a><div id="Generate Reports" class="&#xA;                      step-icon&#xA;                      step-icon-PentahoReportingOutput" style="&#xA;                      left:547px;&#xA;                      top:185px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Reports-text" style="&#xA;                      top:217px;&#xA;                      left:525.6666666666666px;                    &#xA;                  ">Generate Reports</a><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:135px;&#xA;                      top:185px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Create Template and Output paths"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:217px;&#xA;                      left:117.66666666666667px;                    &#xA;                  ">Generate Rows</a>
+            <pre class="note" style="&#xA;            left: 36px;&#xA;            top: 112px;&#xA;            width: 217px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Create a row for Customer "333"</pre>
+            <pre class="note" style="&#xA;            left: 194px;&#xA;            top: 269px;&#xA;            width: 323px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Create the path\filename for the Report Template
+and the output name for the generated report.</pre>
+            <pre class="note" style="&#xA;            left: 431px;&#xA;            top: 73px;&#xA;            width: 358px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Generate the PDF Reports
+Please note that you need to start up the sampledata
+hypersonic database that ships with Pentaho BI Server
+in order for this sample to run successfully.</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Create Template and Output paths-text" href="#Create Template and Output paths-icon">Create Template and Output paths</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Generate Reports-text">Generate Reports</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">
+var Report_Template;
+var Report_Output;
+
+
+// Create full path combining transformation directory + filename
+Report_Template = getVariable("Internal.Transformation.Filename.Directory"," ")+Report_Template_name;
+Report_Output = getVariable("Internal.Transformation.Filename.Directory"," ")+Report_Output_name;
+
+// Trim the leading 'file:C///' characters from the full path
+Report_Template = substr(Report_Template,6);
+Report_Output = substr(Report_Output,6);</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Report_Template</td>
+               <td>Report_Template</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Report_Output</td>
+               <td>Report_Output</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-PentahoReportingOutput"></div>
+      <h3 class="step-heading"><a name="Generate Reports-text" href="#Generate Reports-icon">Generate Reports</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create Template and Output paths-text">Create Template and Output paths</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Create Template and Output paths-text">Create Template and Output paths</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>CustomerNo</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>333</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Output_type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>pdf</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Report_Template_name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>/files/Invoice_Statements.prpt</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Report_Output_name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>/output/invoice_output.pdf</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

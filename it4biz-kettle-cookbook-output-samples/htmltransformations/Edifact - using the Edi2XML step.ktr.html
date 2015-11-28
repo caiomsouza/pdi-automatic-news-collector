@@ -1,0 +1,642 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Edifact - using the Edi2XML step.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Edifact - using the Edi2XML step.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>read_orders</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/12/06 15:29:42.437</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (2)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Get data from XML-text">Get data from XML</a></div>
+                  <div><a href="#Load file content in memory-text">Load file content in memory</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 466px;&#xA;          height: 128px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 466px;&#xA;              height: 128px;&#xA;          "><a name="Edi to XML-icon"></a><div id="Edi to XML" class="&#xA;                      step-icon&#xA;                      step-icon-TypeExitEdi2XmlStep" style="&#xA;                      left:252px;&#xA;                      top:65px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Get data from XML"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Edi to XML-text" style="&#xA;                      top:97px;&#xA;                      left:238.66666666666666px;                    &#xA;                  ">Edi to XML</a><a name="Get data from XML-icon"></a><div id="Get data from XML" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:354px;&#xA;                      top:65px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get data from XML-text" style="&#xA;                      top:97px;&#xA;                      left:331.3333333333333px;                    &#xA;                  ">Get data from XML</a><a name="Load file content in memory-icon"></a><div id="Load file content in memory" class="&#xA;                      step-icon&#xA;                      step-icon-LoadFileInput" style="&#xA;                      left:122px;&#xA;                      top:65px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Edi to XML"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Load file content in memory-text" style="&#xA;                      top:97px;&#xA;                      left:86px;                    &#xA;                  ">Load file content in memory</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:460px;&#xA;                      top:65px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:97px;&#xA;                      left:442.6666666666667px;                    &#xA;                  ">Select values</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Load file content in memory">Load file content in memory</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TypeExitEdi2XmlStep"></div>
+      <h3 class="step-heading"><a name="Edi to XML-text" href="#Edi to XML-icon">Edi to XML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Load file content in memory-text">Load file content in memory</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Get data from XML-text">Get data from XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="Get data from XML-text" href="#Get data from XML-icon">Get data from XML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Edi to XML-text">Edi to XML</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Line item number</td>
+               <td>element[1]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Action request/notification, coded</td>
+               <td>element[2]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Item number</td>
+               <td>element[3]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Item number type, coded</td>
+               <td>element[3]/value[2]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>ITEMNUMBER</td>
+               <td>count(./preceding::LIN)+1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>Quantity qualifier</td>
+               <td>../QTY[number(@_ITEMNUMBER-)]/element[1]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>Quantity</td>
+               <td>../QTY[number(@_ITEMNUMBER-)]/element[1]/value[2]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>Text subject qualifier</td>
+               <td>../FTX[number(@_ITEMNUMBER-)]/element[1]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>Text function, coded</td>
+               <td>../FTX[number(@_ITEMNUMBER-)]/element[2]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>TEXT LITERAL</td>
+               <td>../FTX[number(@_ITEMNUMBER-)]/element[4]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>Supplier id identification</td>
+               <td>../NAD[element[1]/value[1]='SU']/element[2]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>Supplier Code list qualifier</td>
+               <td>../NAD[element[1]/value[1]='SU']/element[2]/value[3]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>Buyer id identification</td>
+               <td>../NAD[element[1]/value[1]='BY']/element[2]/value[1]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>Buyer Code list qualifier</td>
+               <td>../NAD[element[1]/value[1]='BY']/element[2]/value[3]</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-LoadFileInput"></div>
+      <h3 class="step-heading"><a name="Load file content in memory-text" href="#Load file content in memory-icon">Load file content in memory</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Edi to XML-text">Edi to XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>edi</td>
+               <td>content</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get data from XML-text">Get data from XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Line item number</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Action request/notification, coded</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Item number</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Item number type, coded</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>ITEMNUMBER</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>Quantity qualifier</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>Quantity</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>Text subject qualifier</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>Text function, coded</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>TEXT LITERAL</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>Supplier id identification</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>Supplier Code list qualifier</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>Buyer id identification</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>Buyer Code list qualifier</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

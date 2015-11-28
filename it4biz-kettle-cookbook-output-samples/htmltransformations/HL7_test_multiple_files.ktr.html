@@ -1,0 +1,557 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/HL7_test_multiple_files.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/HL7_test_multiple_files.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>HL7_test_multiple_files</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2012/02/10 16:11:24.040</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Load file content in memory-text">Load file content in memory</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 963px;&#xA;          height: 394px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 963px;&#xA;              height: 394px;&#xA;          "><a name="ADT_A01, non-empty-icon"></a><div id="ADT_A01, non-empty" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:622px;&#xA;                      top:227px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Extract fields"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ADT_A01, non-empty-text" style="&#xA;                      top:259px;&#xA;                      left:598px;                    &#xA;                  ">ADT_A01, non-empty</a><a name="Calculator-icon"></a><div id="Calculator" class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:342px;&#xA;                      top:227px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#ADT_A01, non-empty"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator-text" style="&#xA;                      top:259px;&#xA;                      left:328.6666666666667px;                    &#xA;                  ">Calculator</a><a name="Extract fields-icon"></a><div id="Extract fields" class="&#xA;                      step-icon&#xA;                      step-icon-Denormaliser" style="&#xA;                      left:862px;&#xA;                      top:227px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Extract fields-text" style="&#xA;                      top:259px;&#xA;                      left:843.3333333333334px;                    &#xA;                  ">Extract fields</a><a name="HL7 Input-icon"></a><div id="HL7 Input" class="&#xA;                      step-icon&#xA;                      step-icon-HL7Input" style="&#xA;                      left:122px;&#xA;                      top:227px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Remove content"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#HL7 Input-text" style="&#xA;                      top:259px;&#xA;                      left:110px;                    &#xA;                  ">HL7 Input</a><a name="Load file content in memory-icon"></a><div id="Load file content in memory" class="&#xA;                      step-icon&#xA;                      step-icon-LoadFileInput" style="&#xA;                      left:122px;&#xA;                      top:127px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#HL7 Input"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Load file content in memory-text" style="&#xA;                      top:159px;&#xA;                      left:86px;                    &#xA;                  ">Load file content in memory</a><a name="Remove content-icon"></a><div id="Remove content" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:242px;&#xA;                      top:227px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Remove content-text" style="&#xA;                      top:259px;&#xA;                      left:223.33333333333334px;                    &#xA;                  ">Remove content</a>
+            <pre class="note" style="&#xA;            left: 765px;&#xA;            top: 291px;&#xA;            width: 206px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Denormalize the stream into fields</pre>
+            <pre class="note" style="&#xA;            left: 563px;&#xA;            top: 291px;&#xA;            width: 155px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Filter by the parent group</pre>
+            <pre class="note" style="&#xA;            left: 281px;&#xA;            top: 296px;&#xA;            width: 211px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">code=StructureName+Coordinates</pre>
+            <pre class="note" style="&#xA;            left: 193px;&#xA;            top: 123px;&#xA;            width: 413px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Load all hl7_message_ test files into the data stream (one file per row)</pre>
+            <pre class="note" style="&#xA;            left: 101px;&#xA;            top: 298px;&#xA;            width: 71px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Parse HL7</pre>
+            <pre class="note" style="&#xA;            left: 27px;&#xA;            top: 32px;&#xA;            width: 484px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This sample shows a general process for multiple files and transforming into fields.</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Load file content in memory">Load file content in memory</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="ADT_A01, non-empty-text" href="#ADT_A01, non-empty-icon">ADT_A01, non-empty</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Calculator-text">Calculator</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Extract fields-text">Extract fields</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator-text" href="#Calculator-icon">Calculator</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Remove content-text">Remove content</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#ADT_A01, non-empty-text">ADT_A01, non-empty</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Denormaliser"></div>
+      <h3 class="step-heading"><a name="Extract fields-text" href="#Extract fields-icon">Extract fields</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#ADT_A01, non-empty-text">ADT_A01, non-empty</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>key_value</th>
+               <th>target_name</th>
+               <th>target_type</th>
+               <th>target_format</th>
+               <th>target_length</th>
+               <th>target_precision</th>
+               <th>target_decimal_symbol</th>
+               <th>target_grouping_symbol</th>
+               <th>target_currency_symbol</th>
+               <th>target_null_string</th>
+               <th>target_aggregation_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>value</td>
+               <td>MSH7.1.1.1</td>
+               <td>MessageDate</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>value</td>
+               <td>MSH10.1.1.1</td>
+               <td>MessageControlID</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>value</td>
+               <td>PID2.1.1.1</td>
+               <td>PatientID</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>value</td>
+               <td>PID5.1.1.1</td>
+               <td>FamilyName</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>value</td>
+               <td>PID5.1.2.1</td>
+               <td>GivenName</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>value</td>
+               <td>PID7.1.1.1</td>
+               <td>BirthDate</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>value</td>
+               <td>PID11.1.1.1</td>
+               <td>Street</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>value</td>
+               <td>PID11.1.3.1</td>
+               <td>City</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>value</td>
+               <td>PID11.1.5.1</td>
+               <td>ZipCode</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>value</td>
+               <td>PID11.2.6.1</td>
+               <td>Country</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>value</td>
+               <td>PID13.1.1.1</td>
+               <td>HomePhone</td>
+               <td>String</td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-HL7Input"></div>
+      <h3 class="step-heading"><a name="HL7 Input-text" href="#HL7 Input-icon">HL7 Input</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Load file content in memory-text">Load file content in memory</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Remove content-text">Remove content</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-LoadFileInput"></div>
+      <h3 class="step-heading"><a name="Load file content in memory-text" href="#Load file content in memory-icon">Load file content in memory</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#HL7 Input-text">HL7 Input</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>content</td>
+               <td>content</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Remove content-text" href="#Remove content-icon">Remove content</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#HL7 Input-text">HL7 Input</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Calculator-text">Calculator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>content</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

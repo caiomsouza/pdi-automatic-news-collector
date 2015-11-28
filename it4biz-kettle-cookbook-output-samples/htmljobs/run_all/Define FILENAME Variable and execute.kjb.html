@@ -1,0 +1,263 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/run_all/Define FILENAME Variable and execute.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/run_all/Define FILENAME Variable and execute.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: Launch transformation
+            relative-path: "jobs/run_all"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "Launch transformation"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Launch transformation</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2011/05/25 17:13:21.037</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td></td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This job defines 1 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>FILENAME</th>
+               <td></td>
+               <td>The filename of the transformation to execute</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 692px;&#xA;            height: 269px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 692px;&#xA;              height: 269px;&#xA;          "><a name="START-icon"></a><div id="START" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:149px;&#xA;                      top:137px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#Set ${FILENAME}"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:169px;&#xA;                      left:142.33333333333334px;&#xA;                  " href="#START-text">START</a><a name="DUMMY-icon"></a><div id="DUMMY" class="&#xA;                      entry-icon&#xA;                      entry-icon-DUMMY&#xA;                          entry-hidden&#xA;                      " style="&#xA;                      left:50px;&#xA;                      top:50px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      &#xA;                          entry-label-hidden&#xA;                      " style="&#xA;                      top:82px;&#xA;                      left:43.333333333333336px;&#xA;                  " href="#DUMMY-text">DUMMY</a><a name="OK-icon"></a><div id="OK" class="&#xA;                      entry-icon&#xA;                      entry-icon-EVAL&#xA;                          entry-hidden&#xA;                      " style="&#xA;                      left:0px;&#xA;                      top:0px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      &#xA;                          entry-label-hidden&#xA;                      " style="&#xA;                      top:32px;&#xA;                      left:-2.6666666666666665px;&#xA;                  " href="#OK-text">OK</a><a name="ERROR-icon"></a><div id="ERROR" class="&#xA;                      entry-icon&#xA;                      entry-icon-EVAL&#xA;                          entry-hidden&#xA;                      " style="&#xA;                      left:0px;&#xA;                      top:0px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      &#xA;                          entry-label-hidden&#xA;                      " style="&#xA;                      top:32px;&#xA;                      left:-6.666666666666667px;&#xA;                  " href="#ERROR-text">ERROR</a><a name="Execute ${FILENAME}-icon"></a><div id="Execute ${FILENAME}" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:564px;&#xA;                      top:141px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:173px;&#xA;                      left:538.6666666666666px;&#xA;                  " href="${FILENAME}.html">Execute ${FILENAME}</a><a name="Set ${FILENAME}-icon"></a><div id="Set ${FILENAME}" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:325px;&#xA;                      top:137px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Execute ${FILENAME}"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:169px;&#xA;                      left:305px;&#xA;                  " href="Set Variable.ktr.html">Set ${FILENAME}</a><pre class="note" style="&#xA;            left: 62px;&#xA;            top: 41px;&#xA;            width: 630px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 11;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This job uses a FILENAME parameter based on the result from a previous job or transformation.
+It uses it to execute a transformation with file name ${FILENAME}.</pre></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>FILENAME</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Execute ${FILENAME}">Execute ${FILENAME}</a>, <a href="#Set ${FILENAME}">Set ${FILENAME}</a></td>
+            </tr>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Set ${FILENAME}">Set ${FILENAME}</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="START-text" href="#START-icon">START</a></h3><pre><p class="description">A job starts to process here.</p></pre><h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Set ${FILENAME}-text">Set ${FILENAME}</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      DUMMY
+      A dummy entry.
+      SPECIAL
+      N
+      Y
+      N
+      0
+      0
+      0
+      12
+      0
+      1
+      1
+      N
+      N
+      0
+      50
+      50
+      
+      OK
+      This comparisson is true when no errors have occured.
+      EVAL
+      <pre class="brush: js;">errors == 0</pre>
+      N
+      N
+      0
+      0
+      0
+      
+      ERROR
+      This comparisson is true when one or more errors have occured.
+      EVAL
+      <pre class="brush: js;">errors != 0</pre>
+      N
+      N
+      0
+      0
+      0
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="Execute ${FILENAME}-text" href="#Execute ${FILENAME}-icon">Execute ${FILENAME}</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Set ${FILENAME}-text">Set ${FILENAME}</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="Set ${FILENAME}-text" href="#Set ${FILENAME}-icon">Set ${FILENAME}</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#START-text">START</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Execute ${FILENAME}-text">Execute ${FILENAME}</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

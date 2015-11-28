@@ -1,0 +1,720 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 6 - Namespaces.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 6 - Namespaces.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream StAX Test 6 - Namespaces</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/04/08 16:06:02.212</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#XML Input Stream (StAX) Test 6 - Namespaces.xml-text">XML Input Stream (StAX) Test 6 - Namespaces.xml</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 846px;&#xA;          height: 704px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 846px;&#xA;              height: 704px;&#xA;          "><a name="Alternate group on Level 2-icon"></a><div id="Alternate group on Level 2" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:140px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Only CHARACTERS"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Alternate group on Level 2-text" style="&#xA;                      top:352px;&#xA;                      left:105.33333333333334px;                    &#xA;                  ">Alternate group on Level 2</a><a name="Alternate group on Level 2 - JavaScript sample-icon"></a><div id="Alternate group on Level 2 - JavaScript sample" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:720px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Alternate group on Level 2 - JavaScript sample-text" style="&#xA;                      top:352px;&#xA;                      left:658.6666666666666px;                    &#xA;                  ">Alternate group on Level 2 - JavaScript sample</a><a name="Filter on NAMESPACE-icon"></a><div id="Filter on NAMESPACE" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:140px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Alternate group on Level 2"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#NAMESPACES"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter on NAMESPACE-text" style="&#xA;                      top:252px;&#xA;                      left:114.66666666666667px;                    &#xA;                  ">Filter on NAMESPACE</a><a name="NAMESPACES-icon"></a><div id="NAMESPACES" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:260px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#NAMESPACES-text" style="&#xA;                      top:252px;&#xA;                      left:246.66666666666666px;                    &#xA;                  ">NAMESPACES</a><a name="No END_ELEMENT-icon"></a><div id="No END_ELEMENT" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:140px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter on NAMESPACE"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#No END_ELEMENT-text" style="&#xA;                      top:172px;&#xA;                      left:121.33333333333333px;                    &#xA;                  ">No END_ELEMENT</a><a name="Only CHARACTERS-icon"></a><div id="Only CHARACTERS" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:140px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Row denormaliser"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Only CHARACTERS-text" style="&#xA;                      top:412px;&#xA;                      left:120px;                    &#xA;                  ">Only CHARACTERS</a><a name="Row denormaliser-icon"></a><div id="Row denormaliser" class="&#xA;                      step-icon&#xA;                      step-icon-Denormaliser" style="&#xA;                      left:140px;&#xA;                      top:440px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Row denormaliser-text" style="&#xA;                      top:472px;&#xA;                      left:118.66666666666667px;                    &#xA;                  ">Row denormaliser</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:140px;&#xA;                      top:500px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:532px;&#xA;                      left:122.66666666666667px;                    &#xA;                  ">Select values</a><a name="XML Input Stream (StAX) Test 6 - Namespaces.xml-icon"></a><div id="XML Input Stream (StAX) Test 6 - Namespaces.xml" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:140px;&#xA;                      top:80px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#No END_ELEMENT"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX) Test 6 - Namespaces.xml-text" style="&#xA;                      top:112px;&#xA;                      left:77.33333333333334px;                    &#xA;                  ">XML Input Stream (StAX) Test 6 - Namespaces.xml</a>
+            <pre class="note" style="&#xA;            left: 227px;&#xA;            top: 310px;&#xA;            width: 367px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Put a '1' or '-1' to the group field that alternates on each Level 2 element.
+(The JavaScript on the right is easier but slower.)</pre>
+            <pre class="note" style="&#xA;            left: 8px;&#xA;            top: 11px;&#xA;            width: 389px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example parses the XML Input Stream (StAX) Test 6 - Namespaces.xml
+and parses different fields.</pre>
+            <pre class="note" style="&#xA;            left: 7px;&#xA;            top: 587px;&#xA;            width: 169px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-05-29 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 190px;&#xA;            top: 81px;&#xA;            width: 209px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">"Add namespace information" is checked</pre>
+            <pre class="note" style="&#xA;            left: 223px;&#xA;            top: 446px;&#xA;            width: 156px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Move the rows to the columns</pre>
+            <pre class="note" style="&#xA;            left: 223px;&#xA;            top: 510px;&#xA;            width: 138px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Remove not needed fields</pre>
+            <pre class="note" style="&#xA;            left: 321px;&#xA;            top: 225px;&#xA;            width: 322px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">These namespace information could be used for later reference.</pre>
+            <pre class="note" style="&#xA;            left: 2px;&#xA;            top: 281px;&#xA;            width: 153px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Further processing the data...</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#XML Input Stream (StAX) Test 6 - Namespaces.xml">XML Input Stream (StAX) Test 6 - Namespaces.xml</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="Alternate group on Level 2-text" href="#Alternate group on Level 2-icon">Alternate group on Level 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter on NAMESPACE-text">Filter on NAMESPACE</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Only CHARACTERS-text">Only CHARACTERS</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>Processor</h5><pre class="brush: java;">private int pos_xml_element_level;
+
+private int pos_group;
+
+private int group=1;
+
+private static final int LEVEL_CHECK=2;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException 
+{
+  Object[] r=getRow();
+
+  if (r==null)
+  {
+    setOutputDone();
+	return false;
+  }
+
+  if (first) {
+	 // get field positions (input)
+     pos_xml_element_level = getInputRowMeta().indexOfValue("xml_element_level");
+
+	 // get field positions (output)
+     pos_group = data.outputRowMeta.indexOfValue("group");
+
+     if (pos_xml_element_level&lt;0 || pos_group&lt;0 ) {
+         throw new KettleException("One of the xml_ fields or output fields was not found.");
+     }
+	 
+     first=false;
+  }
+
+  if ((Long)r[pos_xml_element_level]==LEVEL_CHECK) {
+    group=group*(-1);
+  }
+
+  Object[] outputRowData = createOutputRow(r, data.outputRowMeta.size());
+  outputRowData[pos_group]=new Long(group);
+  putRow(data.outputRowMeta, outputRowData);
+
+  return true;
+}</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>field_type</th>
+               <th>field_length</th>
+               <th>field_precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Alternate group on Level 2 - JavaScript sample-text" href="#Alternate group on Level 2 - JavaScript sample-icon">Alternate group on Level 2 - JavaScript sample</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody></tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">//Script here
+
+if (xml_element_level==2) {
+	group=group*(-1);
+}</pre><h5>Start Script</h5><pre class="brush: js;">//Script here
+
+var group=1;</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group</td>
+               <td>group</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter on NAMESPACE-text" href="#Filter on NAMESPACE-icon">Filter on NAMESPACE</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#No END_ELEMENT-text">No END_ELEMENT</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Alternate group on Level 2-text">Alternate group on Level 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#NAMESPACES-text">NAMESPACES</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="NAMESPACES-text" href="#NAMESPACES-icon">NAMESPACES</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter on NAMESPACE-text">Filter on NAMESPACE</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data_name</td>
+               <td>Namespace_Prefix</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data_value</td>
+               <td>Namespace_URI</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="No END_ELEMENT-text" href="#No END_ELEMENT-icon">No END_ELEMENT</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX) Test 6 - Namespaces.xml-text">XML Input Stream (StAX) Test 6 - Namespaces.xml</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter on NAMESPACE-text">Filter on NAMESPACE</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Only CHARACTERS-text" href="#Only CHARACTERS-icon">Only CHARACTERS</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Alternate group on Level 2-text">Alternate group on Level 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Row denormaliser-text">Row denormaliser</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Denormaliser"></div>
+      <h3 class="step-heading"><a name="Row denormaliser-text" href="#Row denormaliser-icon">Row denormaliser</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Only CHARACTERS-text">Only CHARACTERS</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>key_value</th>
+               <th>target_name</th>
+               <th>target_type</th>
+               <th>target_format</th>
+               <th>target_length</th>
+               <th>target_precision</th>
+               <th>target_decimal_symbol</th>
+               <th>target_grouping_symbol</th>
+               <th>target_currency_symbol</th>
+               <th>target_null_string</th>
+               <th>target_aggregation_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/IsSuccessful</td>
+               <td>IsSuccessful</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/Message</td>
+               <td>Message</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProductInfo/Id</td>
+               <td>ProductInfo_Id</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProductInfo/Name</td>
+               <td>ProductInfo_Name</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProductInfo/Fruits:ProductGroup</td>
+               <td>ProductInfo_PG_Fruits</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProductInfo/Fish:ProductGroup</td>
+               <td>ProductInfo_PG_Fish</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProducerInfo/Id</td>
+               <td>ProducerInfo_Id</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ProducerInfo/Name</td>
+               <td>ProducerInfo_Name</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>xml_data_value</td>
+               <td>/ProductInfoResults/ProductInfoResult/ExtraInfoAvail</td>
+               <td>ExtraInfoAvail</td>
+               <td>String</td>
+               <td></td>
+               <td>256</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>CONCAT_COMMA</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Row denormaliser-text">Row denormaliser</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data_type_description</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_element_level</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>xml_data_name</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>group</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX) Test 6 - Namespaces.xml-text" href="#XML Input Stream (StAX) Test 6 - Namespaces.xml-icon">XML Input Stream (StAX) Test 6 - Namespaces.xml</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#No END_ELEMENT-text">No END_ELEMENT</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

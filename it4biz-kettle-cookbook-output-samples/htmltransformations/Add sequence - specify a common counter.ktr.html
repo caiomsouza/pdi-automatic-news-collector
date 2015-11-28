@@ -1,0 +1,411 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Add sequence - specify a common counter.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Add sequence - specify a common counter.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Add sequence - specify a common counter</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:38:58.379</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (3)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+                  <div><a href="#Row Gen [1]-text">Row Gen [1]</a></div>
+                  <div><a href="#Row Gen [2]-text">Row Gen [2]</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 664px;&#xA;          height: 836px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 664px;&#xA;              height: 836px;&#xA;          "><a name="Gen ID [1]-icon"></a><div id="Gen ID [1]" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:352px;&#xA;                      top:576px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Result 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Gen ID [1]-text" style="&#xA;                      top:608px;&#xA;                      left:338.6666666666667px;                    &#xA;                  ">Gen ID [1]</a><a name="Gen ID [2]-icon"></a><div id="Gen ID [2]" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:351px;&#xA;                      top:736px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Result 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Gen ID [2]-text" style="&#xA;                      top:768px;&#xA;                      left:337.6666666666667px;                    &#xA;                  ">Gen ID [2]</a><a name="Generate ID-icon"></a><div id="Generate ID" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:355px;&#xA;                      top:179px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Result"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate ID-text" style="&#xA;                      top:211px;&#xA;                      left:340.3333333333333px;                    &#xA;                  ">Generate ID</a><a name="Generate ID (2)-icon"></a><div id="Generate ID (2)" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:360px;&#xA;                      top:361px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Result"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate ID (2)-text" style="&#xA;                      top:393px;&#xA;                      left:340px;                    &#xA;                  ">Generate ID (2)</a><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:188px;&#xA;                      top:267px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate ID"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate ID (2)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:299px;&#xA;                      left:170.66666666666666px;                    &#xA;                  ">Generate Rows</a><a name="Result-icon"></a><div id="Result" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:563px;&#xA;                      top:251px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Result-text" style="&#xA;                      top:283px;&#xA;                      left:555px;                    &#xA;                  ">Result</a><a name="Result 2-icon"></a><div id="Result 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:568px;&#xA;                      top:655px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Result 2-text" style="&#xA;                      top:687px;&#xA;                      left:557.3333333333334px;                    &#xA;                  ">Result 2</a><a name="Row Gen [1]-icon"></a><div id="Row Gen [1]" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:158px;&#xA;                      top:631px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Gen ID [1]"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Row Gen [1]-text" style="&#xA;                      top:663px;&#xA;                      left:143.33333333333334px;                    &#xA;                  ">Row Gen [1]</a><a name="Row Gen [2]-icon"></a><div id="Row Gen [2]" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:157px;&#xA;                      top:698px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Gen ID [2]"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Row Gen [2]-text" style="&#xA;                      top:730px;&#xA;                      left:142.33333333333334px;                    &#xA;                  ">Row Gen [2]</a>
+            <pre class="note" style="&#xA;            left: 32px;&#xA;            top: 28px;&#xA;            width: 631px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">If you do a preview on the Result step you will note that the generated ID is unique.
+If you specify another counter name in either of the sequence generator steps, you will get duplicates.
+
+Step "Generate Rows" does not actually produce output. It creates 1000 empty lines and splits them evenly
+before they reach the two "Generate ID" steps (step type "sequence generator"). Both sequence generators
+do have the same "Counter name" (double click to edit and see the "Counter name" value). That makes the
+generated ids unique, even though they are produced by two different sequence generators.</pre>
+            <pre class="note" style="&#xA;            left: 45px;&#xA;            top: 472px;&#xA;            width: 611px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">You basically get the same result if you have 2 row generators (both generating 20 lines, with no
+actual output) that are linked to two ID sequence generators. Both ID sequence generators have got the
+same "counter name" and thus the finally created IDs are unique. The difference to the example above is
+that the generated IDs are in order (enumerated from 1..40).</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="Gen ID [1]-text" href="#Gen ID [1]-icon">Gen ID [1]</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Row Gen [1]-text">Row Gen [1]</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Result 2-text">Result 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="Gen ID [2]-text" href="#Gen ID [2]-icon">Gen ID [2]</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Row Gen [2]-text">Row Gen [2]</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Result 2-text">Result 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="Generate ID-text" href="#Generate ID-icon">Generate ID</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Result-text">Result</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="Generate ID (2)-text" href="#Generate ID (2)-icon">Generate ID (2)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Result-text">Result</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Generate ID-text">Generate ID</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Generate ID (2)-text">Generate ID (2)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Result-text" href="#Result-icon">Result</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate ID-text">Generate ID</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate ID (2)-text">Generate ID (2)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Result 2-text" href="#Result 2-icon">Result 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Gen ID [1]-text">Gen ID [1]</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Gen ID [2]-text">Gen ID [2]</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Row Gen [1]-text" href="#Row Gen [1]-icon">Row Gen [1]</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Gen ID [1]-text">Gen ID [1]</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Row Gen [2]-text" href="#Row Gen [2]-icon">Row Gen [2]</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Gen ID [2]-text">Gen ID [2]</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

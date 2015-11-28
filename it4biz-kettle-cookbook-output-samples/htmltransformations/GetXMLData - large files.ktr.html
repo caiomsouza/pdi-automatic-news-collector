@@ -1,0 +1,886 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/GetXMLData - large files.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/GetXMLData - large files.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>GetXMLData - large files</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:03.155</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (5)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#GetXMLData - test 1 - simple functionality test-text">GetXMLData - test 1 - simple functionality test</a></div>
+                  <div><a href="#GetXMLData - test 1 - simple functionality test - file read triple-text">GetXMLData - test 1 - simple functionality test - file read triple</a></div>
+                  <div><a href="#GetXMLData - test 2 - missing elements-text">GetXMLData - test 2 - missing elements</a></div>
+                  <div><a href="#GetXMLData - test 2 - missing elements 2-text">GetXMLData - test 2 - missing elements 2</a></div>
+                  <div><a href="#GetXMLData - test 3 - error handling-text">GetXMLData - test 3 - error handling</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 617px;&#xA;          height: 661px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 617px;&#xA;              height: 661px;&#xA;          "><a name="Conversion Errors-icon"></a><div id="Conversion Errors" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy&#xA;                          step-error&#xA;                      " style="&#xA;                      left:399px;&#xA;                      top:432px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Conversion Errors-text" style="&#xA;                      top:464px;&#xA;                      left:376.3333333333333px;                    &#xA;                  ">Conversion Errors</a><a name="Dummy (do nothing)-icon"></a><div id="Dummy (do nothing)" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:498px;&#xA;                      top:105px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing)-text" style="&#xA;                      top:137px;&#xA;                      left:474px;                    &#xA;                  ">Dummy (do nothing)</a><a name="Dummy (do nothing) 2-icon"></a><div id="Dummy (do nothing) 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:497px;&#xA;                      top:168px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2-text" style="&#xA;                      top:200px;&#xA;                      left:470.3333333333333px;                    &#xA;                  ">Dummy (do nothing) 2</a><a name="Dummy (do nothing) 2 2-icon"></a><div id="Dummy (do nothing) 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:497px;&#xA;                      top:235px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2 2-text" style="&#xA;                      top:267px;&#xA;                      left:467.6666666666667px;                    &#xA;                  ">Dummy (do nothing) 2 2</a><a name="Dummy (do nothing) 2 2 2-icon"></a><div id="Dummy (do nothing) 2 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:500px;&#xA;                      top:372px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2 2 2-text" style="&#xA;                      top:404px;&#xA;                      left:468px;                    &#xA;                  ">Dummy (do nothing) 2 2 2</a><a name="Dummy (do nothing) 3-icon"></a><div id="Dummy (do nothing) 3" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:501px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 3-text" style="&#xA;                      top:332px;&#xA;                      left:474.3333333333333px;                    &#xA;                  ">Dummy (do nothing) 3</a><a name="GetXMLData - test 1 - simple functionality test-icon"></a><div id="GetXMLData - test 1 - simple functionality test" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:259px;&#xA;                      top:105px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#GetXMLData - test 1 - simple functionality test-text" style="&#xA;                      top:137px;&#xA;                      left:196.33333333333334px;                    &#xA;                  ">GetXMLData - test 1 - simple functionality test</a><a name="GetXMLData - test 1 - simple functionality test - file read triple-icon"></a><div id="GetXMLData - test 1 - simple functionality test - file read triple" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:265px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#GetXMLData - test 1 - simple functionality test - file read triple-text" style="&#xA;                      top:332px;&#xA;                      left:177px;                    &#xA;                  ">GetXMLData - test 1 - simple functionality test - file read triple</a><a name="GetXMLData - test 2 - missing elements-icon"></a><div id="GetXMLData - test 2 - missing elements" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:263px;&#xA;                      top:168px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#GetXMLData - test 2 - missing elements-text" style="&#xA;                      top:200px;&#xA;                      left:212.33333333333334px;                    &#xA;                  ">GetXMLData - test 2 - missing elements</a><a name="GetXMLData - test 2 - missing elements 2-icon"></a><div id="GetXMLData - test 2 - missing elements 2" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:263px;&#xA;                      top:235px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#GetXMLData - test 2 - missing elements 2-text" style="&#xA;                      top:267px;&#xA;                      left:209.66666666666666px;                    &#xA;                  ">GetXMLData - test 2 - missing elements 2</a><a name="GetXMLData - test 3 - error handling-icon"></a><div id="GetXMLData - test 3 - error handling" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:266px;&#xA;                      top:372px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2 2 2"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                  step-hop-error&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Conversion Errors"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#GetXMLData - test 3 - error handling-text" style="&#xA;                      top:404px;&#xA;                      left:218px;                    &#xA;                  ">GetXMLData - test 3 - error handling</a>
+            <pre class="note" style="&#xA;            left: 40px;&#xA;            top: 247px;&#xA;            width: 89px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Limit to 1 line</pre>
+            <pre class="note" style="&#xA;            left: 12px;&#xA;            top: 15px;&#xA;            width: 848px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Tests for the option "Prune path to handle large files" (only functionality tests with small files).
+A larger test file with 300MB is available on the PDI online documentation for this step: http://wiki.pentaho.com/display/EAI/Get+Data+From+XML
+When you switch on detailed logging you will see messages like: "Streaming mode for processing large XML files is activated"
+Debug logging shows you more detailed messages.</pre>
+            <pre class="note" style="&#xA;            left: 41px;&#xA;            top: 382px;&#xA;            width: 91px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Error handling</pre>
+            <pre class="note" style="&#xA;            left: 37px;&#xA;            top: 176px;&#xA;            width: 112px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Missing elements</pre>
+            <pre class="note" style="&#xA;            left: 37px;&#xA;            top: 107px;&#xA;            width: 50px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Basics</pre>
+            <pre class="note" style="&#xA;            left: 40px;&#xA;            top: 548px;&#xA;            width: 197px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2008-09-16 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 40px;&#xA;            top: 312px;&#xA;            width: 78px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Read 3 files</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#GetXMLData - test 1 - simple functionality test">GetXMLData - test 1 - simple functionality test</a>, <a href="#GetXMLData - test 1 - simple functionality test - file read triple">GetXMLData - test 1 - simple functionality test - file read triple</a>, <a href="#GetXMLData - test 2 - missing elements">GetXMLData - test 2 - missing elements</a>, <a href="#GetXMLData - test 2 - missing elements 2">GetXMLData - test 2 - missing elements 2</a>, <a href="#GetXMLData - test 3 - error handling">GetXMLData - test 3 - error handling</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Conversion Errors-text" href="#Conversion Errors-icon">Conversion Errors</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 3 - error handling-text">GetXMLData - test 3 - error handling</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing)-text" href="#Dummy (do nothing)-icon">Dummy (do nothing)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 1 - simple functionality test-text">GetXMLData - test 1 - simple functionality test</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2-text" href="#Dummy (do nothing) 2-icon">Dummy (do nothing) 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 2 - missing elements-text">GetXMLData - test 2 - missing elements</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2 2-text" href="#Dummy (do nothing) 2 2-icon">Dummy (do nothing) 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 2 - missing elements 2-text">GetXMLData - test 2 - missing elements 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2 2 2-text" href="#Dummy (do nothing) 2 2 2-icon">Dummy (do nothing) 2 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 3 - error handling-text">GetXMLData - test 3 - error handling</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 3-text" href="#Dummy (do nothing) 3-icon">Dummy (do nothing) 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#GetXMLData - test 1 - simple functionality test - file read triple-text">GetXMLData - test 1 - simple functionality test - file read triple</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="GetXMLData - test 1 - simple functionality test-text" href="#GetXMLData - test 1 - simple functionality test-icon">GetXMLData - test 1 - simple functionality test</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>testDescription</td>
+               <td>../../@testDescription</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rowID</td>
+               <td>../@rowID</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>v1</td>
+               <td>v1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>v2</td>
+               <td>v2</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="GetXMLData - test 1 - simple functionality test - file read triple-text" href="#GetXMLData - test 1 - simple functionality test - file read triple-icon">GetXMLData - test 1 - simple functionality test - file read triple</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 3-text">Dummy (do nothing) 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>testDescription</td>
+               <td>../../@testDescription</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rowID</td>
+               <td>../@rowID</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>v1</td>
+               <td>v1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>v2</td>
+               <td>v2</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="GetXMLData - test 2 - missing elements-text" href="#GetXMLData - test 2 - missing elements-icon">GetXMLData - test 2 - missing elements</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2-text">Dummy (do nothing) 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>testDescription</td>
+               <td>../../@testDescription</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rowID</td>
+               <td>../@rowID</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>v1</td>
+               <td>v1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>v2</td>
+               <td>v2</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="GetXMLData - test 2 - missing elements 2-text" href="#GetXMLData - test 2 - missing elements 2-icon">GetXMLData - test 2 - missing elements 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2 2-text">Dummy (do nothing) 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>testDescription</td>
+               <td>../../@testDescription</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rowID</td>
+               <td>../@rowID</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>v1</td>
+               <td>v1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>v2</td>
+               <td>v2</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="GetXMLData - test 3 - error handling-text" href="#GetXMLData - test 3 - error handling-icon">GetXMLData - test 3 - error handling</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2 2 2-text">Dummy (do nothing) 2 2 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Conversion Errors-text">Conversion Errors</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>testDescription</td>
+               <td>../../@testDescription</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rowID</td>
+               <td>../@rowID</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>v1</td>
+               <td>v1</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>v2</td>
+               <td>v2</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

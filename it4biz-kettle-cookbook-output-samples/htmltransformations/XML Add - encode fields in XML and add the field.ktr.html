@@ -1,0 +1,889 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Add - encode fields in XML and add the field.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Add - encode fields in XML and add the field.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>xml demo</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 16:55:33.899</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>admin</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 939px;&#xA;          height: 510px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 939px;&#xA;              height: 510px;&#xA;          "><a name="Add dimensions to rectangles-icon"></a><div id="Add dimensions to rectangles" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:323px;&#xA;                      top:21px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Convert rectangle to XML"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Add dimensions to rectangles-text" style="&#xA;                      top:53px;&#xA;                      left:285.6666666666667px;                    &#xA;                  ">Add dimensions to rectangles</a><a name="Add radius to circles-icon"></a><div id="Add radius to circles" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:317px;&#xA;                      top:260px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Convert circle to XML class"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Add radius to circles-text" style="&#xA;                      top:292px;&#xA;                      left:289px;                    &#xA;                  ">Add radius to circles</a><a name="Add sequence-icon"></a><div id="Add sequence" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:139px;&#xA;                      top:129px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Create random shape classes"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Add sequence-text" style="&#xA;                      top:161px;&#xA;                      left:123px;                    &#xA;                  ">Add sequence</a><a name="Convert circle to XML class-icon"></a><div id="Convert circle to XML class" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:463px;&#xA;                      top:259px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Remove fluff from circles"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Convert circle to XML class-text" style="&#xA;                      top:291px;&#xA;                      left:427px;                    &#xA;                  ">Convert circle to XML class</a><a name="Convert rectangle to XML-icon"></a><div id="Convert rectangle to XML" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:473px;&#xA;                      top:20px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Remove fluff from rectangles"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Convert rectangle to XML-text" style="&#xA;                      top:52px;&#xA;                      left:441px;                    &#xA;                  ">Convert rectangle to XML</a><a name="Create random shape classes-icon"></a><div id="Create random shape classes" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:311px;&#xA;                      top:137px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Split rectangles and circles"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Create random shape classes-text" style="&#xA;                      top:169px;&#xA;                      left:275px;                    &#xA;                  ">Create random shape classes</a><a name="Dummy (do nothing)-icon"></a><div id="Dummy (do nothing)" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:845px;&#xA;                      top:147px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing)-text" style="&#xA;                      top:179px;&#xA;                      left:821px;                    &#xA;                  ">Dummy (do nothing)</a><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:34px;&#xA;                      top:128px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Add sequence"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:160px;&#xA;                      left:16.666666666666668px;                    &#xA;                  ">Generate Rows</a><a name="Remove fluff from circles-icon"></a><div id="Remove fluff from circles" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:619px;&#xA;                      top:202px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Remove fluff from circles-text" style="&#xA;                      top:234px;&#xA;                      left:585.6666666666666px;                    &#xA;                  ">Remove fluff from circles</a><a name="Remove fluff from rectangles-icon"></a><div id="Remove fluff from rectangles" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:711px;&#xA;                      top:75px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Remove fluff from rectangles-text" style="&#xA;                      top:107px;&#xA;                      left:673.6666666666666px;                    &#xA;                  ">Remove fluff from rectangles</a><a name="Split rectangles and circles-icon"></a><div id="Split rectangles and circles" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:468px;&#xA;                      top:135px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Add radius to circles"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Add dimensions to rectangles"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Split rectangles and circles-text" style="&#xA;                      top:167px;&#xA;                      left:430.6666666666667px;                    &#xA;                  ">Split rectangles and circles</a>
+            <pre class="note" style="&#xA;            left: 613px;&#xA;            top: 5px;&#xA;            width: 300px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Make a collection of Circle and Rectangle objects.
+Then save them in a single XML column</pre>
+            <pre class="note" style="&#xA;            left: 201px;&#xA;            top: 387px;&#xA;            width: 534px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">CHANGE LOG
+-----------------
+
+2006/10/12 - Initial version by David Zverina
+2006/10/13 - Modified by Matt Casters: removed Table Output step, used a dummy instead</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Add dimensions to rectangles-text" href="#Add dimensions to rectangles-icon">Add dimensions to rectangles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Split rectangles and circles-text">Split rectangles and circles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Convert rectangle to XML-text">Convert rectangle to XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>LENGTH</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>6</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>WIDTH</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>4</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Add radius to circles-text" href="#Add radius to circles-icon">Add radius to circles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Split rectangles and circles-text">Split rectangles and circles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Convert circle to XML class-text">Convert circle to XML class</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>RADIUS</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>5</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="Add sequence-text" href="#Add sequence-icon">Add sequence</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Create random shape classes-text">Create random shape classes</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="Convert circle to XML class-text" href="#Convert circle to XML class-icon">Convert circle to XML class</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Add radius to circles-text">Add radius to circles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Remove fluff from circles-text">Remove fluff from circles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>SHAPE</td>
+               <td>type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>COLOUR</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>RADIUS</td>
+               <td></td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="Convert rectangle to XML-text" href="#Convert rectangle to XML-icon">Convert rectangle to XML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Add dimensions to rectangles-text">Add dimensions to rectangles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Remove fluff from rectangles-text">Remove fluff from rectangles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>SHAPE</td>
+               <td>type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>COLOUR</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>WIDTH</td>
+               <td></td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>LENGTH</td>
+               <td></td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Create random shape classes-text" href="#Create random shape classes-icon">Create random shape classes</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Add sequence-text">Add sequence</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Split rectangles and circles-text">Split rectangles and circles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">A.setValue(Math.floor(Math.random() * 10))
+B.setValue(Math.floor(Math.random() * 10))
+SHAPE.setValue(Math.random()&gt;.5 ? "circle" : "rectangle");
+COLOUR.setValue(Math.random()&gt;.5 ? "red" : "blue");
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>A</td>
+               <td>X</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>B</td>
+               <td>Y</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing)-text" href="#Dummy (do nothing)-icon">Dummy (do nothing)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Remove fluff from circles-text">Remove fluff from circles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Remove fluff from rectangles-text">Remove fluff from rectangles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Add sequence-text">Add sequence</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>A</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>B</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>SHAPE</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>rectangle</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>COLOUR</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>blue</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Remove fluff from circles-text" href="#Remove fluff from circles-icon">Remove fluff from circles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Convert circle to XML class-text">Convert circle to XML class</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>A</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>B</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>SHAPE</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>COLOUR</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>RADIUS</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Remove fluff from rectangles-text" href="#Remove fluff from rectangles-icon">Remove fluff from rectangles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Convert rectangle to XML-text">Convert rectangle to XML</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>A</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>B</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>SHAPE</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>COLOUR</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>LENGTH</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>WIDTH</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Split rectangles and circles-text" href="#Split rectangles and circles-icon">Split rectangles and circles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create random shape classes-text">Create random shape classes</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Add radius to circles-text">Add radius to circles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Add dimensions to rectangles-text">Add dimensions to rectangles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/dynamic-table/Dynamic table creation and population.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/dynamic-table/Dynamic table creation and population.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: Dynamic table creation and population
+            relative-path: "transformations/dynamic-table"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "Dynamic table creation and population"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Dynamic table creation and population</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2012/06/29 10:32:35.614</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This job does not define any parameters.
+         
+      </p>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 456px;&#xA;            height: 128px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 456px;&#xA;              height: 128px;&#xA;          "><a name="START-icon"></a><div id="START" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:104px;&#xA;                      top:95px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#Create table"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:127px;&#xA;                      left:97.33333333333333px;&#xA;                  " href="#START-text">START</a><a name="Create table-icon"></a><div id="Create table" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:268px;&#xA;                      top:95px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#populate table"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:127px;&#xA;                      left:252px;&#xA;                  " href="Create table.ktr.html">Create table</a><a name="populate table-icon"></a><div id="populate table" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:432px;&#xA;                      top:95px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:127px;&#xA;                      left:413.3333333333333px;&#xA;                  " href="populate table.ktr.html">populate table</a></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Create table">Create table</a>, <a href="#populate table">populate table</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="START-text" href="#START-icon">START</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Create table-text">Create table</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="Create table-text" href="#Create table-icon">Create table</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#START-text">START</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#populate table-text">populate table</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="populate table-text" href="#populate table-icon">populate table</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create table-text">Create table</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

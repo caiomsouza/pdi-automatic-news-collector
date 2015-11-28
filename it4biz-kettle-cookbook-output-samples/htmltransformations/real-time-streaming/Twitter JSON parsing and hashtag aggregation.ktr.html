@@ -1,0 +1,788 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/real-time-streaming/Twitter JSON parsing and hashtag aggregation.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/real-time-streaming/Twitter JSON parsing and hashtag aggregation.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations/real-time-streaming"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Twitter JSON parsing and hashtag aggregation</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/07/27 21:48:07.317</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (2)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Json Input-text">Json Input</a></div>
+                  <div><a href="#Mapping input specification-text">Mapping input specification</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Mapping output specification-text">Mapping output specification</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 1217px;&#xA;          height: 207px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 1217px;&#xA;              height: 207px;&#xA;          "><a name="Convert English date-icon"></a><div id="Convert English date" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:315px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#5 hashtag rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Convert English date-text" style="&#xA;                      top:116px;&#xA;                      left:288.3333333333333px;                    &#xA;                  ">Convert English date</a><a name="Json Input-icon"></a><div id="Json Input" class="&#xA;                      step-icon&#xA;                      step-icon-JsonInput" style="&#xA;                      left:194px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Convert English date"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Json Input-text" style="&#xA;                      top:116px;&#xA;                      left:180.66666666666666px;                    &#xA;                  ">Json Input</a><a name="Mapping input specification-icon"></a><div id="Mapping input specification" class="&#xA;                      step-icon&#xA;                      step-icon-MappingInput" style="&#xA;                      left:73px;&#xA;                      top:156px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Json Input"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Mapping input specification-text" style="&#xA;                      top:188px;&#xA;                      left:37px;                    &#xA;                  ">Mapping input specification</a><a name="Mapping output specification-icon"></a><div id="Mapping output specification" class="&#xA;                      step-icon&#xA;                      step-icon-MappingOutput" style="&#xA;                      left:1162px;&#xA;                      top:163px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Mapping output specification-text" style="&#xA;                      top:195px;&#xA;                      left:1124.6666666666667px;                    &#xA;                  ">Mapping output specification</a><a name="count hashtags-icon"></a><div id="count hashtags" class="&#xA;                      step-icon&#xA;                      step-icon-MemoryGroupBy" style="&#xA;                      left:678px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter out singles"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#count hashtags-text" style="&#xA;                      top:116px;&#xA;                      left:659.3333333333334px;                    &#xA;                  ">count hashtags</a><a name="No empty hashtag-icon"></a><div id="No empty hashtag" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:557px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#count hashtags"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#No empty hashtag-text" style="&#xA;                      top:116px;&#xA;                      left:535.6666666666666px;                    &#xA;                  ">No empty hashtag</a><a name="5 hashtag rows-icon"></a><div id="5 hashtag rows" class="&#xA;                      step-icon&#xA;                      step-icon-Normaliser" style="&#xA;                      left:436px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#No empty hashtag"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#5 hashtag rows-text" style="&#xA;                      top:116px;&#xA;                      left:417.3333333333333px;                    &#xA;                  ">5 hashtag rows</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:920px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#batch date range"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:116px;&#xA;                      left:908px;                    &#xA;                  ">Sort rows</a><a name="batch date range-icon"></a><div id="batch date range" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:1041px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Mapping output specification"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#batch date range-text" style="&#xA;                      top:116px;&#xA;                      left:1019.6666666666666px;                    &#xA;                  ">batch date range</a><a name="Filter out singles-icon"></a><div id="Filter out singles" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:799px;&#xA;                      top:84px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter out singles-text" style="&#xA;                      top:116px;&#xA;                      left:775px;                    &#xA;                  ">Filter out singles</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Convert English date-text" href="#Convert English date-icon">Convert English date</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Json Input-text">Json Input</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#5 hashtag rows-text">5 hashtag rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">
+
+var created_at = str2date(created_tmp, "EEE MMM d HH:mm:ss Z yyyy", "EN");</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>created_at</td>
+               <td>created_at</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JsonInput"></div>
+      <h3 class="step-heading"><a name="Json Input-text" href="#Json Input-icon">Json Input</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Mapping input specification-text">Mapping input specification</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Convert English date-text">Convert English date</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>path</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>text</td>
+               <td>$.text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>id</td>
+               <td>$.id</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>delete</td>
+               <td>$.delete</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>retweet_count</td>
+               <td>$.retweet_count</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>hashtag0</td>
+               <td>$.entities.hashtags[0].text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>hashtag1</td>
+               <td>$.entities.hashtags[1].text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>hashtag2</td>
+               <td>$.entities.hashtags[2].text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>hashtag3</td>
+               <td>$.entities.hashtags[3].text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>hashtag4</td>
+               <td>$.entities.hashtags[4].text</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>created_tmp</td>
+               <td>$.created_at</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-MappingInput"></div>
+      <h3 class="step-heading"><a name="Mapping input specification-text" href="#Mapping input specification-icon">Mapping input specification</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Json Input-text">Json Input</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>json</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-MappingOutput"></div>
+      <h3 class="step-heading"><a name="Mapping output specification-text" href="#Mapping output specification-icon">Mapping output specification</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#batch date range-text">batch date range</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-MemoryGroupBy"></div>
+      <h3 class="step-heading"><a name="count hashtags-text" href="#count hashtags-icon">count hashtags</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#No empty hashtag-text">No empty hashtag</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter out singles-text">Filter out singles</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>count</td>
+               <td>id</td>
+               <td>COUNT_ALL</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>date_from</td>
+               <td>created_at</td>
+               <td>MIN</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>date_to</td>
+               <td>created_at</td>
+               <td>MAX</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="No empty hashtag-text" href="#No empty hashtag-icon">No empty hashtag</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#5 hashtag rows-text">5 hashtag rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#count hashtags-text">count hashtags</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Normaliser"></div>
+      <h3 class="step-heading"><a name="5 hashtag rows-text" href="#5 hashtag rows-icon">5 hashtag rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Convert English date-text">Convert English date</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#No empty hashtag-text">No empty hashtag</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>value</th>
+               <th>norm</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>hashtag0</td>
+               <td>0</td>
+               <td>hashtag</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>hashtag1</td>
+               <td>1</td>
+               <td>hashtag</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>hashtag2</td>
+               <td>2</td>
+               <td>hashtag</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>hashtag3</td>
+               <td>3</td>
+               <td>hashtag</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>hashtag4</td>
+               <td>4</td>
+               <td>hashtag</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter out singles-text">Filter out singles</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#batch date range-text">batch date range</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>count</td>
+               <td>N</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>hashtag</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>date_from</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>date_to</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="batch date range-text" href="#batch date range-icon">batch date range</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Mapping output specification-text">Mapping output specification</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>from</td>
+               <td>date_from</td>
+               <td>MIN</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>to</td>
+               <td>date_to</td>
+               <td>MAX</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter out singles-text" href="#Filter out singles-icon">Filter out singles</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#count hashtags-text">count hashtags</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

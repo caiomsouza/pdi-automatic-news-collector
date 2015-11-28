@@ -1,0 +1,820 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Regex Eval - parse NCSA access log records.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Regex Eval - parse NCSA access log records.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>regex_capture_access_logs</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 16:12:08.685</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (4)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate lots of access log records-text">Generate lots of access log records</a></div>
+                  <div><a href="#Generate one bad record-text">Generate one bad record</a></div>
+                  <div><a href="#Generate one record with no referrer (nullif example)-text">Generate one record with no referrer (nullif example)</a></div>
+                  <div><a href="#Generate one record with no user_agent (nullif+ifnull example)-text">Generate one record with no user_agent (nullif+ifnull example)</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 523px;&#xA;          height: 428px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 523px;&#xA;              height: 428px;&#xA;          "><a name="Append streams-icon"></a><div id="Append streams" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:355px;&#xA;                      top:116px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams-text" style="&#xA;                      top:148px;&#xA;                      left:336.3333333333333px;                    &#xA;                  ">Append streams</a><a name="Append streams 2-icon"></a><div id="Append streams 2" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:355px;&#xA;                      top:216px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams 2-text" style="&#xA;                      top:248px;&#xA;                      left:333.6666666666667px;                    &#xA;                  ">Append streams 2</a><a name="Append streams 3-icon"></a><div id="Append streams 3" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:355px;&#xA;                      top:316px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Regex Evaluation"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams 3-text" style="&#xA;                      top:348px;&#xA;                      left:333.6666666666667px;                    &#xA;                  ">Append streams 3</a><a name="Generate lots of access log records-icon"></a><div id="Generate lots of access log records" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:100px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate lots of access log records-text" style="&#xA;                      top:352px;&#xA;                      left:53.333333333333336px;                    &#xA;                  ">Generate lots of access log records</a><a name="Generate one bad record-icon"></a><div id="Generate one bad record" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:100px;&#xA;                      top:20px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate one bad record-text" style="&#xA;                      top:52px;&#xA;                      left:69.33333333333333px;                    &#xA;                  ">Generate one bad record</a><a name="Generate one record with no referrer (nullif example)-icon"></a><div id="Generate one record with no referrer (nullif example)" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:100px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate one record with no referrer (nullif example)-text" style="&#xA;                      top:152px;&#xA;                      left:29.33333333333333px;                    &#xA;                  ">Generate one record with no referrer (nullif example)</a><a name="Generate one record with no user_agent (nullif+ifnull example)-icon"></a><div id="Generate one record with no user_agent (nullif+ifnull example)" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:100px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate one record with no user_agent (nullif+ifnull example)-text" style="&#xA;                      top:252px;&#xA;                      left:17.33333333333333px;                    &#xA;                  ">Generate one record with no user_agent (nullif+ifnull example)</a><a name="Regex Evaluation-icon"></a><div id="Regex Evaluation" class="&#xA;                      step-icon&#xA;                      step-icon-RegexEval" style="&#xA;                      left:495px;&#xA;                      top:316px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Regex Evaluation-text" style="&#xA;                      top:348px;&#xA;                      left:473.6666666666667px;                    &#xA;                  ">Regex Evaluation</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams-text" href="#Append streams-icon">Append streams</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate one bad record-text">Generate one bad record</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate one record with no referrer (nullif example)-text">Generate one record with no referrer (nullif example)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams 2-text" href="#Append streams 2-icon">Append streams 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate one record with no user_agent (nullif+ifnull example)-text">Generate one record with no user_agent (nullif+ifnull example)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams 3-text" href="#Append streams 3-icon">Append streams 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Generate lots of access log records-text">Generate lots of access log records</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Regex Evaluation-text">Regex Evaluation</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate lots of access log records-text" href="#Generate lots of access log records-icon">Generate lots of access log records</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>line</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>127.0.0.1 - - [01/Jan/2008:00:00:00 -0800] "GET / HTTP/1.1" 200 50 "http://localhost/" "Mozilla/5.0 (Windows; U; Windows NT
+                  5.1; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0"
+               </td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate one bad record-text" href="#Generate one bad record-icon">Generate one bad record</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>line</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>127.0.0.1 - - [01/Jan/2008:00:00:00 -0800] "DELETE /this_is_a_row_that_will_not_match HTTP/1.1" 200 50 "http://localhost/"
+                  "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0"
+               </td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate one record with no referrer (nullif example)-text" href="#Generate one record with no referrer (nullif example)-icon">Generate one record with no referrer (nullif example)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>line</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>127.0.0.1 - - [01/Jan/2008:00:00:00 -0800] "GET / HTTP/1.1" 200 50 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1)
+                  Gecko/20061010 Firefox/2.0"
+               </td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate one record with no user_agent (nullif+ifnull example)-text" href="#Generate one record with no user_agent (nullif+ifnull example)-icon">Generate one record with no user_agent (nullif+ifnull example)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>line</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>127.0.0.1 - - [01/Jan/2008:00:00:00 -0800] "GET / HTTP/1.1" 200 50 "http://localhost/" "-"</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RegexEval"></div>
+      <h3 class="step-heading"><a name="Regex Evaluation-text" href="#Regex Evaluation-icon">Regex Evaluation</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><pre class="brush: js;">^([^\s]{7,15})\s            # client_ip
+-\s                         # unused IDENT field
+-\s                         # unused USER field
+\[((\d{2})/(\w{3})/(\d{4})  # request date dd/MMM/yyyy
+:(\d{2}):(\d{2}):(\d{2})\s([-+ ]\d{4}))\]
+                            # request time :HH:mm:ss -0800
+\s"(GET|POST)\s             # HTTP verb
+([^\s]*)                     # HTTP URI
+\sHTTP/1\.[01]"\s           # HTTP version
+
+(\d{3})\s                   # HTTP status code
+(\d+)\s                     # bytes returned
+"([^"]+)"\s                 # referrer field
+
+"                           # User agent parsing, always quoted.
+"?                          # Sometimes if the user spoofs the user_agent, they incorrectly quote it.
+(                           # The UA string
+  [^"]*?                    # Uninteresting bits
+  (?:
+    (?:
+     rv:                    # Beginning of the gecko engine version token
+     (?=[^;)]{3,15}[;)])    # ensure version string size
+     (                      # Whole gecko version
+       (\d{1,2})                   # version_component_major
+       \.(\d{1,2}[^.;)]{0,8})      # version_component_minor
+       (?:\.(\d{1,2}[^.;)]{0,8}))? # version_component_a
+       (?:\.(\d{1,2}[^.;)]{0,8}))? # version_component_b
+     )
+     [^"]*                  # More uninteresting bits
+    )
+   |
+    [^"]*                   # More uninteresting bits
+  )
+)                           # End of UA string
+"?
+"</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>group</th>
+               <th>decimal</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>trimtype</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>client_ip</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>full_request_date</td>
+               <td>Date</td>
+               <td>dd/MMM/yyyy:HH:mm:ss Z</td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>day</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>month</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>year</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>hour</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>minute</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>second</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>tz</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>http_verb</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>URI</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>http_status_code</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>bytes_returned</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>referrer</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>-</td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>15</th>
+               <td>user_agent</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>-</td>
+               <td>Unknown</td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>16</th>
+               <td>firefox_gecko_version</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>17</th>
+               <td>firefox_gecko_version_major</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>18</th>
+               <td>firefox_gecko_version_minor</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>19</th>
+               <td>firefox_gecko_version_a</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+            <tr>
+               <th>20</th>
+               <td>firefox_gecko_version_b</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

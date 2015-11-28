@@ -1,0 +1,2174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Join - Create a multilayer XML file.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Join - Create a multilayer XML file.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Join - Create a multilayer XML file</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:27:52.905</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (6)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#OrderHeaderComments-text">OrderHeaderComments</a></div>
+                  <div><a href="#OrderHeaders-text">OrderHeaders</a></div>
+                  <div><a href="#OrderLineComments-text">OrderLineComments</a></div>
+                  <div><a href="#OrderLines-text">OrderLines</a></div>
+                  <div><a href="#OrderList-text">OrderList</a></div>
+                  <div><a href="#OrderSubLines-text">OrderSubLines</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#XML File output-text">XML File output</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 550px;&#xA;          height: 797px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 550px;&#xA;              height: 797px;&#xA;          "><a name="Create XPath-icon"></a><div id="Create XPath" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:171px;&#xA;                      top:492px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderLineComments"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Create XPath-text" style="&#xA;                      top:524px;&#xA;                      left:155px;                    &#xA;                  ">Create XPath</a><a name="Create XPath 2-icon"></a><div id="Create XPath 2" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:171px;&#xA;                      top:582px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderSubLines"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Create XPath 2-text" style="&#xA;                      top:614px;&#xA;                      left:152.33333333333334px;                    &#xA;                  ">Create XPath 2</a><a name="OrderHeaderComments-icon"></a><div id="OrderHeaderComments" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:317px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderHeaderComments"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderHeaderComments-text" style="&#xA;                      top:349px;&#xA;                      left:10.666666666666668px;                    &#xA;                  ">OrderHeaderComments</a><a name="OrderHeaders-icon"></a><div id="OrderHeaders" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:233px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderHeaders-text" style="&#xA;                      top:265px;&#xA;                      left:20px;                    &#xA;                  ">OrderHeaders</a><a name="OrderLineComments-icon"></a><div id="OrderLineComments" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:491px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Create XPath"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderLineComments-text" style="&#xA;                      top:523px;&#xA;                      left:13.333333333333332px;                    &#xA;                  ">OrderLineComments</a><a name="OrderLines-icon"></a><div id="OrderLines" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:400px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder 3x"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderLines-text" style="&#xA;                      top:432px;&#xA;                      left:22.666666666666664px;                    &#xA;                  ">OrderLines</a><a name="OrderList-icon"></a><div id="OrderList" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:147px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderList-text" style="&#xA;                      top:179px;&#xA;                      left:24px;                    &#xA;                  ">OrderList</a><a name="OrderSubLines-icon"></a><div id="OrderSubLines" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:36px;&#xA;                      top:581px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Create XPath 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderSubLines-text" style="&#xA;                      top:613px;&#xA;                      left:18.666666666666668px;                    &#xA;                  ">OrderSubLines</a><a name="Placeholder-icon"></a><div id="Placeholder" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:171px;&#xA;                      top:147px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderList"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder-text" style="&#xA;                      top:179px;&#xA;                      left:156.33333333333334px;                    &#xA;                  ">Placeholder</a><a name="Placeholder 2-icon"></a><div id="Placeholder 2" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:171px;&#xA;                      top:234px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderHeaders"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder 2-text" style="&#xA;                      top:266px;&#xA;                      left:153.66666666666666px;                    &#xA;                  ">Placeholder 2</a><a name="Placeholder 3x-icon"></a><div id="Placeholder 3x" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:171px;&#xA;                      top:402px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderLines"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder 3x-text" style="&#xA;                      top:434px;&#xA;                      left:152.33333333333334px;                    &#xA;                  ">Placeholder 3x</a><a name="XML File output-icon"></a><div id="XML File output" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:429px;&#xA;                      top:671px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML File output-text" style="&#xA;                      top:703px;&#xA;                      left:409px;                    &#xA;                  ">XML File output</a><a name="XML Join Step-icon"></a><div id="XML Join Step" class="&#xA;                      step-icon&#xA;                      step-icon-XMLJoin" style="&#xA;                      left:429px;&#xA;                      top:233px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Join Step-text" style="&#xA;                      top:265px;&#xA;                      left:411.6666666666667px;                    &#xA;                  ">XML Join Step</a><a name="XML Join Step 2-icon"></a><div id="XML Join Step 2" class="&#xA;                      step-icon&#xA;                      step-icon-XMLJoin" style="&#xA;                      left:429px;&#xA;                      top:317px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Join Step 2-text" style="&#xA;                      top:349px;&#xA;                      left:409px;                    &#xA;                  ">XML Join Step 2</a><a name="XML Join Step 3-icon"></a><div id="XML Join Step 3" class="&#xA;                      step-icon&#xA;                      step-icon-XMLJoin" style="&#xA;                      left:429px;&#xA;                      top:405px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 4"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Join Step 3-text" style="&#xA;                      top:437px;&#xA;                      left:409px;                    &#xA;                  ">XML Join Step 3</a><a name="XML Join Step 4-icon"></a><div id="XML Join Step 4" class="&#xA;                      step-icon&#xA;                      step-icon-XMLJoin" style="&#xA;                      left:429px;&#xA;                      top:491px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 5"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Join Step 4-text" style="&#xA;                      top:523px;&#xA;                      left:409px;                    &#xA;                  ">XML Join Step 4</a><a name="XML Join Step 5-icon"></a><div id="XML Join Step 5" class="&#xA;                      step-icon&#xA;                      step-icon-XMLJoin" style="&#xA;                      left:429px;&#xA;                      top:581px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML File output"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Join Step 5-text" style="&#xA;                      top:613px;&#xA;                      left:409px;                    &#xA;                  ">XML Join Step 5</a><a name="xmlOrderHeaderComments-icon"></a><div id="xmlOrderHeaderComments" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:295px;&#xA;                      top:317px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderHeaderComments-text" style="&#xA;                      top:349px;&#xA;                      left:265.6666666666667px;                    &#xA;                  ">xmlOrderHeaderComments</a><a name="xmlOrderHeaders-icon"></a><div id="xmlOrderHeaders" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:295px;&#xA;                      top:233px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderHeaders-text" style="&#xA;                      top:265px;&#xA;                      left:275px;                    &#xA;                  ">xmlOrderHeaders</a><a name="xmlOrderLineComments-icon"></a><div id="xmlOrderLineComments" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:295px;&#xA;                      top:491px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 4"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderLineComments-text" style="&#xA;                      top:523px;&#xA;                      left:268.3333333333333px;                    &#xA;                  ">xmlOrderLineComments</a><a name="xmlOrderLines-icon"></a><div id="xmlOrderLines" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:295px;&#xA;                      top:405px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderLines-text" style="&#xA;                      top:437px;&#xA;                      left:277.6666666666667px;                    &#xA;                  ">xmlOrderLines</a><a name="xmlOrderList-icon"></a><div id="xmlOrderList" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:429px;&#xA;                      top:147px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderList-text" style="&#xA;                      top:179px;&#xA;                      left:413px;                    &#xA;                  ">xmlOrderList</a><a name="xmlOrderSubLines-icon"></a><div id="xmlOrderSubLines" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:295px;&#xA;                      top:581px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML Join Step 5"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderSubLines-text" style="&#xA;                      top:613px;&#xA;                      left:273.6666666666667px;                    &#xA;                  ">xmlOrderSubLines</a>
+            <pre class="note" style="&#xA;            left: 7px;&#xA;            top: 2px;&#xA;            width: 544px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example produces a multi level XML document from one Excel source.
+
+
+The sample  is a redesign of the old sample in Kettle's sample folder and makes use 
+of the new XML Join Step which allows to add XML structures into an existing XML structure.
+
+The redesign uses 21 steps instead of the 35 of the orirginal sample.
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#OrderHeaderComments">OrderHeaderComments</a>, <a href="#OrderHeaders">OrderHeaders</a>, <a href="#OrderLineComments">OrderLineComments</a>, <a href="#OrderLines">OrderLines</a>, <a href="#OrderList">OrderList</a>, <a href="#OrderSubLines">OrderSubLines</a>, <a href="#XML File output">XML File output</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Create XPath-text" href="#Create XPath-icon">Create XPath</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderLineComments-text">OrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderLineComments-text">xmlOrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">//Script here
+var xPathStatement;
+
+xPathStatement = "//OrderHeader[@orderNumber='" + orderNumber.getInteger() 
++"']/OrderLines/OrderLine[@orderLineNumber='" 
++ orderLineNumber.getInteger()+"']/OrderLineComments";</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xPathStatement</td>
+               <td>xPathStatement</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Create XPath 2-text" href="#Create XPath 2-icon">Create XPath 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderSubLines-text">OrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderSubLines-text">xmlOrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">//Script here
+var xPathStatement;
+
+xPathStatement = "//OrderHeader[@orderNumber='" + orderNumber.getInteger() 
++"']/OrderLines/OrderLine[@orderLineNumber='" 
++ orderLineNumber.getInteger()+"']/OrderSubLines";</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xPathStatement</td>
+               <td>xPathStatement</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderHeaderComments-text" href="#OrderHeaderComments-icon">OrderHeaderComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#xmlOrderHeaderComments-text">xmlOrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>lineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>text</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderHeaders-text" href="#OrderHeaders-icon">OrderHeaders</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder 2-text">Placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>originator</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderType</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>orderDate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>customerNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderLineComments-text" href="#OrderLineComments-icon">OrderLineComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Create XPath-text">Create XPath</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>lineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Text</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderLines-text" href="#OrderLines-icon">OrderLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder 3x-text">Placeholder 3x</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>productNumber</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>productText</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>quantity</td>
+               <td>Number</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>uom</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>principal</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderList-text" href="#OrderList-icon">OrderList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder-text">Placeholder</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>source</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>timestamp</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>businessUnitId</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>plantId</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderSubLines-text" href="#OrderSubLines-icon">OrderSubLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Create XPath 2-text">Create XPath 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderSubLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>batch</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>quantity</td>
+               <td>Number</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>expiryDate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder-text" href="#Placeholder-icon">Placeholder</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderList-text">OrderList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderList-text">xmlOrderList</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderHeaders</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder 2-text" href="#Placeholder 2-icon">Placeholder 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderHeaders-text">OrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderHeaders-text">xmlOrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderLines</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>OrderHeaderComments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder 3x-text" href="#Placeholder 3x-icon">Placeholder 3x</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderLines-text">OrderLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderLines-text">xmlOrderLines</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderSubLines</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>OrderLineComments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="XML File output-text" href="#XML File output-icon">XML File output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Join Step 5-text">XML Join Step 5</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOutput</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLJoin"></div>
+      <h3 class="step-heading"><a name="XML Join Step-text" href="#XML Join Step-icon">XML Join Step</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderList-text">xmlOrderList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#xmlOrderHeaders-text">xmlOrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 2-text">XML Join Step 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLJoin"></div>
+      <h3 class="step-heading"><a name="XML Join Step 2-text" href="#XML Join Step 2-icon">XML Join Step 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Join Step-text">XML Join Step</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#xmlOrderHeaderComments-text">xmlOrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 3-text">XML Join Step 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLJoin"></div>
+      <h3 class="step-heading"><a name="XML Join Step 3-text" href="#XML Join Step 3-icon">XML Join Step 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Join Step 2-text">XML Join Step 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#xmlOrderLines-text">xmlOrderLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 4-text">XML Join Step 4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLJoin"></div>
+      <h3 class="step-heading"><a name="XML Join Step 4-text" href="#XML Join Step 4-icon">XML Join Step 4</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Join Step 3-text">XML Join Step 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#xmlOrderLineComments-text">xmlOrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 5-text">XML Join Step 5</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLJoin"></div>
+      <h3 class="step-heading"><a name="XML Join Step 5-text" href="#XML Join Step 5-icon">XML Join Step 5</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Join Step 4-text">XML Join Step 4</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#xmlOrderSubLines-text">xmlOrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#XML File output-text">XML File output</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderHeaderComments-text" href="#xmlOrderHeaderComments-icon">xmlOrderHeaderComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderHeaderComments-text">OrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 2-text">XML Join Step 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>lineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>text</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderHeaders-text" href="#xmlOrderHeaders-icon">xmlOrderHeaders</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder 2-text">Placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step-text">XML Join Step</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>originator</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderType</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>orderDate</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>customerNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>OrderLines</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>OrderHeaderComments</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderLineComments-text" href="#xmlOrderLineComments-icon">xmlOrderLineComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create XPath-text">Create XPath</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 4-text">XML Join Step 4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>lineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Text</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderLines-text" href="#xmlOrderLines-icon">xmlOrderLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder 3x-text">Placeholder 3x</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 3-text">XML Join Step 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderLineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>productNumber</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>productText</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>quantity</td>
+               <td></td>
+               <td>Number</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>uom</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>principal</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>OrderSubLines</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>OrderLineComments</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderList-text" href="#xmlOrderList-icon">xmlOrderList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder-text">Placeholder</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step-text">XML Join Step</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>source</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>timestamp</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>businessUnitId</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>plantId</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>OrderHeaders</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderSubLines-text" href="#xmlOrderSubLines-icon">xmlOrderSubLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Create XPath 2-text">Create XPath 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML Join Step 5-text">XML Join Step 5</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderSubLineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>batch</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>quantity</td>
+               <td></td>
+               <td>Number</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>expiryDate</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

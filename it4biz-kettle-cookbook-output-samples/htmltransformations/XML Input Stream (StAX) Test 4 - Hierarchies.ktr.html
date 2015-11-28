@@ -1,0 +1,510 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 4 - Hierarchies.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 4 - Hierarchies.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream StAX Test 4 - Hierarchies</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/01/14 13:37:59.729</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 1 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>FILENAME</th>
+               <td>C:\Pentaho\_external\CE\data\shops\D-Brutto-ONLINESHOPS-incr_PRODUCTS.xml</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 714px;&#xA;          height: 688px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 714px;&#xA;              height: 688px;&#xA;          "><a name="Document Details-icon"></a><div id="Document Details" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:240px;&#xA;                      top:260px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Document Details-text" style="&#xA;                      top:292px;&#xA;                      left:218.66666666666666px;                    &#xA;                  ">Document Details</a><a name="Filter Products-icon"></a><div id="Filter Products" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:240px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Document Details"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#ProductHierarchy"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter Products-text" style="&#xA;                      top:172px;&#xA;                      left:220px;                    &#xA;                  ">Filter Products</a><a name="Filter name-icon"></a><div id="Filter name" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:500px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter name-text" style="&#xA;                      top:172px;&#xA;                      left:485.3333333333333px;                    &#xA;                  ">Filter name</a><a name="ProductHierarchy-icon"></a><div id="ProductHierarchy" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:380px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter name"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ProductHierarchy-text" style="&#xA;                      top:172px;&#xA;                      left:358.6666666666667px;                    &#xA;                  ">ProductHierarchy</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:600px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:172px;&#xA;                      left:582.6666666666666px;                    &#xA;                  ">Select values</a><a name="XML Input Stream (StAX)-icon"></a><div id="XML Input Stream (StAX)" class="&#xA;                      step-icon&#xA;                      step-icon-XMLInputStream" style="&#xA;                      left:80px;&#xA;                      top:140px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter Products"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML Input Stream (StAX)-text" style="&#xA;                      top:172px;&#xA;                      left:49.33333333333333px;                    &#xA;                  ">XML Input Stream (StAX)</a>
+            <pre class="note" style="&#xA;            left: 19px;&#xA;            top: 575px;&#xA;            width: 169px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-05-29 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 14px;&#xA;            top: 15px;&#xA;            width: 381px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example parses the XML Input Stream (StAX) Test 4 - Hierarchies.xml
+and builds a product hierarchy table.</pre>
+            <pre class="note" style="&#xA;            left: 499px;&#xA;            top: 98px;&#xA;            width: 109px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Processing example</pre>
+            <pre class="note" style="&#xA;            left: 351px;&#xA;            top: 98px;&#xA;            width: 101px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Build the hierarchy</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#XML Input Stream (StAX)">XML Input Stream (StAX)</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Document Details-text" href="#Document Details-icon">Document Details</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter Products-text">Filter Products</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter Products-text" href="#Filter Products-icon">Filter Products</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#XML Input Stream (StAX)-text">XML Input Stream (StAX)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Document Details-text">Document Details</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#ProductHierarchy-text">ProductHierarchy</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter name-text" href="#Filter name-icon">Filter name</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#ProductHierarchy-text">ProductHierarchy</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="ProductHierarchy-text" href="#ProductHierarchy-icon">ProductHierarchy</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter Products-text">Filter Products</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter name-text">Filter name</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>Processor</h5><pre class="brush: java;">private int pos_xml_data_type_numeric;
+private int pos_xml_data_name;
+private int pos_xml_data_value;
+private int pos_xml_path;
+private int pos_ProductParentID;
+private int pos_ProductID;
+private int pos_ProductLevel;
+
+private int productLevel=0;
+private String productID[]=new String[1000];
+
+private final static Long START_ELEMENT=new Long(1);
+private final static Long END_ELEMENT=new Long(2);
+private final static Long ATTRIBUTE=new Long(10);
+
+private final static String ELEMENT_PRODUCT="Product";
+private final static String ATTR_ID="id";
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException 
+{
+  Object[] r=getRow();
+
+  if (r==null)
+  {
+    setOutputDone();
+	return false;
+  }
+
+  if (first) {
+	 // get field positions (input)
+     pos_xml_data_type_numeric = getInputRowMeta().indexOfValue("xml_data_type_numeric");
+     pos_xml_data_name = getInputRowMeta().indexOfValue("xml_data_name");
+	 pos_xml_data_value = getInputRowMeta().indexOfValue("xml_data_value");
+     pos_xml_path = getInputRowMeta().indexOfValue("xml_path");
+
+	 // get field positions (output)
+     pos_ProductID = data.outputRowMeta.indexOfValue("ProductID");
+     pos_ProductParentID = data.outputRowMeta.indexOfValue("ProductParentID");
+     pos_ProductLevel = data.outputRowMeta.indexOfValue("ProductLevel");
+
+     if (pos_xml_data_type_numeric&lt;0 || pos_xml_data_name&lt;0 || pos_xml_data_value&lt;0 || pos_xml_path&lt;0 || pos_ProductID&lt;0 || pos_ProductParentID&lt;0 || pos_ProductLevel&lt;0 ) {
+         throw new KettleException("One of the xml_ fields or output fields was not found.");
+     }
+	 
+     first=false;
+  }
+
+  boolean ignoreLine=false;
+
+   // START_ELEMENT: increment productLevel
+  if(r[pos_xml_data_type_numeric].equals(START_ELEMENT)) {
+      ignoreLine=true;
+      if(r[pos_xml_data_name].equals(ELEMENT_PRODUCT)) {
+		productLevel++;
+      }
+  }
+
+ // END_ELEMENT: decrement productLevel
+  if(r[pos_xml_data_type_numeric].equals(END_ELEMENT)) {
+      ignoreLine=true;
+      if(r[pos_xml_data_name].equals(ELEMENT_PRODUCT)) {
+		productLevel--;
+      }
+  }
+
+  // productID
+  if(r[pos_xml_data_type_numeric].equals(ATTRIBUTE)) {
+      if(r[pos_xml_data_name].equals(ATTR_ID)) {
+		productID[productLevel]=new String((String)r[pos_xml_data_value]);
+        ignoreLine=true;
+      }
+  }
+
+  if(!ignoreLine) {
+    Object[] outputRowData = createOutputRow(r, data.outputRowMeta.size());
+    outputRowData[pos_ProductID]=new String(Const.NVL((String)productID[productLevel],""));
+    if(productLevel&gt;0) {
+      outputRowData[pos_ProductParentID]=new String(Const.NVL((String)productID[productLevel-1],""));
+    } else {
+       outputRowData[pos_ProductParentID]=null;
+    }
+    outputRowData[pos_ProductLevel]=new Long(productLevel);
+
+    putRow(data.outputRowMeta, outputRowData);
+  }
+
+  return true;
+}</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>field_type</th>
+               <th>field_length</th>
+               <th>field_precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>ProductID</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>ProductParentID</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>ProductLevel</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter name-text">Filter name</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>ProductID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>ProductParentID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>ProductLevel</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>xml_data_value</td>
+               <td>ProductName</td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-XMLInputStream"></div>
+      <h3 class="step-heading"><a name="XML Input Stream (StAX)-text" href="#XML Input Stream (StAX)-icon">XML Input Stream (StAX)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Filter Products-text">Filter Products</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

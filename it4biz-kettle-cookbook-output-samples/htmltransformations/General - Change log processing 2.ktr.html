@@ -1,0 +1,763 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Change log processing 2.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Change log processing 2.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>General - Change log processing 2</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 15:04:31.732</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (0)</th>
+               <th>Transform</th>
+               <th>Output (4)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td></td>
+               <td></td>
+               <td>
+                  <div><a href="#Delete row-text">Delete row</a></div>
+                  <div><a href="#Insert row-text">Insert row</a></div>
+                  <div><a href="#Update row-text">Update row</a></div>
+                  <div><a href="#temp.txt-text">temp.txt</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 830px;&#xA;          height: 639px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 830px;&#xA;              height: 639px;&#xA;          "><a name="Changed?-icon"></a><div id="Changed?" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:427px;&#xA;                      top:478px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Sink"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Update row"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Changed?-text" style="&#xA;                      top:510px;&#xA;                      left:416.3333333333333px;                    &#xA;                  ">Changed?</a><a name="Delete row-icon"></a><div id="Delete row" class="&#xA;                      step-icon&#xA;                      step-icon-Delete" style="&#xA;                      left:827px;&#xA;                      top:308px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Delete row-text" style="&#xA;                      top:340px;&#xA;                      left:813.6666666666666px;                    &#xA;                  ">Delete row</a><a name="Deleted?-icon"></a><div id="Deleted?" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:427px;&#xA;                      top:308px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Changed?"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Delete row"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Deleted?-text" style="&#xA;                      top:340px;&#xA;                      left:416.3333333333333px;                    &#xA;                  ">Deleted?</a><a name="Get rows from result-icon"></a><div id="Get rows from result" class="&#xA;                      step-icon&#xA;                      step-icon-RowsFromResult" style="&#xA;                      left:227px;&#xA;                      top:138px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#New?"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get rows from result-text" style="&#xA;                      top:170px;&#xA;                      left:200.33333333333334px;                    &#xA;                  ">Get rows from result</a><a name="Insert row-icon"></a><div id="Insert row" class="&#xA;                      step-icon&#xA;                      step-icon-TableOutput" style="&#xA;                      left:929px;&#xA;                      top:137px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Insert row-text" style="&#xA;                      top:169px;&#xA;                      left:915.6666666666666px;                    &#xA;                  ">Insert row</a><a name="New?-icon"></a><div id="New?" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:427px;&#xA;                      top:138px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Deleted?"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#remove flag"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#New?-text" style="&#xA;                      top:170px;&#xA;                      left:421.6666666666667px;                    &#xA;                  ">New?</a><a name="Sink-icon"></a><div id="Sink" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:427px;&#xA;                      top:648px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sink-text" style="&#xA;                      top:680px;&#xA;                      left:421.6666666666667px;                    &#xA;                  ">Sink</a><a name="Update row-icon"></a><div id="Update row" class="&#xA;                      step-icon&#xA;                      step-icon-Update" style="&#xA;                      left:827px;&#xA;                      top:478px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Update row-text" style="&#xA;                      top:510px;&#xA;                      left:813.6666666666666px;                    &#xA;                  ">Update row</a><a name="remove flag-icon"></a><div id="remove flag" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:627px;&#xA;                      top:138px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#temp.txt"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#remove flag-text" style="&#xA;                      top:170px;&#xA;                      left:612.3333333333334px;                    &#xA;                  ">remove flag</a><a name="temp.txt-icon"></a><div id="temp.txt" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:784px;&#xA;                      top:141px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Insert row"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#temp.txt-text" style="&#xA;                      top:173px;&#xA;                      left:773.3333333333334px;                    &#xA;                  ">temp.txt</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#temp.txt">temp.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 1 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.Sampledata">Sampledata</a></th>
+               <td>H2</td>
+               <td>JNDI</td>
+               <td></td>
+               <td>1521</td>
+               <td></td>
+               <td><a href="#Delete row">Delete row</a>, <a href="#Insert row">Insert row</a>, <a href="#Update row">Update row</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.Sampledata">Sampledata</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>Sampledata</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>H2</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>JNDI</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Changed?-text" href="#Changed?-icon">Changed?</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Deleted?-text">Deleted?</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sink-text">Sink</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Update row-text">Update row</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Delete"></div>
+      <h3 class="step-heading"><a name="Delete row-text" href="#Delete row-icon">Delete row</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Deleted?-text">Deleted?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.Sampledata">Sampledata</a></td>
+               <td></td>
+               <td>changelog</td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+               <th>condition</th>
+               <th>name2</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>=</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Deleted?-text" href="#Deleted?-icon">Deleted?</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#New?-text">New?</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Changed?-text">Changed?</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Delete row-text">Delete row</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowsFromResult"></div>
+      <h3 class="step-heading"><a name="Get rows from result-text" href="#Get rows from result-icon">Get rows from result</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#New?-text">New?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>flag</td>
+               <td>String</td>
+               <td>1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>id</td>
+               <td>Integer</td>
+               <td>2</td>
+               <td>0</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>foo</td>
+               <td>String</td>
+               <td>10</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TableOutput"></div>
+      <h3 class="step-heading"><a name="Insert row-text" href="#Insert row-icon">Insert row</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#temp.txt-text">temp.txt</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.Sampledata">Sampledata</a></td>
+               <td></td>
+               <td>CHANGELOG</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="New?-text" href="#New?-icon">New?</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get rows from result-text">Get rows from result</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Deleted?-text">Deleted?</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#remove flag-text">remove flag</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Sink-text" href="#Sink-icon">Sink</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Changed?-text">Changed?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Update"></div>
+      <h3 class="step-heading"><a name="Update row-text" href="#Update row-icon">Update row</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Changed?-text">Changed?</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.Sampledata">Sampledata</a></td>
+               <td></td>
+               <td>CHANGELOG</td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+               <th>condition</th>
+               <th>name2</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>=</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>foo</td>
+               <td>foo</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="remove flag-text" href="#remove flag-icon">remove flag</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#New?-text">New?</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#temp.txt-text">temp.txt</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>flag</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="temp.txt-text" href="#temp.txt-icon">temp.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#remove flag-text">remove flag</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Insert row-text">Insert row</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>foo</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

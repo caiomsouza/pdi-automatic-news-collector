@@ -1,0 +1,764 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/data-generator/generate order data.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/data-generator/generate order data.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations/data-generator"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Generate order data</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/27 12:46:04.302</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate 10M Rows-text">Generate 10M Rows</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#orders-random.txt-text">orders-random.txt</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 579px;&#xA;          height: 418px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 579px;&#xA;              height: 418px;&#xA;          "><a name="Determine orderNr-icon"></a><div id="Determine orderNr" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:377px;&#xA;                      top:199px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Remove orderSeq"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Determine orderNr-text" style="&#xA;                      top:231px;&#xA;                      left:354.3333333333333px;                    &#xA;                  ">Determine orderNr</a><a name="Generate 10M Rows-icon"></a><div id="Generate 10M Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:67px;&#xA;                      top:72px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate random stuff"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate 10M Rows-text" style="&#xA;                      top:104px;&#xA;                      left:44.33333333333333px;                    &#xA;                  ">Generate 10M Rows</a><a name="Generate random stuff-icon"></a><div id="Generate random stuff" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:208px;&#xA;                      top:72px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate random stuff-text" style="&#xA;                      top:104px;&#xA;                      left:180px;                    &#xA;                  ">Generate random stuff</a><a name="Group by-icon"></a><div id="Group by" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:236px;&#xA;                      top:199px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Determine orderNr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by-text" style="&#xA;                      top:231px;&#xA;                      left:225.33333333333334px;                    &#xA;                  ">Group by</a><a name="Remove orderSeq-icon"></a><div id="Remove orderSeq" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:518px;&#xA;                      top:199px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#orders-random.txt"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Remove orderSeq-text" style="&#xA;                      top:231px;&#xA;                      left:498px;                    &#xA;                  ">Remove orderSeq</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:349px;&#xA;                      top:72px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sorted Merge"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:104px;&#xA;                      left:337px;                    &#xA;                  ">Sort rows</a><a name="Sorted Merge-icon"></a><div id="Sorted Merge" class="&#xA;                      step-icon&#xA;                      step-icon-SortedMerge" style="&#xA;                      left:504px;&#xA;                      top:72px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sorted Merge-text" style="&#xA;                      top:104px;&#xA;                      left:488px;                    &#xA;                  ">Sorted Merge</a><a name="orders-random.txt-icon"></a><div id="orders-random.txt" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:363px;&#xA;                      top:362px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#orders-random.txt-text" style="&#xA;                      top:394px;&#xA;                      left:340.3333333333333px;                    &#xA;                  ">orders-random.txt</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#orders-random.txt">orders-random.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Determine orderNr-text" href="#Determine orderNr-icon">Determine orderNr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Group by-text">Group by</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Remove orderSeq-text">Remove orderSeq</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">// The ordernr is linked to the customerId and the orderSeq.
+// it starts at 5000000 and is then incremented each time
+// there is a new customerId/orderSeq combination
+
+var prevId;
+var prevSeq;
+var orderNr
+
+if (prevId == null)
+{
+  orderNr = 5000000;
+}
+else
+{
+  if (prevId != customerId.getInteger() || prevSeq != orderSeq.getInteger())
+  {
+    orderNr++;
+  }
+}
+
+prevId = customerId.getInteger();
+prevSeq = orderSeq.getInteger();
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNr</td>
+               <td>orderNr</td>
+               <td>Integer</td>
+               <td>7</td>
+               <td>0</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate 10M Rows-text" href="#Generate 10M Rows-icon">Generate 10M Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Generate random stuff-text">Generate random stuff</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Generate random stuff-text" href="#Generate random stuff-icon">Generate random stuff</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate 10M Rows-text">Generate 10M Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">
+// 1M customers
+var customerId = Math.round( Math.random() * 1000000 );
+
+// 1000 products
+var productId = Math.round( Math.random() * 1000 );
+
+// Order date
+var orderDate = new Date(2000+Math.round( Math.random() * 6), Math.round( Math.random() * 12 ), Math.round( Math.random() * 31 ));
+
+// Discount % : between 0 and 20% in 5% blocks
+var discountPct = Math.round( Math.random() * 4 ) * 5;
+
+// Number of products : between 1 and 5
+var nrProducts = 1 + Math.round( Math.random() * 4 );
+
+
+var orderSeq=Math.round( Math.random() * 5 );</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>customerId</td>
+               <td>customerId</td>
+               <td>Integer</td>
+               <td>7</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>productId</td>
+               <td>productId</td>
+               <td>Integer</td>
+               <td>7</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderDate</td>
+               <td>orderDate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>discountPct</td>
+               <td>discountPct</td>
+               <td>Integer</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>nrProducts</td>
+               <td>nrProducts</td>
+               <td>Integer</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>orderSeq</td>
+               <td>orderSeq</td>
+               <td>Integer</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by-text" href="#Group by-icon">Group by</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sorted Merge-text">Sorted Merge</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Determine orderNr-text">Determine orderNr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>minOrderDate</td>
+               <td>orderDate</td>
+               <td>MIN</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Remove orderSeq-text" href="#Remove orderSeq-icon">Remove orderSeq</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Determine orderNr-text">Determine orderNr</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#orders-random.txt-text">orders-random.txt</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>remove</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderSeq</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderDate</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>meta</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>conversion_mask</th>
+               <th>date_format_lenient</th>
+               <th>date_format_locale</th>
+               <th>date_format_timezone</th>
+               <th>lenient_string_to_number</th>
+               <th>encoding</th>
+               <th>decimal_symbol</th>
+               <th>grouping_symbol</th>
+               <th>currency_symbol</th>
+               <th>storage_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>minOrderDate</td>
+               <td>orderDate</td>
+               <td>None</td>
+               <td>-2</td>
+               <td>-2</td>
+               <td></td>
+               <td>false</td>
+               <td></td>
+               <td></td>
+               <td>false</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate random stuff-text">Generate random stuff</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sorted Merge-text">Sorted Merge</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>customerId</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderSeq</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortedMerge"></div>
+      <h3 class="step-heading"><a name="Sorted Merge-text" href="#Sorted Merge-icon">Sorted Merge</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by-text">Group by</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>customerId</td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderSeq</td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="orders-random.txt-text" href="#orders-random.txt-icon">orders-random.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Remove orderSeq-text">Remove orderSeq</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>customerId</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>productId</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderDate</td>
+               <td>Date</td>
+               <td>yyyy/MM/dd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>discountPct</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>nrProducts</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>orderLineNr</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>orderNr</td>
+               <td>Integer</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

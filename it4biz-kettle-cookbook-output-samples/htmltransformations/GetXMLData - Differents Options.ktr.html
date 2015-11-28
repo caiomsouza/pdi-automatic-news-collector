@@ -1,0 +1,999 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/GetXMLData - Differents Options.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/GetXMLData - Differents Options.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>GetXMLData - Differents Options.ktr</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:03.065</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td>1.0</td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>Production</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (6)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Pass URl-text">Pass URl</a></div>
+                  <div><a href="#Read Url-text">Read Url</a></div>
+                  <div><a href="#Read XML-text">Read XML</a></div>
+                  <div><a href="#Read XML file-text">Read XML file</a></div>
+                  <div><a href="#generate XML-text">generate XML</a></div>
+                  <div><a href="#parse file from filename-text">parse file from filename</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 1071px;&#xA;          height: 902px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 1071px;&#xA;              height: 902px;&#xA;          "><a name="Pass URl-icon"></a><div id="Pass URl" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:64px;&#xA;                      top:512px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Read Url"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Pass URl-text" style="&#xA;                      top:544px;&#xA;                      left:53.333333333333336px;                    &#xA;                  ">Pass URl</a><a name="Preview-icon"></a><div id="Preview" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:260px;&#xA;                      top:102px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Preview-text" style="&#xA;                      top:134px;&#xA;                      left:250.66666666666666px;                    &#xA;                  ">Preview</a><a name="Preview2-icon"></a><div id="Preview2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:352px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Preview2-text" style="&#xA;                      top:352px;&#xA;                      left:341.3333333333333px;                    &#xA;                  ">Preview2</a><a name="Preview3-icon"></a><div id="Preview3" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:352px;&#xA;                      top:512px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Preview3-text" style="&#xA;                      top:544px;&#xA;                      left:341.3333333333333px;                    &#xA;                  ">Preview3</a><a name="Preview4-icon"></a><div id="Preview4" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:576px;&#xA;                      top:736px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Preview4-text" style="&#xA;                      top:768px;&#xA;                      left:565.3333333333334px;                    &#xA;                  ">Preview4</a><a name="Read Url-icon"></a><div id="Read Url" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:224px;&#xA;                      top:512px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Read Url-text" style="&#xA;                      top:544px;&#xA;                      left:213.33333333333334px;                    &#xA;                  ">Read Url</a><a name="Read XML-icon"></a><div id="Read XML" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:352px;&#xA;                      top:736px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview4"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Read XML-text" style="&#xA;                      top:768px;&#xA;                      left:341.3333333333333px;                    &#xA;                  ">Read XML</a><a name="Read XML file-icon"></a><div id="Read XML file" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:48px;&#xA;                      top:102px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Read XML file-text" style="&#xA;                      top:134px;&#xA;                      left:30.666666666666668px;                    &#xA;                  ">Read XML file</a><a name="generate XML-icon"></a><div id="generate XML" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:32px;&#xA;                      top:736px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Read XML"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#generate XML-text" style="&#xA;                      top:768px;&#xA;                      left:16px;                    &#xA;                  ">generate XML</a><a name="get filename-icon"></a><div id="get filename" class="&#xA;                      step-icon&#xA;                      step-icon-GetVariable" style="&#xA;                      left:64px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#parse file from filename"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#get filename-text" style="&#xA;                      top:352px;&#xA;                      left:48px;                    &#xA;                  ">get filename</a><a name="parse file from filename-icon"></a><div id="parse file from filename" class="&#xA;                      step-icon&#xA;                      step-icon-getXMLData" style="&#xA;                      left:202px;&#xA;                      top:320px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Preview2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#parse file from filename-text" style="&#xA;                      top:352px;&#xA;                      left:170px;                    &#xA;                  ">parse file from filename</a>
+            <pre class="note" style="&#xA;            left: 32px;&#xA;            top: 800px;&#xA;            width: 354px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The XML field contain: 
+
+&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+	&lt;persons&gt;
+		&lt;person&gt;
+			&lt;id&gt;1&lt;/id&gt;
+			&lt;firstname&gt;Samatar&lt;/firstname&gt;
+			&lt;name&gt;Hassan&lt;/name&gt;
+			&lt;birthdate&gt;20/06/1978&lt;/birthdate&gt;
+		&lt;/person&gt;
+		&lt;person&gt;
+			&lt;id&gt;2&lt;/id&gt;
+			&lt;firstname&gt;Isaac&lt;/firstname&gt;
+			&lt;name&gt;Hassan&lt;/name&gt;
+			&lt;birthdate&gt;20/09/2004&lt;/birthdate&gt;
+		&lt;/person&gt;
+		&lt;person&gt;
+			&lt;id&gt;3&lt;/id&gt;
+			&lt;firstname&gt;Souley&lt;/firstname&gt;
+			&lt;name&gt;Hassan&lt;/name&gt;
+			&lt;birthdate&gt;20/09/2007&lt;/birthdate&gt;
+		&lt;/person&gt;
+	&lt;/persons&gt;</pre>
+            <pre class="note" style="&#xA;            left: 352px;&#xA;            top: 800px;&#xA;            width: 388px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This step will parse the input XML field and extract all person with
+the selected fields.
+You can use it to read RSS like this :
+
+Generate 1 row --&gt; Call HTTP --&gt; Parse</pre>
+            <pre class="note" style="&#xA;            left: 17px;&#xA;            top: 26px;&#xA;            width: 283px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">1 - Read the file and extract all session data
+--------------------------------------------------------------------
+Use of token</pre>
+            <pre class="note" style="&#xA;            left: 32px;&#xA;            top: 608px;&#xA;            width: 509px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">4 - Parse the contain of a field
+----------------------------------------------------------------------------
+Image you want to extract all person (id, first name, name, birth date) for the XML field.
+In fact, you will get nb returned rows=nb persons.
+This kind of result can be from Web service  or HTTP service.</pre>
+            <pre class="note" style="&#xA;            left: 384px;&#xA;            top: 64px;&#xA;            width: 403px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Please notice 'kind of variable' use : @_User- mean current User
+-----------------------------------------------------------------------------
+
+Data field =  ../../InfoSession/InfoSessionData[@User={$User}]/Data
+@_User-  mean that the step must search Data for current user.
+There must be User field before. </pre>
+            <pre class="note" style="&#xA;            left: 32px;&#xA;            top: 224px;&#xA;            width: 321px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">2- Read the file and extract all session data
+------------------------------------------------------
+Same than 1. but filename is passed by previous step</pre>
+            <pre class="note" style="&#xA;            left: 960px;&#xA;            top: 32px;&#xA;            width: 151px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Autor : Samatar Hassan
+Date : 27/06/2008  
+Version : 1.0</pre>
+            <pre class="note" style="&#xA;            left: 32px;&#xA;            top: 416px;&#xA;            width: 442px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">3- Read Url (ex:http://forums.pentaho.org/external.php?type=xml)
+------------------------------------------------------
+You can also read the Url thanks to Http step and after parse string (see 4)</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Read XML file">Read XML file</a>, <a href="#get filename">get filename</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Pass URl-text" href="#Pass URl-icon">Pass URl</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Read Url-text">Read Url</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlUrl</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>http://forums.pentaho.org/external.php?type=xml</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Preview-text" href="#Preview-icon">Preview</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Read XML file-text">Read XML file</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Preview2-text" href="#Preview2-icon">Preview2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#parse file from filename-text">parse file from filename</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Preview3-text" href="#Preview3-icon">Preview3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Read Url-text">Read Url</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Preview4-text" href="#Preview4-icon">Preview4</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Read XML-text">Read XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="Read Url-text" href="#Read Url-icon">Read Url</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Pass URl-text">Pass URl</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Preview3-text">Preview3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>attribut</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>title</td>
+               <td>title</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>author</td>
+               <td>author</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>date</td>
+               <td>date</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>time</td>
+               <td>time</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="Read XML-text" href="#Read XML-icon">Read XML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#generate XML-text">generate XML</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Preview4-text">Preview4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>id</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>firstname</td>
+               <td>firstname</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>name</td>
+               <td>name</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>birthdate</td>
+               <td>birthdate</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="Read XML file-text" href="#Read XML file-icon">Read XML file</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Preview-text">Preview</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Code</td>
+               <td>../../@Code</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>User</td>
+               <td>Parameter/User</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Password</td>
+               <td>Parameter/Password</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Status</td>
+               <td>OutputData/Step/Status</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Error_Message</td>
+               <td>OutputData/Step/Error_Message</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>Data</td>
+               <td>../../InfoSession/InfoSessionData[@User=@_User-]/Data</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="generate XML-text" href="#generate XML-icon">generate XML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Read XML-text">Read XML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlstring</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;&lt;persons&gt;&lt;person&gt;&lt;id&gt;1&lt;/id&gt;&lt;firstname&gt;Samatar&lt;/firstname&gt;&lt;name&gt;Hassan&lt;/name&gt;&lt;birthdate&gt;20/06/1978&lt;/birthdate&gt;&lt;/person&gt;&lt;person&gt;&lt;id&gt;2&lt;/id&gt;&lt;firstname&gt;Isaac&lt;/firstname&gt;&lt;name&gt;Hassan&lt;/name&gt;&lt;birthdate&gt;20/09/2004&lt;/birthdate&gt;&lt;/person&gt;&lt;person&gt;&lt;id&gt;3&lt;/id&gt;&lt;firstname&gt;Souley&lt;/firstname&gt;&lt;name&gt;Hassan&lt;/name&gt;&lt;birthdate&gt;20/09/2007&lt;/birthdate&gt;&lt;/person&gt;&lt;/persons&gt;</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetVariable"></div>
+      <h3 class="step-heading"><a name="get filename-text" href="#get filename-icon">get filename</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#parse file from filename-text">parse file from filename</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>variable</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>${Internal.Transformation.Filename.Directory}/files/test_xml_file.xml</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-getXMLData"></div>
+      <h3 class="step-heading"><a name="parse file from filename-text" href="#parse file from filename-icon">parse file from filename</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#get filename-text">get filename</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Preview2-text">Preview2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>xpath</th>
+               <th>element_type</th>
+               <th>result_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Code</td>
+               <td>../../@Code</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>User</td>
+               <td>Parameter/User</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>Password</td>
+               <td>Parameter/Password</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Data</td>
+               <td>../../InfoSession/InfoSessionData[@User=@_User-]/Data</td>
+               <td>node</td>
+               <td>valueof</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

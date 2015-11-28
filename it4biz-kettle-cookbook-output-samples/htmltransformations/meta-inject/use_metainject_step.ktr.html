@@ -1,0 +1,876 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/meta-inject/use_metainject_step.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/meta-inject/use_metainject_step.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations/meta-inject"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>use_metainject_step</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2010/08/19 13:44:19.217</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (4)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Fields-text">Fields</a></div>
+                  <div><a href="#Remove-text">Remove</a></div>
+                  <div><a href="#Rename-text">Rename</a></div>
+                  <div><a href="#Filename 2-text">Filename 2</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 430px;&#xA;          height: 470px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 430px;&#xA;              height: 470px;&#xA;          "><a name="ETL Metadata Injection-icon"></a><div id="ETL Metadata Injection" class="&#xA;                      step-icon&#xA;                      step-icon-MetaInject" style="&#xA;                      left:266px;&#xA;                      top:126px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#ETL Metadata Injection-text" style="&#xA;                      top:158px;&#xA;                      left:236.66666666666666px;                    &#xA;                  ">ETL Metadata Injection</a><a name="Fields-icon"></a><div id="Fields" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:129px;&#xA;                      top:33px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#ETL Metadata Injection"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Fields-text" style="&#xA;                      top:65px;&#xA;                      left:121px;                    &#xA;                  ">Fields</a><a name="Remove-icon"></a><div id="Remove" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:431px;&#xA;                      top:139px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#ETL Metadata Injection"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Remove-text" style="&#xA;                      top:171px;&#xA;                      left:423px;                    &#xA;                  ">Remove</a><a name="Rename-icon"></a><div id="Rename" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:409px;&#xA;                      top:33px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#ETL Metadata Injection"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Rename-text" style="&#xA;                      top:65px;&#xA;                      left:401px;                    &#xA;                  ">Rename</a><a name="Filename 2-icon"></a><div id="Filename 2" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:167px;&#xA;                      top:375px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Using variable to resolve filename"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filename 2-text" style="&#xA;                      top:407px;&#xA;                      left:153.66666666666666px;                    &#xA;                  ">Filename 2</a><a name="Using variable to resolve filename-icon"></a><div id="Using variable to resolve filename" class="&#xA;                      step-icon&#xA;                      step-icon-SetValueConstant" style="&#xA;                      left:167px;&#xA;                      top:240px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#ETL Metadata Injection"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Using variable to resolve filename-text" style="&#xA;                      top:272px;&#xA;                      left:121.66666666666666px;                    &#xA;                  ">Using variable to resolve filename</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#ETL Metadata Injection">ETL Metadata Injection</a>, <a href="#Using variable to resolve filename">Using variable to resolve filename</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-MetaInject"></div>
+      <h3 class="step-heading"><a name="ETL Metadata Injection-text" href="#ETL Metadata Injection-icon">ETL Metadata Injection</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Fields-text">Fields</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Rename-text">Rename</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>From</td>
+               <td><a href="#Remove-text">Remove</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>From</td>
+               <td><a href="#Using variable to resolve filename-text">Using variable to resolve filename</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Called sub-transformation</h4><a href="read_csv_file.ktr.html">${Internal.Transformation.Filename.Directory}/read_csv_file.ktr</a><h4>mapping</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>target_step_name</th>
+               <th>target_attribute_key</th>
+               <th>target_detail</th>
+               <th>source_step</th>
+               <th>source_field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>CSV file input</td>
+               <td>group</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>group</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Select values</td>
+               <td>name</td>
+               <td>Y</td>
+               <td>Rename fields</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>CSV file input</td>
+               <td>field_format</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>format</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>CSV file input</td>
+               <td>filename</td>
+               <td>N</td>
+               <td>Filename</td>
+               <td>filename</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>Select values</td>
+               <td>remove_name</td>
+               <td>Y</td>
+               <td>Remove</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>CSV file input</td>
+               <td>FIELD_CURRENCY</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>currency</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>CSV file input</td>
+               <td>field_currency</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>currency</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>CSV file input</td>
+               <td>field_length</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>length</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>Select values</td>
+               <td>META_NAME</td>
+               <td>Y</td>
+               <td>Rename</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>CSV file input</td>
+               <td>decimal</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>decimal</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>CSV file input</td>
+               <td>FILENAME</td>
+               <td>N</td>
+               <td>Using variable to resolve filename</td>
+               <td>filename</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>CSV file input</td>
+               <td>format</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>format</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>CSV file input</td>
+               <td>FIELD_FORMAT</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>format</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>CSV file input</td>
+               <td>FIELD_PRECISION</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>precision</td>
+            </tr>
+            <tr>
+               <th>15</th>
+               <td>CSV file input</td>
+               <td>FIELD_LENGTH</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>length</td>
+            </tr>
+            <tr>
+               <th>16</th>
+               <td>CSV file input</td>
+               <td>precision</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>precision</td>
+            </tr>
+            <tr>
+               <th>17</th>
+               <td>CSV file input</td>
+               <td>field_decimal</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>decimal</td>
+            </tr>
+            <tr>
+               <th>18</th>
+               <td>CSV file input</td>
+               <td>length</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>length</td>
+            </tr>
+            <tr>
+               <th>19</th>
+               <td>CSV file input</td>
+               <td>field_group</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>group</td>
+            </tr>
+            <tr>
+               <th>20</th>
+               <td>CSV file input</td>
+               <td>name</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>21</th>
+               <td>CSV file input</td>
+               <td>trim_type</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>trimtype</td>
+            </tr>
+            <tr>
+               <th>22</th>
+               <td>Select values</td>
+               <td>META_RENAME</td>
+               <td>Y</td>
+               <td>Rename</td>
+               <td>rename</td>
+            </tr>
+            <tr>
+               <th>23</th>
+               <td>CSV file input</td>
+               <td>FIELD_TYPE</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>type</td>
+            </tr>
+            <tr>
+               <th>24</th>
+               <td>Select values</td>
+               <td>meta_name</td>
+               <td>Y</td>
+               <td>Rename</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>25</th>
+               <td>CSV file input</td>
+               <td>type</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>type</td>
+            </tr>
+            <tr>
+               <th>26</th>
+               <td>CSV file input</td>
+               <td>FIELD_GROUP</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>group</td>
+            </tr>
+            <tr>
+               <th>27</th>
+               <td>CSV file input</td>
+               <td>field_trim_type</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>trimtype</td>
+            </tr>
+            <tr>
+               <th>28</th>
+               <td>Select values</td>
+               <td>REMOVE_NAME</td>
+               <td>Y</td>
+               <td>Remove</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>29</th>
+               <td>CSV file input</td>
+               <td>currency</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>currency</td>
+            </tr>
+            <tr>
+               <th>30</th>
+               <td>CSV file input</td>
+               <td>field_precision</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>precision</td>
+            </tr>
+            <tr>
+               <th>31</th>
+               <td>Select values</td>
+               <td>meta_rename</td>
+               <td>Y</td>
+               <td>Rename</td>
+               <td>rename</td>
+            </tr>
+            <tr>
+               <th>32</th>
+               <td>CSV file input</td>
+               <td>FIELD_NAME</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>33</th>
+               <td>CSV file input</td>
+               <td>FIELD_TRIM_TYPE</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>trimtype</td>
+            </tr>
+            <tr>
+               <th>34</th>
+               <td>CSV file input</td>
+               <td>field_name</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>name</td>
+            </tr>
+            <tr>
+               <th>35</th>
+               <td>CSV file input</td>
+               <td>FIELD_DECIMAL</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>decimal</td>
+            </tr>
+            <tr>
+               <th>36</th>
+               <td>CSV file input</td>
+               <td>field_type</td>
+               <td>Y</td>
+               <td>Fields</td>
+               <td>type</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Fields-text" href="#Fields-icon">Fields</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#ETL Metadata Injection-text">ETL Metadata Injection</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>type</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>format</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>length</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>precision</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>currency</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>decimal</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>group</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>trimtype</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Remove-text" href="#Remove-icon">Remove</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#ETL Metadata Injection-text">ETL Metadata Injection</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Rename-text" href="#Rename-icon">Rename</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#ETL Metadata Injection-text">ETL Metadata Injection</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>rename</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Filename 2-text" href="#Filename 2-icon">Filename 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Using variable to resolve filename-text">Using variable to resolve filename</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SetValueConstant"></div>
+      <h3 class="step-heading"><a name="Using variable to resolve filename-text" href="#Using variable to resolve filename-icon">Using variable to resolve filename</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filename 2-text">Filename 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#ETL Metadata Injection-text">ETL Metadata Injection</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>value</th>
+               <th>mask</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>${Internal.Transformation.Filename.Directory}/../files/customers-100.txt</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/parallel synchronized jobs/SyncJobs.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/parallel synchronized jobs/SyncJobs.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: SyncJobs
+            relative-path: "jobs/parallel synchronized jobs"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "SyncJobs"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>SyncJobs</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2007/09/06 08:17:59.989</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 546px;&#xA;            height: 649px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 546px;&#xA;              height: 649px;&#xA;          "><a name="Wait for file &#34;Job1Ready.tmp&#34;-icon"></a><div id="Wait for file &#34;Job1Ready.tmp&#34;" class="&#xA;                      entry-icon&#xA;                      entry-icon-WAIT_FOR_FILE" style="&#xA;                      left:382px;&#xA;                      top:363px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Wait for file &#34;Job2Ready.tmp&#34;"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:395px;&#xA;                      left:343.3333333333333px;&#xA;                  " href="#Wait for file &#34;Job1Ready.tmp&#34;-text">Wait for file "Job1Ready.tmp"</a><a name="Start-icon"></a><div id="Start" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:80px;&#xA;                      top:268px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#Delete file &#34;Job1Ready.tmp&#34;"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:300px;&#xA;                      left:73.33333333333333px;&#xA;                  " href="#Start-text">Start</a><a name="Delete file &#34;Job1Ready.tmp&#34;-icon"></a><div id="Delete file &#34;Job1Ready.tmp&#34;" class="&#xA;                      entry-icon&#xA;                      entry-icon-DELETE_FILE" style="&#xA;                      left:206px;&#xA;                      top:264px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Delete file &#34;Job2Ready.tmp&#34;"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:296px;&#xA;                      left:170px;&#xA;                  " href="#Delete file &#34;Job1Ready.tmp&#34;-text">Delete file "Job1Ready.tmp"</a><a name="Delete file &#34;Job2Ready.tmp&#34;-icon"></a><div id="Delete file &#34;Job2Ready.tmp&#34;" class="&#xA;                      entry-icon&#xA;                      entry-icon-DELETE_FILE" style="&#xA;                      left:379px;&#xA;                      top:265px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Wait for file &#34;Job1Ready.tmp&#34;"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:297px;&#xA;                      left:343px;&#xA;                  " href="#Delete file &#34;Job2Ready.tmp&#34;-text">Delete file "Job2Ready.tmp"</a><a name="Wait for file &#34;Job2Ready.tmp&#34;-icon"></a><div id="Wait for file &#34;Job2Ready.tmp&#34;" class="&#xA;                      entry-icon&#xA;                      entry-icon-WAIT_FOR_FILE" style="&#xA;                      left:382px;&#xA;                      top:461px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#Dummy"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:493px;&#xA;                      left:343.3333333333333px;&#xA;                  " href="#Wait for file &#34;Job2Ready.tmp&#34;-text">Wait for file "Job2Ready.tmp"</a><a name="Dummy-icon"></a><div id="Dummy" class="&#xA;                      entry-icon&#xA;                      entry-icon-DUMMY" style="&#xA;                      left:381px;&#xA;                      top:554px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:586px;&#xA;                      left:374.3333333333333px;&#xA;                  " href="#Dummy-text">Dummy</a><pre class="note" style="&#xA;            left: 40px;&#xA;            top: 33px;&#xA;            width: 429px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">By design Jobs can not be run in parallel. 
+If you need this, you might start multiple job processes by the operating system
+or the Shell job entry.
+To synchronize multiple jobs you can use the File job entries.</pre><pre class="note" style="&#xA;            left: 40px;&#xA;            top: 149px;&#xA;            width: 430px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">This Job will wait for two other Jobs (SyncJobs - Example 1 and 2) to be finished.
+If you want to test this with Spoon, you need to run the other Jobs after
+this Job. Note: In the log view you see enries of all Jobs.</pre><pre class="note" style="&#xA;            left: 458px;&#xA;            top: 551px;&#xA;            width: 281px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">Do other things here after the two Jobs are finished.</pre><pre class="note" style="&#xA;            left: 454px;&#xA;            top: 314px;&#xA;            width: 402px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">Make sure the timing is enough for this job to start and delete the two files
+before the other Jobs will be finished. Otherwise you could run into
+race conditions.</pre><pre class="note" style="&#xA;            left: 457px;&#xA;            top: 446px;&#xA;            width: 307px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">Note: In our example Job2 will be faster then Job1.
+If the Jobs are started parallel this Job entry has no delay.</pre></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Wait for file &#34;Job1Ready.tmp&#34;">Wait for file "Job1Ready.tmp"</a>, <a href="#Delete file &#34;Job1Ready.tmp&#34;">Delete file "Job1Ready.tmp"</a>, <a href="#Delete file &#34;Job2Ready.tmp&#34;">Delete file "Job2Ready.tmp"</a>, <a href="#Wait for file &#34;Job2Ready.tmp&#34;">Wait for file "Job2Ready.tmp"</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-WAIT_FOR_FILE"></div>
+      <h3 class="entry-heading"><a name="Wait for file &#34;Job1Ready.tmp&#34;-text" href="#Wait for file &#34;Job1Ready.tmp&#34;-icon">Wait for file "Job1Ready.tmp"</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Delete file &#34;Job2Ready.tmp&#34;-text">Delete file "Job2Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Wait for file &#34;Job2Ready.tmp&#34;-text">Wait for file "Job2Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="Start-text" href="#Start-icon">Start</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Delete file &#34;Job1Ready.tmp&#34;-text">Delete file "Job1Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DELETE_FILE"></div>
+      <h3 class="entry-heading"><a name="Delete file &#34;Job1Ready.tmp&#34;-text" href="#Delete file &#34;Job1Ready.tmp&#34;-icon">Delete file "Job1Ready.tmp"</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Start-text">Start</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Delete file &#34;Job2Ready.tmp&#34;-text">Delete file "Job2Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DELETE_FILE"></div>
+      <h3 class="entry-heading"><a name="Delete file &#34;Job2Ready.tmp&#34;-text" href="#Delete file &#34;Job2Ready.tmp&#34;-icon">Delete file "Job2Ready.tmp"</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Delete file &#34;Job1Ready.tmp&#34;-text">Delete file "Job1Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Wait for file &#34;Job1Ready.tmp&#34;-text">Wait for file "Job1Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-WAIT_FOR_FILE"></div>
+      <h3 class="entry-heading"><a name="Wait for file &#34;Job2Ready.tmp&#34;-text" href="#Wait for file &#34;Job2Ready.tmp&#34;-icon">Wait for file "Job2Ready.tmp"</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Wait for file &#34;Job1Ready.tmp&#34;-text">Wait for file "Job1Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy-text">Dummy</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-DUMMY"></div>
+      <h3 class="entry-heading"><a name="Dummy-text" href="#Dummy-icon">Dummy</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Wait for file &#34;Job2Ready.tmp&#34;-text">Wait for file "Job2Ready.tmp"</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

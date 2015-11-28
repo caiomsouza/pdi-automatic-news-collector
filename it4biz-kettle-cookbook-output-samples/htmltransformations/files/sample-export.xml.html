@@ -1,0 +1,476 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+make_pdi_encrypted_password
+
+
+
+Normal
+/
+
+
+
+
+
+
+
+
+
+ID_BATCHYID_BATCHCHANNEL_IDNCHANNEL_IDTRANSNAMEYTRANSNAMESTATUSYSTATUSLINES_READYLINES_READLINES_WRITTENYLINES_WRITTENLINES_UPDATEDYLINES_UPDATEDLINES_INPUTYLINES_INPUTLINES_OUTPUTYLINES_OUTPUTLINES_REJECTEDNLINES_REJECTEDERRORSYERRORSSTARTDATEYSTARTDATEENDDATEYENDDATELOGDATEYLOGDATEDEPDATEYDEPDATEREPLAYDATEYREPLAYDATELOG_FIELDNLOG_FIELD
+
+
+
+
+
+ID_BATCHYID_BATCHSEQ_NRYSEQ_NRLOGDATEYLOGDATETRANSNAMEYTRANSNAMESTEPNAMEYSTEPNAMESTEP_COPYYSTEP_COPYLINES_READYLINES_READLINES_WRITTENYLINES_WRITTENLINES_UPDATEDYLINES_UPDATEDLINES_INPUTYLINES_INPUTLINES_OUTPUTYLINES_OUTPUTLINES_REJECTEDYLINES_REJECTEDERRORSYERRORSINPUT_BUFFER_ROWSYINPUT_BUFFER_ROWSOUTPUT_BUFFER_ROWSYOUTPUT_BUFFER_ROWS
+
+
+
+
+ID_BATCHYID_BATCHCHANNEL_IDYCHANNEL_IDLOG_DATEYLOG_DATELOGGING_OBJECT_TYPEYLOGGING_OBJECT_TYPEOBJECT_NAMEYOBJECT_NAMEOBJECT_COPYYOBJECT_COPYREPOSITORY_DIRECTORYYREPOSITORY_DIRECTORYFILENAMEYFILENAMEOBJECT_IDYOBJECT_IDOBJECT_REVISIONYOBJECT_REVISIONPARENT_CHANNEL_IDYPARENT_CHANNEL_IDROOT_CHANNEL_IDYROOT_CHANNEL_ID
+
+
+
+
+ID_BATCHYID_BATCHCHANNEL_IDYCHANNEL_IDLOG_DATEYLOG_DATETRANSNAMEYTRANSNAMESTEPNAMEYSTEPNAMESTEP_COPYYSTEP_COPYLINES_READYLINES_READLINES_WRITTENYLINES_WRITTENLINES_UPDATEDYLINES_UPDATEDLINES_INPUTYLINES_INPUTLINES_OUTPUTYLINES_OUTPUTLINES_REJECTEDYLINES_REJECTEDERRORSYERRORSLOG_FIELDNLOG_FIELD
+
+
+
+
+
+0.0
+0.0
+
+10000
+50
+50
+N
+Y
+50000
+Y
+
+N
+1000
+
+
+
+
+
+
+
+
+
+
+2011/01/26 15:02:20.074
+-
+2010/01/29 13:08:07.709
+
+
+
+Change the value in this step to your
+clear text password.
+195
+38
+245
+44
+
+-1
+N
+N
+0
+0
+0
+255
+165
+0
+100
+100
+100
+N
+
+
+This encrypts the password using PDI
+basic obfuscation (same as if you save a DB
+connection in dialog).
+192
+136
+292
+61
+
+-1
+N
+N
+0
+0
+0
+255
+165
+0
+100
+100
+100
+N
+
+
+Preview Run the Transformation here!
+Copy and Paste the password from here, and place it into your
+xml files like such:
+&lt;password&gt;Encrypted 2be98afc86aa7f2e4cb79ce10dc9eaed2&lt;/password&gt;
+193
+248
+498
+78
+
+-1
+N
+N
+0
+0
+0
+255
+165
+0
+100
+100
+100
+N
+
+
+
+ clear_passwordencryptY    encryptd1Y   
+
+clear_password
+RowGenerator
+
+Y
+1
+
+none
+
+
+
+
+clear_password
+String
+
+
+
+
+blah
+-1
+-1
+
+
+1
+
+                 
+83
+45
+Y
+
+
+
+
+d1
+Dummy
+
+Y
+1
+
+none
+
+
+
+                 
+82
+264
+Y
+
+
+
+
+encrypt
+ScriptValueMod
+
+Y
+1
+
+none
+
+
+N
+              0
+Script 1
+//Script here
+
+var encrypted_password = 'not encrypted';
+
+
+encrypted_password = "Encrypted " + Packages.org.pentaho.di.core.encryption.Encr.encryptPassword(clear_password);
+
+
+                      encrypted_password
+encrypted_password
+String
+-1
+-1
+N
+         
+                 
+84
+147
+Y
+
+
+
+
+
+
+
+N
+
+
+
+
+
+/
+-
+2006/10/19 10:21:11.187
+
+H2
+localhost
+H2
+Native
+test
+
+sa
+Encrypted 
+
+
+
+
+EXTRA_OPTION_MYSQL.defaultFetchSize500
+EXTRA_OPTION_MYSQL.useCursorFetchtrue
+MAXIMUM_POOL_SIZE10
+USE_POOLINGN
+
+
+
+
+N
+N
+N
+
+
+START
+A job starts to process here.
+SPECIAL
+Y
+N
+N
+0
+60
+12
+0
+1
+1
+N
+Y
+0
+96
+22
+
+
+DUMMY
+A dummy entry.
+SPECIAL
+N
+Y
+N
+0
+60
+12
+0
+1
+1
+N
+N
+0
+19
+3
+
+
+OK
+This comparisson is true when no errors have occured.
+EVAL
+errors == 0
+N
+N
+0
+0
+0
+
+
+ERROR
+This comparisson is true when one or more errors have occured.
+EVAL
+errors != 0
+N
+N
+0
+0
+0
+
+
+Table CHANGELOG exists?
+
+TABLE_EXISTS
+CHANGELOG
+H2
+N
+Y
+0
+253
+61
+
+
+Create table changelog
+
+SQL
+create table changelog
+(
+id int
+, foo varchar(100)
+, primary key(id)
+)
+H2
+N
+Y
+0
+253
+248
+
+
+General - Change log processing
+
+TRANS
+${Internal.Job.Filename.Directory}/../../transformations/General - Change log processing.ktr
+
+/
+N
+N
+Y
+Y
+N
+
+
+N
+N
+Error
+N
+Y
+0
+253
+357
+
+
+General - Change log processing 2
+
+TRANS
+${Internal.Job.Filename.Directory}/../../transformations/General - Change log processing 2.ktr
+
+/
+N
+Y
+Y
+Y
+N
+
+
+N
+N
+Error
+N
+Y
+0
+253
+505
+
+
+Drop table changelog
+
+SQL
+drop table changelog
+
+H2
+N
+Y
+0
+350
+148
+
+
+
+
+START
+Table CHANGELOG exists?
+0
+0
+Y
+Y
+Y
+
+
+Table CHANGELOG exists?
+Create table changelog
+0
+0
+Y
+N
+N
+
+
+Create table changelog
+General - Change log processing
+0
+0
+Y
+Y
+N
+
+
+General - Change log processing
+General - Change log processing 2
+0
+0
+Y
+Y
+N
+
+
+Table CHANGELOG exists?
+Drop table changelog
+0
+0
+Y
+Y
+N
+
+
+Drop table changelog
+Create table changelog
+0
+0
+Y
+Y
+N
+
+
+
+
+
+

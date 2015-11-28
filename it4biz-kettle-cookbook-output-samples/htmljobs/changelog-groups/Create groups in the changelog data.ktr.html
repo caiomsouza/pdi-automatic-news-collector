@@ -1,0 +1,714 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/changelog-groups/Create groups in the changelog data.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/changelog-groups/Create groups in the changelog data.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "jobs/changelog-groups"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Create groups in the changelog data</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 12:55:58.788</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#changelog.txt-text">changelog.txt</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#TMP_CHANGELOG-text">TMP_CHANGELOG</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 604px;&#xA;          height: 558px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 604px;&#xA;              height: 558px;&#xA;          "><a name="Copy rows to result-icon"></a><div id="Copy rows to result" class="&#xA;                      step-icon&#xA;                      step-icon-RowsToResult" style="&#xA;                      left:377px;&#xA;                      top:507px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Copy rows to result-text" style="&#xA;                      top:539px;&#xA;                      left:351.6666666666667px;                    &#xA;                  ">Copy rows to result</a><a name="Only subnr-icon"></a><div id="Only subnr" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:377px;&#xA;                      top:204px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#sort on subnr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Only subnr-text" style="&#xA;                      top:236px;&#xA;                      left:363.6666666666667px;                    &#xA;                  ">Only subnr</a><a name="TMP_CHANGELOG-icon"></a><div id="TMP_CHANGELOG" class="&#xA;                      step-icon&#xA;                      step-icon-TableOutput" style="&#xA;                      left:591px;&#xA;                      top:78px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Only subnr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#TMP_CHANGELOG-text" style="&#xA;                      top:110px;&#xA;                      left:573.6666666666666px;                    &#xA;                  ">TMP_CHANGELOG</a><a name="changelog.txt-icon"></a><div id="changelog.txt" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileInput" style="&#xA;                      left:115px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#nr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#changelog.txt-text" style="&#xA;                      top:109px;&#xA;                      left:97.66666666666667px;                    &#xA;                  ">changelog.txt</a><a name="distinct subnr-icon"></a><div id="distinct subnr" class="&#xA;                      step-icon&#xA;                      step-icon-Unique" style="&#xA;                      left:377px;&#xA;                      top:406px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Copy rows to result"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#distinct subnr-text" style="&#xA;                      top:438px;&#xA;                      left:358.3333333333333px;                    &#xA;                  ">distinct subnr</a><a name="nr-icon"></a><div id="nr" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:234px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#sort on id, seq"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#nr-text" style="&#xA;                      top:109px;&#xA;                      left:231.33333333333334px;                    &#xA;                  ">nr</a><a name="sort on id, seq-icon"></a><div id="sort on id, seq" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:353px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#subnr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#sort on id, seq-text" style="&#xA;                      top:109px;&#xA;                      left:333px;                    &#xA;                  ">sort on id, seq</a><a name="sort on subnr-icon"></a><div id="sort on subnr" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:377px;&#xA;                      top:305px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#distinct subnr"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#sort on subnr-text" style="&#xA;                      top:337px;&#xA;                      left:359.6666666666667px;                    &#xA;                  ">sort on subnr</a><a name="subnr-icon"></a><div id="subnr" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:472px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#TMP_CHANGELOG"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#subnr-text" style="&#xA;                      top:109px;&#xA;                      left:465.3333333333333px;                    &#xA;                  ">subnr</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#changelog.txt">changelog.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 1 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.SampleData">SampleData</a></th>
+               <td>H2</td>
+               <td>JNDI</td>
+               <td></td>
+               <td>1521</td>
+               <td></td>
+               <td><a href="#TMP_CHANGELOG">TMP_CHANGELOG</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.SampleData">SampleData</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>H2</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>JNDI</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted </td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowsToResult"></div>
+      <h3 class="step-heading"><a name="Copy rows to result-text" href="#Copy rows to result-icon">Copy rows to result</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#distinct subnr-text">distinct subnr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Only subnr-text" href="#Only subnr-icon">Only subnr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#TMP_CHANGELOG-text">TMP_CHANGELOG</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#sort on subnr-text">sort on subnr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>subnr</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TableOutput"></div>
+      <h3 class="step-heading"><a name="TMP_CHANGELOG-text" href="#TMP_CHANGELOG-icon">TMP_CHANGELOG</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#subnr-text">subnr</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Only subnr-text">Only subnr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.SampleData">SampleData</a></td>
+               <td></td>
+               <td>TMP_CHANGELOG</td>
+               <td></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileInput"></div>
+      <h3 class="step-heading"><a name="changelog.txt-text" href="#changelog.txt-icon">changelog.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#nr-text">nr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>position</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>flag</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>id</td>
+               <td>Integer</td>
+               <td></td>
+               <td>€</td>
+               <td>,</td>
+               <td>.</td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>2</td>
+               <td>0</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>foo</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>10</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Unique"></div>
+      <h3 class="step-heading"><a name="distinct subnr-text" href="#distinct subnr-icon">distinct subnr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#sort on subnr-text">sort on subnr</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Copy rows to result-text">Copy rows to result</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="nr-text" href="#nr-icon">nr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#changelog.txt-text">changelog.txt</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#sort on id, seq-text">sort on id, seq</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="sort on id, seq-text" href="#sort on id, seq-icon">sort on id, seq</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#nr-text">nr</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#subnr-text">subnr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>nr</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="sort on subnr-text" href="#sort on subnr-icon">sort on subnr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Only subnr-text">Only subnr</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#distinct subnr-text">distinct subnr</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>subnr</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="subnr-text" href="#subnr-icon">subnr</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#sort on id, seq-text">sort on id, seq</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#TMP_CHANGELOG-text">TMP_CHANGELOG</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">
+var subnr
+var prevId;
+
+if (prevId!=null)
+{
+  if ( prevId!=id.getInteger() )
+  {
+    subnr= 1;
+  }
+  else
+  {
+    subnr++;
+  }
+}
+else
+{
+  subnr = 1;
+}
+
+
+prevId = id.getInteger();</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>subnr</td>
+               <td>subnr</td>
+               <td>Integer</td>
+               <td>5</td>
+               <td>0</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

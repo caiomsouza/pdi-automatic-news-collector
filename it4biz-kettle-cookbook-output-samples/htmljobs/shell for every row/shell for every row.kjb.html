@@ -1,0 +1,187 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/shell for every row/shell for every row.kjb"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/jobs/shell for every row/shell for every row.kjb"
+            file: 1
+            document: 1
+            document-element: job
+            name: shell for every row
+            relative-path: "jobs/shell for every row"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: job "shell for every row"</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/job.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Job Entries">Job Entries</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>shell for every row</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2007/09/06 09:25:34.335</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This job does not have a description.
+         
+      </p>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;            width: 457px;&#xA;            height: 275px;&#xA;        ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 457px;&#xA;              height: 275px;&#xA;          "><a name="Start-icon"></a><div id="Start" class="&#xA;                      entry-icon&#xA;                      entry-icon-START" style="&#xA;                      left:60px;&#xA;                      top:124px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-unconditional" href="#shell for every row - testdata"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:156px;&#xA;                      left:53.333333333333336px;&#xA;                  " href="#Start-text">Start</a><a name="shell for every row - testdata-icon"></a><div id="shell for every row - testdata" class="&#xA;                      entry-icon&#xA;                      entry-icon-TRANS" style="&#xA;                      left:217px;&#xA;                      top:122px;&#xA;                  ">
+               <div class="entry-hops"><a class="&#xA;                                  entry-hop&#xA;                                  entry-hop-true" href="#shelltest.cmd"></a></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:154px;&#xA;                      left:177px;&#xA;                  " href="shell for every row - testdata.ktr.html">shell for every row - testdata</a><a name="shelltest.cmd-icon"></a><div id="shelltest.cmd" class="&#xA;                      entry-icon&#xA;                      entry-icon-SHELL" style="&#xA;                      left:389px;&#xA;                      top:121px;&#xA;                  ">
+               <div class="entry-hops"></div>
+            </div><a class="&#xA;                      entry-label&#xA;                      " style="&#xA;                      top:153px;&#xA;                      left:371.6666666666667px;&#xA;                  " href="#shelltest.cmd-text">shelltest.cmd</a><pre class="note" style="&#xA;            left: 63px;&#xA;            top: 43px;&#xA;            width: 189px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">Example: Run a shell for every row</pre><pre class="note" style="&#xA;            left: 344px;&#xA;            top: 190px;&#xA;            width: 215px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: ;&#xA;            &#xA;            color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            background-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;            border-color: rgb(&#xA;                    ,&#xA;                    ,);&#xA;        ">See in the log the entried with (stdout).</pre></div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This job reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Job Entries</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Job.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#shell for every row - testdata">shell for every row - testdata</a>, <a href="#shelltest.cmd">shelltest.cmd</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This job does not define any database connections.</p>
+      <h2><a name="Job Entries">Job Entries</a></h2>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-START"></div>
+      <h3 class="entry-heading"><a name="Start-text" href="#Start-icon">Start</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#shell for every row - testdata-text">shell for every row - testdata</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-TRANS"></div>
+      <h3 class="entry-heading"><a name="shell for every row - testdata-text" href="#shell for every row - testdata-icon">shell for every row - testdata</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Start-text">Start</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#shelltest.cmd-text">shelltest.cmd</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            entry-icon&#xA;            entry-icon-SHELL"></div>
+      <h3 class="entry-heading"><a name="shelltest.cmd-text" href="#shelltest.cmd-icon">shelltest.cmd</a></h3>
+      <p>
+         This job entry does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#shell for every row - testdata-text">shell for every row - testdata</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

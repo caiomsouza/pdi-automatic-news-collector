@@ -1,0 +1,1129 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 5 - Performance Test Data for Element Blocks.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Input Stream (StAX) Test 5 - Performance Test Data for Element Blocks.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Input Stream StAX Test 5 - Performance Test Data for Element Blocks</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/01/14 13:37:59.729</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation defines 1 parameters.
+         
+      </p>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Default Value
+                  
+               </th>
+               <th>
+                  Description
+                  
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>number_of_new_products</th>
+               <td>1000000</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (7)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#AnalyzerList HEAD - items.added-text">AnalyzerList HEAD - items.added</a></div>
+                  <div><a href="#AnalyzerList TAIL / Products HEAD-text">AnalyzerList TAIL / Products HEAD</a></div>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+                  <div><a href="#Generate Rows 2-text">Generate Rows 2</a></div>
+                  <div><a href="#Generate random value-text">Generate random value</a></div>
+                  <div><a href="#Generate random value 2-text">Generate random value 2</a></div>
+                  <div><a href="#Products TAIL-text">Products TAIL</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Write XML test data-text">Write XML test data</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 903px;&#xA;          height: 690px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 903px;&#xA;              height: 690px;&#xA;          "><a name="AnalyzerList HEAD - items.added-icon"></a><div id="AnalyzerList HEAD - items.added" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:580px;&#xA;                      top:120px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AnalyzerList HEAD - items.added-text" style="&#xA;                      top:152px;&#xA;                      left:538.6666666666666px;                    &#xA;                  ">AnalyzerList HEAD - items.added</a><a name="AnalyzerList TAIL / Products HEAD-icon"></a><div id="AnalyzerList TAIL / Products HEAD" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:420px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#AnalyzerList TAIL / Products HEAD-text" style="&#xA;                      top:332px;&#xA;                      left:376px;                    &#xA;                  ">AnalyzerList TAIL / Products HEAD</a><a name="Append streams-icon"></a><div id="Append streams" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:580px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams-text" style="&#xA;                      top:252px;&#xA;                      left:561.3333333333334px;                    &#xA;                  ">Append streams</a><a name="Append streams 2-icon"></a><div id="Append streams 2" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:580px;&#xA;                      top:300px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams 2-text" style="&#xA;                      top:332px;&#xA;                      left:558.6666666666666px;                    &#xA;                  ">Append streams 2</a><a name="Append streams 3-icon"></a><div id="Append streams 3" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:580px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 4"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams 3-text" style="&#xA;                      top:412px;&#xA;                      left:558.6666666666666px;                    &#xA;                  ">Append streams 3</a><a name="Append streams 4-icon"></a><div id="Append streams 4" class="&#xA;                      step-icon&#xA;                      step-icon-Append" style="&#xA;                      left:580px;&#xA;                      top:460px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Write XML test data"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Append streams 4-text" style="&#xA;                      top:492px;&#xA;                      left:558.6666666666666px;                    &#xA;                  ">Append streams 4</a><a name="Calculator-icon"></a><div id="Calculator" class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:280px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Replace in string"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator-text" style="&#xA;                      top:252px;&#xA;                      left:266.6666666666667px;                    &#xA;                  ">Calculator</a><a name="Calculator 2-icon"></a><div id="Calculator 2" class="&#xA;                      step-icon&#xA;                      step-icon-Calculator" style="&#xA;                      left:280px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Replace in string 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Calculator 2-text" style="&#xA;                      top:412px;&#xA;                      left:264px;                    &#xA;                  ">Calculator 2</a><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:60px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate random value"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:252px;&#xA;                      left:42.66666666666667px;                    &#xA;                  ">Generate Rows</a><a name="Generate Rows 2-icon"></a><div id="Generate Rows 2" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:60px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate random value 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows 2-text" style="&#xA;                      top:412px;&#xA;                      left:40px;                    &#xA;                  ">Generate Rows 2</a><a name="Generate random value-icon"></a><div id="Generate random value" class="&#xA;                      step-icon&#xA;                      step-icon-RandomValue" style="&#xA;                      left:180px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate random value-text" style="&#xA;                      top:252px;&#xA;                      left:152px;                    &#xA;                  ">Generate random value</a><a name="Generate random value 2-icon"></a><div id="Generate random value 2" class="&#xA;                      step-icon&#xA;                      step-icon-RandomValue" style="&#xA;                      left:180px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Calculator 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate random value 2-text" style="&#xA;                      top:412px;&#xA;                      left:149.33333333333334px;                    &#xA;                  ">Generate random value 2</a><a name="Products TAIL-icon"></a><div id="Products TAIL" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:420px;&#xA;                      top:460px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 4"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Products TAIL-text" style="&#xA;                      top:492px;&#xA;                      left:402.6666666666667px;                    &#xA;                  ">Products TAIL</a><a name="Replace in string-icon"></a><div id="Replace in string" class="&#xA;                      step-icon&#xA;                      step-icon-ReplaceString" style="&#xA;                      left:380px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Replace in string-text" style="&#xA;                      top:252px;&#xA;                      left:357.3333333333333px;                    &#xA;                  ">Replace in string</a><a name="Replace in string 2-icon"></a><div id="Replace in string 2" class="&#xA;                      step-icon&#xA;                      step-icon-ReplaceString" style="&#xA;                      left:380px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Replace in string 2-text" style="&#xA;                      top:412px;&#xA;                      left:354.6666666666667px;                    &#xA;                  ">Replace in string 2</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:460px;&#xA;                      top:220px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:252px;&#xA;                      left:442.6666666666667px;                    &#xA;                  ">Select values</a><a name="Select values 2-icon"></a><div id="Select values 2" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:480px;&#xA;                      top:380px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Append streams 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values 2-text" style="&#xA;                      top:412px;&#xA;                      left:460px;                    &#xA;                  ">Select values 2</a><a name="Write XML test data-icon"></a><div id="Write XML test data" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:780px;&#xA;                      top:460px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Write XML test data-text" style="&#xA;                      top:492px;&#xA;                      left:754.6666666666666px;                    &#xA;                  ">Write XML test data</a>
+            <pre class="note" style="&#xA;            left: 5px;&#xA;            top: 5px;&#xA;            width: 428px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example creates performance test data and writes them out to
+files/XML Input Stream (StAX) Test 5 - Performance Test Data for Element Blocks.ktr
+
+Note: You need to enable the hop before 'Write XML test data' to get the file created.
+See named parameter 'number_of_new_products' for the # of test data.
+This parameter defaults to 1 million and produces 1 million test records for the
+Analyzer Lists part and 1 million for the Products parts, in total 2 million records.
+
+After creation of the test data, you can replace the file name in the transformation
+XML Input Stream (StAX) Test 2 - Element Blocks.ktr
+and check the performance.
+
+The file size for the default 1 million will be around 280 MB!</pre>
+            <pre class="note" style="&#xA;            left: 13px;&#xA;            top: 567px;&#xA;            width: 169px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2011-06-20 Jens Bleuel: created</pre>
+            <pre class="note" style="&#xA;            left: 642px;&#xA;            top: 451px;&#xA;            width: 121px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,0&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Enable this hop to test!</pre>
+            <pre class="note" style="&#xA;            left: 59px;&#xA;            top: 335px;&#xA;            width: 53px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Products</pre>
+            <pre class="note" style="&#xA;            left: 60px;&#xA;            top: 271px;&#xA;            width: 78px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Analyzer Lists</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>number_of_new_products</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Generate Rows">Generate Rows</a>, <a href="#Generate Rows 2">Generate Rows 2</a></td>
+            </tr>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Write XML test data">Write XML test data</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="AnalyzerList HEAD - items.added-text" href="#AnalyzerList HEAD - items.added-icon">AnalyzerList HEAD - items.added</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="AnalyzerList TAIL / Products HEAD-text" href="#AnalyzerList TAIL / Products HEAD-icon">AnalyzerList TAIL / Products HEAD</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams-text" href="#Append streams-icon">Append streams</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#AnalyzerList HEAD - items.added-text">AnalyzerList HEAD - items.added</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams 2-text" href="#Append streams 2-icon">Append streams 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#AnalyzerList TAIL / Products HEAD-text">AnalyzerList TAIL / Products HEAD</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams 3-text" href="#Append streams 3-icon">Append streams 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Select values 2-text">Select values 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Append streams 2-text">Append streams 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Append streams 4-text">Append streams 4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Append"></div>
+      <h3 class="step-heading"><a name="Append streams 4-text" href="#Append streams 4-icon">Append streams 4</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Products TAIL-text">Products TAIL</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Write XML test data-text">Write XML test data</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator-text" href="#Calculator-icon">Calculator</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate random value-text">Generate random value</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Replace in string-text">Replace in string</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Calculator"></div>
+      <h3 class="step-heading"><a name="Calculator 2-text" href="#Calculator 2-icon">Calculator 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate random value 2-text">Generate random value 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Replace in string 2-text">Replace in string 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Generate random value-text">Generate random value</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>&lt;AnalyzerElement ItemID="product?id=REPLACE" ProductID="REPLACE" /&gt;</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows 2-text" href="#Generate Rows 2-icon">Generate Rows 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Generate random value 2-text">Generate random value 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>&lt;Product id="REPLACEINT" name="REPLACESTR1"&gt;&lt;MetaData&gt;&lt;Value AttributeID="AttrShortName"&gt;Short REPLACESTR2&lt;/Value&gt;&lt;Value AttributeID="AttrLongName"&gt;Long
+                  REPLACESTR3&lt;/Value&gt;&lt;/MetaData&gt;&lt;/Product&gt;
+               </td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RandomValue"></div>
+      <h3 class="step-heading"><a name="Generate random value-text" href="#Generate random value-icon">Generate random value</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Calculator-text">Calculator</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>random</td>
+               <td>random integer</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RandomValue"></div>
+      <h3 class="step-heading"><a name="Generate random value 2-text" href="#Generate random value 2-icon">Generate random value 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows 2-text">Generate Rows 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Calculator 2-text">Calculator 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>REPLACEINT</td>
+               <td>random integer</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>REPLACESTR1</td>
+               <td>random uuid</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>REPLACESTR2</td>
+               <td>random string</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>REPLACESTR3</td>
+               <td>random string</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Products TAIL-text" href="#Products TAIL-icon">Products TAIL</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Append streams 4-text">Append streams 4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ReplaceString"></div>
+      <h3 class="step-heading"><a name="Replace in string-text" href="#Replace in string-icon">Replace in string</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Calculator-text">Calculator</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>in_stream_name</th>
+               <th>out_stream_name</th>
+               <th>use_regex</th>
+               <th>replace_string</th>
+               <th>replace_by_string</th>
+               <th>set_empty_string</th>
+               <th>replace_field_by_string</th>
+               <th>whole_word</th>
+               <th>case_sensitive</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>no</td>
+               <td>REPLACE</td>
+               <td></td>
+               <td>N</td>
+               <td>random_abs</td>
+               <td>no</td>
+               <td>no</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ReplaceString"></div>
+      <h3 class="step-heading"><a name="Replace in string 2-text" href="#Replace in string 2-icon">Replace in string 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Calculator 2-text">Calculator 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values 2-text">Select values 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>in_stream_name</th>
+               <th>out_stream_name</th>
+               <th>use_regex</th>
+               <th>replace_string</th>
+               <th>replace_by_string</th>
+               <th>set_empty_string</th>
+               <th>replace_field_by_string</th>
+               <th>whole_word</th>
+               <th>case_sensitive</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>no</td>
+               <td>REPLACEINT</td>
+               <td></td>
+               <td>N</td>
+               <td>REPLACEINT_ABS</td>
+               <td>no</td>
+               <td>no</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>no</td>
+               <td>REPLACESTR1</td>
+               <td></td>
+               <td>N</td>
+               <td>REPLACESTR1</td>
+               <td>no</td>
+               <td>no</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>no</td>
+               <td>REPLACESTR2</td>
+               <td></td>
+               <td>N</td>
+               <td>REPLACESTR2</td>
+               <td>no</td>
+               <td>no</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>no</td>
+               <td>REPLACESTR3</td>
+               <td></td>
+               <td>N</td>
+               <td>REPLACESTR3</td>
+               <td>no</td>
+               <td>no</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Replace in string-text">Replace in string</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Append streams-text">Append streams</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values 2-text" href="#Select values 2-icon">Select values 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Replace in string 2-text">Replace in string 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Append streams 3-text">Append streams 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xml_data</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="Write XML test data-text" href="#Write XML test data-icon">Write XML test data</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Append streams 4-text">Append streams 4</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

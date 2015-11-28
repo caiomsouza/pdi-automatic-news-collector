@@ -1,0 +1,453 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Automatic Documentation Output - Generate Kettle HTML Documenation.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Automatic Documentation Output - Generate Kettle HTML Documenation.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Automatic Documentation Output - Generate Kettle HTML Documenation</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/04/02 15:45:27.583</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (2)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Get transformation filenames-text">Get transformation filenames</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Automatic Documentation Output: HTML-text">Automatic Documentation Output: HTML</a></div>
+                  <div><a href="#Automatic Documentation Output: METADATA-text">Automatic Documentation Output: METADATA</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 1128px;&#xA;          height: 349px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 1128px;&#xA;              height: 349px;&#xA;          "><a name="Automatic Documentation Output: HTML-icon"></a><div id="Automatic Documentation Output: HTML" class="&#xA;                      step-icon&#xA;                      step-icon-AutoDoc" style="&#xA;                      left:776px;&#xA;                      top:108px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Automatic Documentation Output: HTML-text" style="&#xA;                      top:140px;&#xA;                      left:728px;                    &#xA;                  ">Automatic Documentation Output: HTML</a><a name="Automatic Documentation Output: METADATA-icon"></a><div id="Automatic Documentation Output: METADATA" class="&#xA;                      step-icon&#xA;                      step-icon-AutoDoc" style="&#xA;                      left:776px;&#xA;                      top:214px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Modified Java Script Value"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Automatic Documentation Output: METADATA-text" style="&#xA;                      top:246px;&#xA;                      left:722.6666666666666px;                    &#xA;                  ">Automatic Documentation Output: METADATA</a><a name="File name &amp; type only-icon"></a><div id="File name &amp; type only" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:514px;&#xA;                      top:108px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Automatic Documentation Output: METADATA"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-copy-data " href="#Automatic Documentation Output: HTML"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#File name &amp; type only-text" style="&#xA;                      top:140px;&#xA;                      left:486px;                    &#xA;                  ">File name &amp; type only</a><a name="Get transformation filenames-icon"></a><div id="Get transformation filenames" class="&#xA;                      step-icon&#xA;                      step-icon-GetFileNames" style="&#xA;                      left:155px;&#xA;                      top:108px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#deterime file type"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Get transformation filenames-text" style="&#xA;                      top:140px;&#xA;                      left:117.66666666666666px;                    &#xA;                  ">Get transformation filenames</a><a name="Modified Java Script Value-icon"></a><div id="Modified Java Script Value" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:1084px;&#xA;                      top:214px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Modified Java Script Value-text" style="&#xA;                      top:246px;&#xA;                      left:1049.3333333333333px;                    &#xA;                  ">Modified Java Script Value</a><a name="deterime file type-icon"></a><div id="deterime file type" class="&#xA;                      step-icon&#xA;                      step-icon-ValueMapper" style="&#xA;                      left:349px;&#xA;                      top:108px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#File name &amp; type only"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#deterime file type-text" style="&#xA;                      top:140px;&#xA;                      left:325px;                    &#xA;                  ">deterime file type</a>
+            <pre class="note" style="&#xA;            left: 84px;&#xA;            top: 60px;&#xA;            width: 124px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Get transformations</pre>
+            <pre class="note" style="&#xA;            left: 668px;&#xA;            top: 281px;&#xA;            width: 219px;&#xA;            height: px;&#xA;            font-family: Arial;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Don't preview this one if you include 
+an image in the output as the Image
+ doesn't convert to String.</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Automatic Documentation Output: HTML">Automatic Documentation Output: HTML</a>, <a href="#Automatic Documentation Output: METADATA">Automatic Documentation Output: METADATA</a>, <a href="#Get transformation filenames">Get transformation filenames</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AutoDoc"></div>
+      <h3 class="step-heading"><a name="Automatic Documentation Output: HTML-text" href="#Automatic Documentation Output: HTML-icon">Automatic Documentation Output: HTML</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#File name &amp; type only-text">File name &amp; type only</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AutoDoc"></div>
+      <h3 class="step-heading"><a name="Automatic Documentation Output: METADATA-text" href="#Automatic Documentation Output: METADATA-icon">Automatic Documentation Output: METADATA</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#File name &amp; type only-text">File name &amp; type only</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Modified Java Script Value-text">Modified Java Script Value</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="File name &amp; type only-text" href="#File name &amp; type only-icon">File name &amp; type only</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#deterime file type-text">deterime file type</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Automatic Documentation Output: METADATA-text">Automatic Documentation Output: METADATA</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Automatic Documentation Output: HTML-text">Automatic Documentation Output: HTML</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>FileType</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GetFileNames"></div>
+      <h3 class="step-heading"><a name="Get transformation filenames-text" href="#Get transformation filenames-icon">Get transformation filenames</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#deterime file type-text">deterime file type</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Modified Java Script Value-text" href="#Modified Java Script Value-icon">Modified Java Script Value</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Automatic Documentation Output: METADATA-text">Automatic Documentation Output: METADATA</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">//Script here
+
+var meta = row[getInputRowMeta().indexOfValue("meta")];
+var object_name = meta.getName();
+var object_description = meta.getDescription();
+var object_extended_description = meta.getExtendedDescription();
+var used_databases = "";
+
+if (FileType.equalsIgnoreCase("Transformation")) {
+	var used_databases_first=true;
+	for (i=0;i&lt;meta.nrDatabases();i++) {
+  		var db = meta.getDatabase(i);
+  		if (meta.isDatabaseConnectionUsed(db)) {
+    		if (!used_databases_first) {
+				used_databases+=", ";
+			} else {
+				used_databases_first=false;
+		    }
+    		used_databases+=db.getName();
+		  }
+	}
+} else {
+	for (i=0;i&lt;meta.nrDatabases();i++) {
+  		var db = meta.getDatabase(i);
+    	if (i&gt;0) {
+			used_databases+=", ";
+		}
+		used_databases+=db.getName();
+	}
+}
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>object_name</td>
+               <td>object_name</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>object_description</td>
+               <td>object_description</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>object_extended_description</td>
+               <td>object_extended_description</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>used_databases</td>
+               <td>used_databases</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ValueMapper"></div>
+      <h3 class="step-heading"><a name="deterime file type-text" href="#deterime file type-icon">deterime file type</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Get transformation filenames-text">Get transformation filenames</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#File name &amp; type only-text">File name &amp; type only</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>source_value</th>
+               <th>target_value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>ktr</td>
+               <td>Transformation</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>kjb</td>
+               <td>Job</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Annotated SOAP Web Service call - dialog.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/General - Annotated SOAP Web Service call - dialog.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Annotated SOAP Web Service call - dialog</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 14:58:08.974</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#email address-text">email address</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 737px;&#xA;          height: 203px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 737px;&#xA;              height: 203px;&#xA;          "><a name="Generate SOAP request-icon"></a><div id="Generate SOAP request" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:297px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#HTTP Post"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate SOAP request-text" style="&#xA;                      top:89px;&#xA;                      left:269px;                    &#xA;                  ">Generate SOAP request</a><a name="HTTP Post-icon"></a><div id="HTTP Post" class="&#xA;                      step-icon&#xA;                      step-icon-HTTPPOST" style="&#xA;                      left:490px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Parse SOAP Response"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#HTTP Post-text" style="&#xA;                      top:89px;&#xA;                      left:478px;                    &#xA;                  ">HTTP Post</a><a name="Parse SOAP Response-icon"></a><div id="Parse SOAP Response" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:683px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Parse SOAP Response-text" style="&#xA;                      top:89px;&#xA;                      left:657.6666666666666px;                    &#xA;                  ">Parse SOAP Response</a><a name="email address-icon"></a><div id="email address" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:104px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Generate SOAP request"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#email address-text" style="&#xA;                      top:89px;&#xA;                      left:86.66666666666667px;                    &#xA;                  ">email address</a>
+            <pre class="note" style="&#xA;            left: 74px;&#xA;            top: 132px;&#xA;            width: 676px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,255&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This is an annotated SOAP Web Service call.
+It validates an e-mail address using a public (free) web service.
+
+This sample explains how you can customize an XML template to generate a SOAP request.
+This method can also be used to customize other XML snippets.
+
+It also shows you how you can parse SOAP responses by 
+explaining how you can work with namespaces in XML 
+documents in E4X (ECMA/Script for XML).
+
+See also: https://developer.mozilla.org/En/E4X
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Generate SOAP request-text" href="#Generate SOAP request-icon">Generate SOAP request</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#email address-text">email address</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#HTTP Post-text">HTTP Post</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>VerifyEmail</h5><pre class="brush: js;">var request = new XML()
+
+// Request XML generated by SOAP UI
+//
+// Change the request to match your needs.
+// Inject arguments in the place of the question marks like this:
+// 
+// var eMail = "someone@example.com";
+// request=...
+//     &lt;ws:email&gt;{eMail}&lt;/ws:email&gt; ...;
+// 
+// where eMail is the name of a scoped JS variable.  That includes input fields.
+//
+// See also: https://developer.mozilla.org/En/E4X
+// 
+//
+request = &lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://ws.cdyne.com/"&gt;
+   &lt;soap:Header/&gt;
+   &lt;soap:Body&gt;
+      &lt;ws:VerifyEmail&gt;
+         &lt;ws:email&gt;{email}&lt;/ws:email&gt;
+         &lt;ws:LicenseKey&gt;&lt;/ws:LicenseKey&gt;
+      &lt;/ws:VerifyEmail&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;;
+
+var requestXml=request.toXMLString();
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>requestXml</td>
+               <td>requestXml</td>
+               <td>String</td>
+               <td>100000</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-HTTPPOST"></div>
+      <h3 class="step-heading"><a name="HTTP Post-text" href="#HTTP Post-icon">HTTP Post</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate SOAP request-text">Generate SOAP request</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Parse SOAP Response-text">Parse SOAP Response</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Parse SOAP Response-text" href="#Parse SOAP Response-icon">Parse SOAP Response</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#HTTP Post-text">HTTP Post</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>VerifyEmail</h5><pre class="brush: js;">/*
+  This is the response that is received:
+  ---------------------------------------
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;soap:Body&gt;
+     &lt;VerifyEmailResponse xmlns="http://ws.cdyne.com/"&gt;
+       &lt;VerifyEmailResult&gt;
+         &lt;ResponseText&gt;Mail Server will accept email&lt;/ResponseText&gt;
+         &lt;ResponseCode&gt;3&lt;/ResponseCode&gt;
+         &lt;LastMailServer&gt;in.mx.linuxsystems.be&lt;/LastMailServer&gt;
+         &lt;GoodEmail&gt;true&lt;/GoodEmail&gt;
+       &lt;/VerifyEmailResult&gt;
+     &lt;/VerifyEmailResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+*/
+
+// E4X needs to get rid of the &lt;xml&gt; header for security reasons...
+// See also: bug 336551, https://bugzilla.mozilla.org/show_bug.cgi?id=336551
+// 
+responseXml = responseXml.replace(/^&lt;\?xml\s+version\s*=\s*(["'])[^\1]+\1[^?]*\?&gt;/, "");
+var response = new XML(responseXml);
+
+// Determine the namespace of the SOAP Envelope:
+//
+var soap = response.namespace();
+
+// Specify the namespace of the verify email response:
+//
+var ws = response.*.*.namespace(); // OR: new Namespace("http://ws.cdyne.com/");
+
+// Set this namespace as a default to make parsing the response easier:
+//
+default xml namespace = ws
+
+// Grab the body inside the SOAP response:
+//
+var responseBody = response.soap::Body.VerifyEmailResponse;
+
+// Use the following format to parse the response body, the payload of the SOAP response:
+// 
+// var memberElement = responseBody.someElement;
+// var memberAttribute = responseBody.@someAttribute;
+// 
+var responseText = responseBody.VerifyEmailResult.ResponseText;
+var responseCode = responseBody.VerifyEmailResult.ResponseCode;
+var goodEmail = responseBody.VerifyEmailResult.GoodEmail;
+
+responseBody.removeNamespace(ws);
+responseBody.removeNamespace(soap);
+
+var xmlns = new Namespace("http://ws.cdyne.com/");
+responseBody.removeNamespace(xmlns);
+
+Alert(responseBody.toXMLString());
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>responseText</td>
+               <td>responseText</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>responseCode</td>
+               <td>responseCode</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>goodEmail</td>
+               <td>goodEmail</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="email address-text" href="#email address-icon">email address</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Generate SOAP request-text">Generate SOAP request</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>email</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>info@pentaho.com</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,3065 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Add - creating multi level XML files.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/XML Add - creating multi level XML files.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>XML Add - creating multi level XML files</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 16:54:32.160</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (6)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#OrderHeaderComments-text">OrderHeaderComments</a></div>
+                  <div><a href="#OrderHeaders-text">OrderHeaders</a></div>
+                  <div><a href="#OrderLineComments-text">OrderLineComments</a></div>
+                  <div><a href="#OrderLines-text">OrderLines</a></div>
+                  <div><a href="#OrderList-text">OrderList</a></div>
+                  <div><a href="#OrderSubLines-text">OrderSubLines</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#XML File output-text">XML File output</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 942px;&#xA;          height: 823px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 942px;&#xA;              height: 823px;&#xA;          "><a name="Dummy for aggregation-icon"></a><div id="Dummy for aggregation" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:240px;&#xA;                      top:578px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy for aggregation-text" style="&#xA;                      top:610px;&#xA;                      left:212px;                    &#xA;                  ">Dummy for aggregation</a><a name="Fill the placeholder-icon"></a><div id="Fill the placeholder" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:241px;&#xA;                      top:518px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy for aggregation"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Fill the placeholder-text" style="&#xA;                      top:550px;&#xA;                      left:214.33333333333334px;                    &#xA;                  ">Fill the placeholder</a><a name="Fill the placeholder 2-icon"></a><div id="Fill the placeholder 2" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:73px;&#xA;                      top:498px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Replace separators"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Fill the placeholder 2-text" style="&#xA;                      top:530px;&#xA;                      left:43.66666666666667px;                    &#xA;                  ">Fill the placeholder 2</a><a name="Fill the placeholder 3-icon"></a><div id="Fill the placeholder 3" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:550px;&#xA;                      top:523px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Fill the placeholder 3-text" style="&#xA;                      top:555px;&#xA;                      left:520.6666666666666px;                    &#xA;                  ">Fill the placeholder 3</a><a name="Group by-icon"></a><div id="Group by" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:550px;&#xA;                      top:669px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by-text" style="&#xA;                      top:701px;&#xA;                      left:539.3333333333334px;                    &#xA;                  ">Group by</a><a name="Group by 2-icon"></a><div id="Group by 2" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:241px;&#xA;                      top:648px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Join Rows (cartesian product)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by 2-text" style="&#xA;                      top:680px;&#xA;                      left:227.66666666666666px;                    &#xA;                  ">Group by 2</a><a name="Group by 3-icon"></a><div id="Group by 3" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:811px;&#xA;                      top:432px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by 3-text" style="&#xA;                      top:464px;&#xA;                      left:797.6666666666666px;                    &#xA;                  ">Group by 3</a><a name="Group by 3 2-icon"></a><div id="Group by 3 2" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:416px;&#xA;                      top:368px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by 3 2-text" style="&#xA;                      top:400px;&#xA;                      left:400px;                    &#xA;                  ">Group by 3 2</a><a name="Group by 3 2 2-icon"></a><div id="Group by 3 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-GroupBy" style="&#xA;                      left:681px;&#xA;                      top:363px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Group by 3 2 2-text" style="&#xA;                      top:395px;&#xA;                      left:662.3333333333334px;                    &#xA;                  ">Group by 3 2 2</a><a name="Join Rows (cartesian product)-icon"></a><div id="Join Rows (cartesian product)" class="&#xA;                      step-icon&#xA;                      step-icon-JoinRows" style="&#xA;                      left:73px;&#xA;                      top:418px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Fill the placeholder 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Join Rows (cartesian product)-text" style="&#xA;                      top:450px;&#xA;                      left:34.333333333333336px;                    &#xA;                  ">Join Rows (cartesian product)</a><a name="OrderHeaderComments-icon"></a><div id="OrderHeaderComments" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:420px;&#xA;                      top:67px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderHeaderComments"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderHeaderComments-text" style="&#xA;                      top:99px;&#xA;                      left:394.6666666666667px;                    &#xA;                  ">OrderHeaderComments</a><a name="OrderHeaders-icon"></a><div id="OrderHeaders" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:251px;&#xA;                      top:71px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderHeaders-text" style="&#xA;                      top:103px;&#xA;                      left:235px;                    &#xA;                  ">OrderHeaders</a><a name="OrderLineComments-icon"></a><div id="OrderLineComments" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:685px;&#xA;                      top:69px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderLineComments"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderLineComments-text" style="&#xA;                      top:101px;&#xA;                      left:662.3333333333334px;                    &#xA;                  ">OrderLineComments</a><a name="OrderLines-icon"></a><div id="OrderLines" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:554px;&#xA;                      top:66px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder 3x"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderLines-text" style="&#xA;                      top:98px;&#xA;                      left:540.6666666666666px;                    &#xA;                  ">OrderLines</a><a name="OrderList-icon"></a><div id="OrderList" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:76px;&#xA;                      top:57px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Placeholder"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderList-text" style="&#xA;                      top:89px;&#xA;                      left:64px;                    &#xA;                  ">OrderList</a><a name="OrderSubLines-icon"></a><div id="OrderSubLines" class="&#xA;                      step-icon&#xA;                      step-icon-ExcelInput" style="&#xA;                      left:815px;&#xA;                      top:133px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderSubLines"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#OrderSubLines-text" style="&#xA;                      top:165px;&#xA;                      left:797.6666666666666px;                    &#xA;                  ">OrderSubLines</a><a name="Placeholder-icon"></a><div id="Placeholder" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:76px;&#xA;                      top:174px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderList"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder-text" style="&#xA;                      top:206px;&#xA;                      left:61.333333333333336px;                    &#xA;                  ">Placeholder</a><a name="Placeholder 2-icon"></a><div id="Placeholder 2" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:247px;&#xA;                      top:185px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderHeaders"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder 2-text" style="&#xA;                      top:217px;&#xA;                      left:229.66666666666666px;                    &#xA;                  ">Placeholder 2</a><a name="Placeholder 3x-icon"></a><div id="Placeholder 3x" class="&#xA;                      step-icon&#xA;                      step-icon-Constant" style="&#xA;                      left:553px;&#xA;                      top:180px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#xmlOrderLines"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Placeholder 3x-text" style="&#xA;                      top:212px;&#xA;                      left:534.3333333333334px;                    &#xA;                  ">Placeholder 3x</a><a name="Replace separators-icon"></a><div id="Replace separators" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:73px;&#xA;                      top:558px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#XML File output"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Replace separators-text" style="&#xA;                      top:590px;&#xA;                      left:49px;                    &#xA;                  ">Replace separators</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:551px;&#xA;                      top:584px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:616px;&#xA;                      left:539px;                    &#xA;                  ">Sort rows</a><a name="Sort rows 2-icon"></a><div id="Sort rows 2" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:809px;&#xA;                      top:364px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows 2-text" style="&#xA;                      top:396px;&#xA;                      left:794.3333333333334px;                    &#xA;                  ">Sort rows 2</a><a name="Sort rows 2 2-icon"></a><div id="Sort rows 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:414px;&#xA;                      top:288px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by 3 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows 2 2-text" style="&#xA;                      top:320px;&#xA;                      left:396.6666666666667px;                    &#xA;                  ">Sort rows 2 2</a><a name="Sort rows 2 2 2-icon"></a><div id="Sort rows 2 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:679px;&#xA;                      top:283px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Group by 3 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows 2 2 2-text" style="&#xA;                      top:315px;&#xA;                      left:659px;                    &#xA;                  ">Sort rows 2 2 2</a><a name="Stream lookup-icon"></a><div id="Stream lookup" class="&#xA;                      step-icon&#xA;                      step-icon-StreamLookup" style="&#xA;                      left:547px;&#xA;                      top:432px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Fill the placeholder 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stream lookup-text" style="&#xA;                      top:464px;&#xA;                      left:529.6666666666666px;                    &#xA;                  ">Stream lookup</a><a name="Stream lookup 2-icon"></a><div id="Stream lookup 2" class="&#xA;                      step-icon&#xA;                      step-icon-StreamLookup" style="&#xA;                      left:241px;&#xA;                      top:438px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Fill the placeholder"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stream lookup 2-text" style="&#xA;                      top:470px;&#xA;                      left:221px;                    &#xA;                  ">Stream lookup 2</a><a name="Stream lookup 2 2-icon"></a><div id="Stream lookup 2 2" class="&#xA;                      step-icon&#xA;                      step-icon-StreamLookup" style="&#xA;                      left:242px;&#xA;                      top:369px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stream lookup 2 2-text" style="&#xA;                      top:401px;&#xA;                      left:219.33333333333334px;                    &#xA;                  ">Stream lookup 2 2</a><a name="Stream lookup 3-icon"></a><div id="Stream lookup 3" class="&#xA;                      step-icon&#xA;                      step-icon-StreamLookup" style="&#xA;                      left:551px;&#xA;                      top:363px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stream lookup 3-text" style="&#xA;                      top:395px;&#xA;                      left:531px;                    &#xA;                  ">Stream lookup 3</a><a name="XML File output-icon"></a><div id="XML File output" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:73px;&#xA;                      top:638px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#XML File output-text" style="&#xA;                      top:670px;&#xA;                      left:53px;                    &#xA;                  ">XML File output</a><a name="xmlOrderHeaderComments-icon"></a><div id="xmlOrderHeaderComments" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:417px;&#xA;                      top:178px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderHeaderComments-text" style="&#xA;                      top:210px;&#xA;                      left:387.6666666666667px;                    &#xA;                  ">xmlOrderHeaderComments</a><a name="xmlOrderHeaders-icon"></a><div id="xmlOrderHeaders" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:244px;&#xA;                      top:291px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderHeaders-text" style="&#xA;                      top:323px;&#xA;                      left:224px;                    &#xA;                  ">xmlOrderHeaders</a><a name="xmlOrderLineComments-icon"></a><div id="xmlOrderLineComments" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:682px;&#xA;                      top:173px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows 2 2 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderLineComments-text" style="&#xA;                      top:205px;&#xA;                      left:655.3333333333334px;                    &#xA;                  ">xmlOrderLineComments</a><a name="xmlOrderLines-icon"></a><div id="xmlOrderLines" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:550px;&#xA;                      top:291px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Stream lookup 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderLines-text" style="&#xA;                      top:323px;&#xA;                      left:532.6666666666666px;                    &#xA;                  ">xmlOrderLines</a><a name="xmlOrderList-icon"></a><div id="xmlOrderList" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:73px;&#xA;                      top:280px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Join Rows (cartesian product)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderList-text" style="&#xA;                      top:312px;&#xA;                      left:57px;                    &#xA;                  ">xmlOrderList</a><a name="xmlOrderSubLines-icon"></a><div id="xmlOrderSubLines" class="&#xA;                      step-icon&#xA;                      step-icon-AddXML" style="&#xA;                      left:806px;&#xA;                      top:292px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#xmlOrderSubLines-text" style="&#xA;                      top:324px;&#xA;                      left:784.6666666666666px;                    &#xA;                  ">xmlOrderSubLines</a>
+            <pre class="note" style="&#xA;            left: 1px;&#xA;            top: 706px;&#xA;            width: 321px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Text file output: no separator, no enclosure, no header</pre>
+            <pre class="note" style="&#xA;            left: 631px;&#xA;            top: 676px;&#xA;            width: 240px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Revision notes:
+2006-12-04 Jens Bleuel: created
+2009-10-12 linked to new XML Join step</pre>
+            <pre class="note" style="&#xA;            left: 9px;&#xA;            top: 11px;&#xA;            width: 444px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example produces a multi level XML document from one Excel source.</pre>
+            <pre class="note" style="&#xA;            left: 417px;&#xA;            top: 11px;&#xA;            width: 423px;&#xA;            height: px;&#xA;            font-family: ;&#xA;            font-size: -1;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,205&#xA;                    ,112);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">REMARK: This example is easier to solve now with the step "Join XML"
+see Example "XML Join - Create a multilayer XML file"</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#OrderHeaderComments">OrderHeaderComments</a>, <a href="#OrderHeaders">OrderHeaders</a>, <a href="#OrderLineComments">OrderLineComments</a>, <a href="#OrderLines">OrderLines</a>, <a href="#OrderList">OrderList</a>, <a href="#OrderSubLines">OrderSubLines</a>, <a href="#XML File output">XML File output</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Dummy for aggregation-text" href="#Dummy for aggregation-icon">Dummy for aggregation</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Fill the placeholder-text">Fill the placeholder</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by 2-text">Group by 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>Dummygroup</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>1</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Fill the placeholder-text" href="#Fill the placeholder-icon">Fill the placeholder</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Stream lookup 2-text">Stream lookup 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy for aggregation-text">Dummy for aggregation</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">var xmlOrderHeadersNewTmp=xmlOrderHeaders.replace("?OrderLinesPlaceholder?",xmlOrderLines.getString());
+xmlOrderHeadersNewTmp=xmlOrderHeadersNewTmp.replace("&lt;OrderLines&gt;null&lt;/OrderLines&gt;","");
+
+
+var xmlOrderHeadersNew=xmlOrderHeadersNewTmp.replace("?OrderHeaderCommentsPlaceholder?",xmlOrderHeaderComments.getString());
+xmlOrderHeadersNew=xmlOrderHeadersNew.replace("&lt;OrderHeaderComments&gt;null&lt;/OrderHeaderComments&gt;","");
+
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderHeadersNew</td>
+               <td>xmlOrderHeadersNew</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Fill the placeholder 2-text" href="#Fill the placeholder 2-icon">Fill the placeholder 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Join Rows (cartesian product)-text">Join Rows (cartesian product)</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Replace separators-text">Replace separators</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">var xmlOrderListNew=xmlOrderLists.replace("?OrderHeadersPlaceholder?",xmlOrderHeadersNew.getString());
+xmlOrderListNew=xmlOrderListNew.replace("&lt;OrderHeaders&gt;null&lt;/OrderHeaders&gt;","");</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderListNew</td>
+               <td>xmlOrderListNew</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Fill the placeholder 3-text" href="#Fill the placeholder 3-icon">Fill the placeholder 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Stream lookup-text">Stream lookup</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">var xmlOrderLinesNewTmp=xmlOrderLines.replace("?OrderSubLinesPlaceholder?",xmlOrderSubLines.getString());
+xmlOrderLinesNewTmp=xmlOrderLinesNewTmp.replace("&lt;OrderSubLine&gt;null&lt;/OrderSubLine&gt;","");
+
+var xmlOrderLinesNew=xmlOrderLinesNewTmp.replace("?OrderLineCommentsPlaceholder?",xmlOrderLineComments.getString());
+xmlOrderLinesNew=xmlOrderLinesNew.replace("&lt;OrderLineComments&gt;null&lt;/OrderLineComments&gt;","");
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderLinesNew</td>
+               <td>xmlOrderLinesNew</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by-text" href="#Group by-icon">Group by</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 2-text">Stream lookup 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderLines</td>
+               <td>xmlOrderLines</td>
+               <td>CONCAT_COMMA</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by 2-text" href="#Group by 2-icon">Group by 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Dummy for aggregation-text">Dummy for aggregation</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Join Rows (cartesian product)-text">Join Rows (cartesian product)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderHeadersNew</td>
+               <td>xmlOrderHeadersNew</td>
+               <td>CONCAT_COMMA</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by 3-text" href="#Group by 3-icon">Group by 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows 2-text">Sort rows 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup-text">Stream lookup</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderSubLines</td>
+               <td>xmlOrderSubLines</td>
+               <td>CONCAT_COMMA</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by 3 2-text" href="#Group by 3 2-icon">Group by 3 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows 2 2-text">Sort rows 2 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 2 2-text">Stream lookup 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderHeaderComments</td>
+               <td>xmlOrderHeaderComments</td>
+               <td>CONCAT_COMMA</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-GroupBy"></div>
+      <h3 class="step-heading"><a name="Group by 3 2 2-text" href="#Group by 3 2 2-icon">Group by 3 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows 2 2 2-text">Sort rows 2 2 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 3-text">Stream lookup 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>aggregate</th>
+               <th>subject</th>
+               <th>type</th>
+               <th>valuefield</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderLineComments</td>
+               <td>xmlOrderLineComments</td>
+               <td>CONCAT_COMMA</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JoinRows"></div>
+      <h3 class="step-heading"><a name="Join Rows (cartesian product)-text" href="#Join Rows (cartesian product)-icon">Join Rows (cartesian product)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderList-text">xmlOrderList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Group by 2-text">Group by 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Fill the placeholder 2-text">Fill the placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderHeaderComments-text" href="#OrderHeaderComments-icon">OrderHeaderComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#xmlOrderHeaderComments-text">xmlOrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>lineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>text</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderHeaders-text" href="#OrderHeaders-icon">OrderHeaders</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder 2-text">Placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>originator</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderType</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>orderDate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>customerNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderLineComments-text" href="#OrderLineComments-icon">OrderLineComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#xmlOrderLineComments-text">xmlOrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>lineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>Text</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderLines-text" href="#OrderLines-icon">OrderLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder 3x-text">Placeholder 3x</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>productNumber</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>productText</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>quantity</td>
+               <td>Number</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>uom</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>principal</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderList-text" href="#OrderList-icon">OrderList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Placeholder-text">Placeholder</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>source</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>timestamp</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>businessUnitId</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>plantId</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExcelInput"></div>
+      <h3 class="step-heading"><a name="OrderSubLines-text" href="#OrderSubLines-icon">OrderSubLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#xmlOrderSubLines-text">xmlOrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderSubLineNumber</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>batch</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>quantity</td>
+               <td>Number</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>expiryDate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+               <td>ddMMyyyy</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder-text" href="#Placeholder-icon">Placeholder</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderList-text">OrderList</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderList-text">xmlOrderList</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderHeaders</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>?OrderHeadersPlaceholder?</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder 2-text" href="#Placeholder 2-icon">Placeholder 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderHeaders-text">OrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderHeaders-text">xmlOrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderLines</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>?OrderLinesPlaceholder?</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>OrderHeaderComments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>?OrderHeaderCommentsPlaceholder?</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Constant"></div>
+      <h3 class="step-heading"><a name="Placeholder 3x-text" href="#Placeholder 3x-icon">Placeholder 3x</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderLines-text">OrderLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#xmlOrderLines-text">xmlOrderLines</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>OrderSubLines</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>?OrderSubLinesPlaceholder?</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>OrderLineComments</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>?OrderLineCommentsPlaceholder?</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Replace separators-text" href="#Replace separators-icon">Replace separators</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Fill the placeholder 2-text">Fill the placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#XML File output-text">XML File output</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>ScriptValue</h5><pre class="brush: js;">var xmlOutput=xmlOrderListNew.replace("&gt;, &lt;","&gt;&lt;");
+
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOutput</td>
+               <td>xmlOutput</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Fill the placeholder 3-text">Fill the placeholder 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by-text">Group by</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows 2-text" href="#Sort rows 2-icon">Sort rows 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderSubLines-text">xmlOrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by 3-text">Group by 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderSubLineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows 2 2-text" href="#Sort rows 2 2-icon">Sort rows 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderHeaderComments-text">xmlOrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by 3 2-text">Group by 3 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>lineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows 2 2 2-text" href="#Sort rows 2 2 2-icon">Sort rows 2 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderLineComments-text">xmlOrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Group by 3 2 2-text">Group by 3 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>lineNumber</td>
+               <td>Y</td>
+               <td>Y</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-StreamLookup"></div>
+      <h3 class="step-heading"><a name="Stream lookup-text" href="#Stream lookup-icon">Stream lookup</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Group by 3-text">Group by 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Stream lookup 3-text">Stream lookup 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Fill the placeholder 3-text">Fill the placeholder 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>orderNumber</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>orderLineNumber</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>default</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderSubLines</td>
+               <td>xmlOrderSubLines</td>
+               <td></td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-StreamLookup"></div>
+      <h3 class="step-heading"><a name="Stream lookup 2-text" href="#Stream lookup 2-icon">Stream lookup 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Group by-text">Group by</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Stream lookup 2 2-text">Stream lookup 2 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Fill the placeholder-text">Fill the placeholder</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>orderNumber</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>default</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderLines</td>
+               <td>xmlOrderLines</td>
+               <td></td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-StreamLookup"></div>
+      <h3 class="step-heading"><a name="Stream lookup 2 2-text" href="#Stream lookup 2 2-icon">Stream lookup 2 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderHeaders-text">xmlOrderHeaders</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Group by 3 2-text">Group by 3 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 2-text">Stream lookup 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>orderNumber</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>default</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderHeaderComments</td>
+               <td>xmlOrderHeaderComments</td>
+               <td></td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-StreamLookup"></div>
+      <h3 class="step-heading"><a name="Stream lookup 3-text" href="#Stream lookup 3-icon">Stream lookup 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#xmlOrderLines-text">xmlOrderLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Group by 3 2 2-text">Group by 3 2 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Stream lookup-text">Stream lookup</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>key</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td>orderNumber</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>orderLineNumber</td>
+               <td>orderLineNumber</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>value</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>default</th>
+               <th>type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOrderLineComments</td>
+               <td>xmlOrderLineComments</td>
+               <td></td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="XML File output-text" href="#XML File output-icon">XML File output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Replace separators-text">Replace separators</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>xmlOutput</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderHeaderComments-text" href="#xmlOrderHeaderComments-icon">xmlOrderHeaderComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderHeaderComments-text">OrderHeaderComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows 2 2-text">Sort rows 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>lineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>text</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderHeaders-text" href="#xmlOrderHeaders-icon">xmlOrderHeaders</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder 2-text">Placeholder 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 2 2-text">Stream lookup 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>originator</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>orderType</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>orderDate</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>customerNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>OrderLines</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>OrderHeaderComments</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderLineComments-text" href="#xmlOrderLineComments-icon">xmlOrderLineComments</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderLineComments-text">OrderLineComments</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows 2 2 2-text">Sort rows 2 2 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>lineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>Text</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderLines-text" href="#xmlOrderLines-icon">xmlOrderLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder 3x-text">Placeholder 3x</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stream lookup 3-text">Stream lookup 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderLineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>productNumber</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>productText</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>quantity</td>
+               <td></td>
+               <td>Number</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>uom</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>principal</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>OrderSubLines</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>OrderLineComments</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderList-text" href="#xmlOrderList-icon">xmlOrderList</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Placeholder-text">Placeholder</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Join Rows (cartesian product)-text">Join Rows (cartesian product)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>source</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>timestamp</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>businessUnitId</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>plantId</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>OrderHeaders</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-AddXML"></div>
+      <h3 class="step-heading"><a name="xmlOrderSubLines-text" href="#xmlOrderSubLines-icon">xmlOrderSubLines</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#OrderSubLines-text">OrderSubLines</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sort rows 2-text">Sort rows 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>attribute</th>
+               <th>attributeParentName</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>orderSubLineNumber</td>
+               <td></td>
+               <td>Integer</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>0</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>batch</td>
+               <td></td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>quantity</td>
+               <td></td>
+               <td>Number</td>
+               <td>#</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>expiryDate</td>
+               <td></td>
+               <td>Date</td>
+               <td>yyyyMMdd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>Y</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Table Output - Tablename in field.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Table Output - Tablename in field.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>test new TableOutput with table name in field</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/26 16:25:18.397</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td></td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Table input-text">Table input</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#Table output-text">Table output</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 739px;&#xA;          height: 240px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 739px;&#xA;              height: 240px;&#xA;          "><a name="Execute SQL script-icon"></a><div id="Execute SQL script" class="&#xA;                      step-icon&#xA;                      step-icon-ExecSQL" style="&#xA;                      left:131px;&#xA;                      top:53px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Table input"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Execute SQL script-text" style="&#xA;                      top:85px;&#xA;                      left:107px;                    &#xA;                  ">Execute SQL script</a><a name="Filter rows-icon"></a><div id="Filter rows" class="&#xA;                      step-icon&#xA;                      step-icon-FilterRows" style="&#xA;                      left:560px;&#xA;                      top:165px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Table output"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Filter rows-text" style="&#xA;                      top:197px;&#xA;                      left:545.3333333333334px;                    &#xA;                  ">Filter rows</a><a name="Table input-icon"></a><div id="Table input" class="&#xA;                      step-icon&#xA;                      step-icon-TableInput" style="&#xA;                      left:306px;&#xA;                      top:165px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Filter rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Table input-text" style="&#xA;                      top:197px;&#xA;                      left:291.3333333333333px;                    &#xA;                  ">Table input</a><a name="Table output-icon"></a><div id="Table output" class="&#xA;                      step-icon&#xA;                      step-icon-TableOutput" style="&#xA;                      left:742px;&#xA;                      top:165px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Table output-text" style="&#xA;                      top:197px;&#xA;                      left:726px;                    &#xA;                  ">Table output</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 1 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.Sampledata">Sampledata</a></th>
+               <td>H2</td>
+               <td>JNDI</td>
+               <td></td>
+               <td>1521</td>
+               <td></td>
+               <td><a href="#Execute SQL script">Execute SQL script</a>, <a href="#Table input">Table input</a>, <a href="#Table output">Table output</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.Sampledata">Sampledata</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>Sampledata</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>H2</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>JNDI</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ExecSQL"></div>
+      <h3 class="step-heading"><a name="Execute SQL script-text" href="#Execute SQL script-icon">Execute SQL script</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Table input-text">Table input</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>SQL</h4>
+      Connection: <a href="#connection.Sampledata">Sampledata</a><pre class="brush: sql;">truncate table N;
+truncate table F;
+truncate table E;
+truncate table D;
+</pre><hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-FilterRows"></div>
+      <h3 class="step-heading"><a name="Filter rows-text" href="#Filter rows-icon">Filter rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Table input-text">Table input</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Table output-text">Table output</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TableInput"></div>
+      <h3 class="step-heading"><a name="Table input-text" href="#Table input-icon">Table input</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Execute SQL script-text">Execute SQL script</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Filter rows-text">Filter rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>SQL</h4>
+      Connection: <a href="#connection.Sampledata">Sampledata</a><pre class="brush: sql;">SELECT&#xD;
+  CUSTOMERNUMBER&#xD;
+, CUSTOMERNAME&#xD;
+, CONTACTLASTNAME&#xD;
+, CONTACTFIRSTNAME&#xD;
+, PHONE&#xD;
+, ADDRESSLINE1&#xD;
+, ADDRESSLINE2&#xD;
+, CITY&#xD;
+, STATE&#xD;
+, POSTALCODE&#xD;
+, COUNTRY&#xD;
+, SALESREPEMPLOYEENUMBER&#xD;
+, CREDITLIMIT&#xD;
+FROM CUSTOMERS_TABLE_OUT&#xD;
+</pre><hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TableOutput"></div>
+      <h3 class="step-heading"><a name="Table output-text" href="#Table output-icon">Table output</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Filter rows-text">Filter rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Database</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Connection</th>
+               <th>Schema</th>
+               <th>Table</th>
+               <th>Commit</th>
+               <th>Truncate</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Value</th>
+               <td><a href="#connection.Sampledata">Sampledata</a></td>
+               <td></td>
+               <td>CUSTOMERS_TABLE_OUT</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

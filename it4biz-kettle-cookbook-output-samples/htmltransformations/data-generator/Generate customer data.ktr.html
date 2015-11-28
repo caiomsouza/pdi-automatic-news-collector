@@ -1,0 +1,635 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/data-generator/Generate customer data.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/data-generator/Generate customer data.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations/data-generator"
+            documentation-root: "../.."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Generate customer data</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/02/27 12:46:00.726</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (1)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+               </td>
+               <td></td>
+               <td>
+                  <div><a href="#customers-random.txt-text">customers-random.txt</a></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 788px;&#xA;          height: 128px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 788px;&#xA;              height: 128px;&#xA;          "><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:58px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#id"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:138px;&#xA;                      left:40.66666666666667px;                    &#xA;                  ">Generate Rows</a><a name="Modified Java Script Value-icon"></a><div id="Modified Java Script Value" class="&#xA;                      step-icon&#xA;                      step-icon-ScriptValueMod" style="&#xA;                      left:388px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sorted Merge"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Modified Java Script Value-text" style="&#xA;                      top:138px;&#xA;                      left:353.3333333333333px;                    &#xA;                  ">Modified Java Script Value</a><a name="Sorted Merge-icon"></a><div id="Sorted Merge" class="&#xA;                      step-icon&#xA;                      step-icon-SortedMerge" style="&#xA;                      left:553px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#customers-random.txt"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sorted Merge-text" style="&#xA;                      top:138px;&#xA;                      left:537px;                    &#xA;                  ">Sorted Merge</a><a name="customers-random.txt-icon"></a><div id="customers-random.txt" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileOutput" style="&#xA;                      left:718px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#customers-random.txt-text" style="&#xA;                      top:138px;&#xA;                      left:691.3333333333334px;                    &#xA;                  ">customers-random.txt</a><a name="id-icon"></a><div id="id" class="&#xA;                      step-icon&#xA;                      step-icon-Sequence" style="&#xA;                      left:223px;&#xA;                      top:106px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Modified Java Script Value"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#id-text" style="&#xA;                      top:138px;&#xA;                      left:220.33333333333334px;                    &#xA;                  ">id</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>NR_OF_ROWS</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Generate Rows">Generate Rows</a></td>
+            </tr>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#customers-random.txt">customers-random.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#id-text">id</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ScriptValueMod"></div>
+      <h3 class="step-heading"><a name="Modified Java Script Value-text" href="#Modified Java Script Value-icon">Modified Java Script Value</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#id-text">id</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Sorted Merge-text">Sorted Merge</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h5>Script 1</h5><pre class="brush: js;">java;
+
+var name=Packages.org.pentaho.di.core.util.StringUtil.generateRandomString(5, "", "-name", false);
+var firstname=Packages.org.pentaho.di.core.util.StringUtil.generateRandomString(3, "", "-firstname", false);
+var zip=10000 + Math.round( Math.random() * 500 )*20;
+var city=Packages.org.pentaho.di.core.util.StringUtil.generateRandomString(3, "", "-city", false);
+var street=Packages.org.pentaho.di.core.util.StringUtil.generateRandomString(4, "", "-street", false);
+var housenr=1 + Math.random() * 200;
+var birthdate = new Date(1950+Math.round( Math.random() * 10 )*4, Math.round( Math.random() * 12 ), Math.round( Math.random() * 31 ));
+
+var states;
+
+if (states == null)
+{
+  states = new Array(
+  "ALABAMA","AL",
+  "ALASKA","AK",
+  "AMERICAN SAMOA","AS",
+  "ARIZONA","AZ",
+  "ARKANSAS","AR",
+  "CALIFORNIA","CA",
+  "COLORADO","CO",
+  "CONNECTICUT","CT",
+  "DELAWARE","DE",
+  "DISTRICT OF COLUMBIA","DC",
+  "FEDERATED STATES OF MICRONESIA","FM",
+  "FLORIDA","FL",
+  "GEORGIA","GA",
+  "GUAM","GU",
+  "HAWAII","HI",
+  "IDAHO","ID",
+  "ILLINOIS","IL",
+  "INDIANA","IN",
+  "IOWA","IA",
+  "KANSAS","KS",
+  "KENTUCKY","KY",
+  "LOUISIANA","LA",
+  "MAINE","ME",
+  "MARSHALL ISLANDS","MH",
+  "MARYLAND","MD",
+  "MASSACHUSETTS","MA",
+  "MICHIGAN","MI",
+  "MINNESOTA","MN",
+  "MISSISSIPPI","MS",
+  "MISSOURI","MO",
+  "MONTANA","MT",
+  "NEBRASKA","NE",
+  "NEVADA","NV",
+  "NEW HAMPSHIRE","NH",
+  "NEW JERSEY","NJ",
+  "NEW MEXICO","NM",
+  "NEW YORK","NY",
+  "NORTH CAROLINA","NC",
+  "NORTH DAKOTA","ND",
+  "NORTHERN MARIANA ISLANDS","MP",
+  "OHIO","OH",
+  "OKLAHOMA","OK",
+  "OREGON","OR",
+  "PALAU","PW",
+  "PENNSYLVANIA","PA",
+  "PUERTO RICO","PR",
+  "RHODE ISLAND","RI",
+  "SOUTH CAROLINA","SC",
+  "SOUTH DAKOTA","SD",
+  "TENNESSEE","TN",
+  "TEXAS","TX",
+  "UTAH","UT",
+  "VERMONT","VT",
+  "VIRGIN ISLANDS","VI",
+  "VIRGINIA","VA",
+  "WASHINGTON","WA",
+  "WEST VIRGINIA","WV",
+  "WISCONSIN","WI",
+  "WYOMING","WY"
+)
+}
+
+var stateNr = Math.round( Math.random() * states.length/2 ) * 2;
+var state = states[stateNr];
+var stateCode = states[stateNr+1];
+
+
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>type</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>replace</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>name</td>
+               <td>name</td>
+               <td>String</td>
+               <td>30</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>firstname</td>
+               <td>firstname</td>
+               <td>String</td>
+               <td>30</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>zip</td>
+               <td>zip</td>
+               <td>Integer</td>
+               <td>5</td>
+               <td>0</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>city</td>
+               <td>city</td>
+               <td>String</td>
+               <td>30</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>birthdate</td>
+               <td>birthdate</td>
+               <td>Date</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>street</td>
+               <td>street</td>
+               <td>String</td>
+               <td>30</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>housenr</td>
+               <td>housenr</td>
+               <td>Integer</td>
+               <td>3</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>stateCode</td>
+               <td>stateCode</td>
+               <td>String</td>
+               <td>2</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>state</td>
+               <td>state</td>
+               <td>String</td>
+               <td>40</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortedMerge"></div>
+      <h3 class="step-heading"><a name="Sorted Merge-text" href="#Sorted Merge-icon">Sorted Merge</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Modified Java Script Value-text">Modified Java Script Value</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#customers-random.txt-text">customers-random.txt</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileOutput"></div>
+      <h3 class="step-heading"><a name="customers-random.txt-text" href="#customers-random.txt-icon">customers-random.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sorted Merge-text">Sorted Merge</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>trim_type</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>id</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>firstname</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>zip</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>city</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>birthdate</td>
+               <td>Date</td>
+               <td>yyyy/MM/dd</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>street</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>housenr</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>stateCode</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>state</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>none</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Sequence"></div>
+      <h3 class="step-heading"><a name="id-text" href="#id-icon">id</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Modified Java Script Value-text">Modified Java Script Value</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../../js/kettle.js"></script><script type="text/javascript" src="../../js/shCore.js"></script><script type="text/javascript" src="../../js/shBrushBash.js"></script><script type="text/javascript" src="../../js/shBrushJava.js"></script><script type="text/javascript" src="../../js/shBrushJScript.js"></script><script type="text/javascript" src="../../js/shBrushSql.js"></script><script type="text/javascript" src="../../js/shBrushMdx.js"></script><script type="text/javascript" src="../../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

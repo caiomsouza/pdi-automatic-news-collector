@@ -1,0 +1,553 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Denormaliser - 2 series of key-value pairs.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Denormaliser - 2 series of key-value pairs.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Denormaliser  2 series of keyvalue pairs</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:00.223</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td></td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Denormaliser - 2 series of key-value pairs.txt-text">Denormaliser - 2 series of key-value pairs.txt</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 527px;&#xA;          height: 129px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 527px;&#xA;              height: 129px;&#xA;          "><a name="Denormaliser - 2 series of key-value pairs.txt-icon"></a><div id="Denormaliser - 2 series of key-value pairs.txt" class="&#xA;                      step-icon&#xA;                      step-icon-TextFileInput" style="&#xA;                      left:131px;&#xA;                      top:75px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Sort rows"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Denormaliser - 2 series of key-value pairs.txt-text" style="&#xA;                      top:107px;&#xA;                      left:69.66666666666666px;                    &#xA;                  ">Denormaliser - 2 series of key-value pairs.txt</a><a name="Row denormaliser-icon"></a><div id="Row denormaliser" class="&#xA;                      step-icon&#xA;                      step-icon-Denormaliser" style="&#xA;                      left:530px;&#xA;                      top:75px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Row denormaliser-text" style="&#xA;                      top:107px;&#xA;                      left:508.6666666666667px;                    &#xA;                  ">Row denormaliser</a><a name="Sort rows-icon"></a><div id="Sort rows" class="&#xA;                      step-icon&#xA;                      step-icon-SortRows" style="&#xA;                      left:343px;&#xA;                      top:76px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Row denormaliser"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Sort rows-text" style="&#xA;                      top:108px;&#xA;                      left:331px;                    &#xA;                  ">Sort rows</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Denormaliser - 2 series of key-value pairs.txt">Denormaliser - 2 series of key-value pairs.txt</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-TextFileInput"></div>
+      <h3 class="step-heading"><a name="Denormaliser - 2 series of key-value pairs.txt-text" href="#Denormaliser - 2 series of key-value pairs.txt-icon">Denormaliser - 2 series of key-value pairs.txt</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>ifnull</th>
+               <th>position</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>4</td>
+               <td>-1</td>
+               <td>right</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>key</td>
+               <td>Integer</td>
+               <td></td>
+               <td>€</td>
+               <td>,</td>
+               <td>.</td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>1</td>
+               <td>0</td>
+               <td>left</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>unit_name</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>17</td>
+               <td>-1</td>
+               <td>right</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>unit_id</td>
+               <td>Integer</td>
+               <td></td>
+               <td>€</td>
+               <td>,</td>
+               <td>.</td>
+               <td>-</td>
+               <td></td>
+               <td>-1</td>
+               <td>4</td>
+               <td>0</td>
+               <td>left</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Denormaliser"></div>
+      <h3 class="step-heading"><a name="Row denormaliser-text" href="#Row denormaliser-icon">Row denormaliser</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Sort rows-text">Sort rows</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>key_value</th>
+               <th>target_name</th>
+               <th>target_type</th>
+               <th>target_format</th>
+               <th>target_length</th>
+               <th>target_precision</th>
+               <th>target_decimal_symbol</th>
+               <th>target_grouping_symbol</th>
+               <th>target_currency_symbol</th>
+               <th>target_null_string</th>
+               <th>target_aggregation_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>unit_name</td>
+               <td>0</td>
+               <td>Name0</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>unit_name</td>
+               <td>1</td>
+               <td>Name1</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>unit_name</td>
+               <td>2</td>
+               <td>Name2</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>unit_name</td>
+               <td>3</td>
+               <td>Name3</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>unit_name</td>
+               <td>4</td>
+               <td>Name4</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>unit_name</td>
+               <td>5</td>
+               <td>Name5</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>unit_name</td>
+               <td>6</td>
+               <td>Name6</td>
+               <td>String</td>
+               <td></td>
+               <td>35</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>unit_id</td>
+               <td>0</td>
+               <td>UnitID0</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>unit_id</td>
+               <td>1</td>
+               <td>UnitID1</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>unit_id</td>
+               <td>2</td>
+               <td>UnitID2</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>unit_id</td>
+               <td>3</td>
+               <td>UnitID3</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>unit_id</td>
+               <td>4</td>
+               <td>UnitID4</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>unit_id</td>
+               <td>5</td>
+               <td>UnitID5</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>unit_id</td>
+               <td>6</td>
+               <td>UnitID6</td>
+               <td>Integer</td>
+               <td></td>
+               <td>7</td>
+               <td>0</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SortRows"></div>
+      <h3 class="step-heading"><a name="Sort rows-text" href="#Sort rows-icon">Sort rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Denormaliser - 2 series of key-value pairs.txt-text">Denormaliser - 2 series of key-value pairs.txt</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Row denormaliser-text">Row denormaliser</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>ascending</th>
+               <th>case_sensitive</th>
+               <th>presorted</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>group</td>
+               <td>Y</td>
+               <td>N</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

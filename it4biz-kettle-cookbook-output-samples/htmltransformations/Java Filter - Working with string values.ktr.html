@@ -1,0 +1,278 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Java Filter - Working with string values.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Java Filter - Working with string values.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Java Filter - Testing String Values</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2012/03/16 10:30:08.060</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Market sentiment-text">Market sentiment</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 840px;&#xA;          height: 556px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 840px;&#xA;              height: 556px;&#xA;          "><a name="Java Filter-icon"></a><div id="Java Filter" class="&#xA;                      step-icon&#xA;                      step-icon-JavaFilter" style="&#xA;                      left:456px;&#xA;                      top:319px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-true " href="#Stock price increases"></a><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-false " href="#Stock price decreases"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Java Filter-text" style="&#xA;                      top:351px;&#xA;                      left:441.3333333333333px;                    &#xA;                  ">Java Filter</a><a name="Market sentiment-icon"></a><div id="Market sentiment" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:118px;&#xA;                      top:319px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Java Filter"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Market sentiment-text" style="&#xA;                      top:351px;&#xA;                      left:96.66666666666667px;                    &#xA;                  ">Market sentiment</a><a name="Stock price decreases-icon"></a><div id="Stock price decreases" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:738px;&#xA;                      top:371px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stock price decreases-text" style="&#xA;                      top:403px;&#xA;                      left:710px;                    &#xA;                  ">Stock price decreases</a><a name="Stock price increases-icon"></a><div id="Stock price increases" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:736px;&#xA;                      top:278px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Stock price increases-text" style="&#xA;                      top:310px;&#xA;                      left:708px;                    &#xA;                  ">Stock price increases</a>
+            <pre class="note" style="&#xA;            left: 385px;&#xA;            top: 102px;&#xA;            width: 418px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(171&#xA;                    ,241&#xA;                    ,176);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The Java Filter step exposes all of your fields as native Java types
+They are not wrapped up in some other kind of object where you need
+getters and setters.
+
+We use the java.lang.String type in this example:
+http://docs.oracle.com/javase/tutorial/java/data/comparestrings.html
+
+See the step below</pre>
+            <pre class="note" style="&#xA;            left: 26px;&#xA;            top: 443px;&#xA;            width: 933px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(171&#xA;                    ,241&#xA;                    ,176);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Deeper information:
+
+A row in PDI is comprised of one RowMetaInterface class to describe the row.  The row metadata contains everything you need to know about 
+the rows like the names of the fields, the data types, the lengths, descriptions and much more.  The row also contains 0, 1 or more rows of data in the form of a 
+simple Object[]: array of java.lang.Object where each value contains either null or one of the data types listed in the available data types section.
+
+http://wiki.pentaho.com/display/EAI/PDI+Rows+Of+Data</pre>
+            <pre class="note" style="&#xA;            left: 28px;&#xA;            top: 15px;&#xA;            width: 772px;&#xA;            height: px;&#xA;            font-family: Ariel;&#xA;            font-size: 10;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Purpose: Demonstrate using a Java Filter step to evaluate outcomes to 'true' or 'false' values to direct the rows to a final destination.
+
+A test on a String data type is demonstrated here.  Only expressions are accepted.
+</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-JavaFilter"></div>
+      <h3 class="step-heading"><a name="Java Filter-text" href="#Java Filter-icon">Java Filter</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Market sentiment-text">Market sentiment</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Stock price increases-text">Stock price increases</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>To</td>
+               <td><a href="#Stock price decreases-text">Stock price decreases</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Market sentiment-text" href="#Market sentiment-icon">Market sentiment</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>MARKET_SENTIMENT</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Stock price decreases-text" href="#Stock price decreases-icon">Stock price decreases</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Stock price increases-text" href="#Stock price increases-icon">Stock price increases</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Java Filter-text">Java Filter</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

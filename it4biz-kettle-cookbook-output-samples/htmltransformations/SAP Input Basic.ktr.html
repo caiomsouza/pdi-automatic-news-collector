@@ -1,0 +1,926 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/SAP Input Basic.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/SAP Input Basic.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>SAPInputBasicTest</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td></td>
+               <td>2014/03/03 20:39:07.193</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (6)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#BAPI_BILLINGDOC_GETDETAIL-text">BAPI_BILLINGDOC_GETDETAIL</a></div>
+                  <div><a href="#BAPI_BILLINGDOC_GETLIST-text">BAPI_BILLINGDOC_GETLIST</a></div>
+                  <div><a href="#Generate Rows-text">Generate Rows</a></div>
+                  <div><a href="#Generate Rows 2-text">Generate Rows 2</a></div>
+                  <div><a href="#Generate Rows 3-text">Generate Rows 3</a></div>
+                  <div><a href="#RFC_FUNCTION_SEARCH-text">RFC_FUNCTION_SEARCH</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 608px;&#xA;          height: 488px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 608px;&#xA;              height: 488px;&#xA;          "><a name="BAPI_BILLINGDOC_GETDETAIL-icon"></a><div id="BAPI_BILLINGDOC_GETDETAIL" class="&#xA;                      step-icon&#xA;                      step-icon-SapInput" style="&#xA;                      left:600px;&#xA;                      top:150px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 3"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#BAPI_BILLINGDOC_GETDETAIL-text" style="&#xA;                      top:182px;&#xA;                      left:566.6666666666666px;                    &#xA;                  ">BAPI_BILLINGDOC_GETDETAIL</a><a name="BAPI_BILLINGDOC_GETLIST-icon"></a><div id="BAPI_BILLINGDOC_GETLIST" class="&#xA;                      step-icon&#xA;                      step-icon-SapInput" style="&#xA;                      left:360px;&#xA;                      top:150px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing) 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#BAPI_BILLINGDOC_GETLIST-text" style="&#xA;                      top:182px;&#xA;                      left:329.3333333333333px;                    &#xA;                  ">BAPI_BILLINGDOC_GETLIST</a><a name="Dummy (do nothing)-icon"></a><div id="Dummy (do nothing)" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:120px;&#xA;                      top:270px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing)-text" style="&#xA;                      top:302px;&#xA;                      left:96px;                    &#xA;                  ">Dummy (do nothing)</a><a name="Dummy (do nothing) 2-icon"></a><div id="Dummy (do nothing) 2" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:360px;&#xA;                      top:270px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 2-text" style="&#xA;                      top:302px;&#xA;                      left:333.3333333333333px;                    &#xA;                  ">Dummy (do nothing) 2</a><a name="Dummy (do nothing) 3-icon"></a><div id="Dummy (do nothing) 3" class="&#xA;                      step-icon&#xA;                      step-icon-Dummy" style="&#xA;                      left:600px;&#xA;                      top:270px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Dummy (do nothing) 3-text" style="&#xA;                      top:302px;&#xA;                      left:573.3333333333334px;                    &#xA;                  ">Dummy (do nothing) 3</a><a name="Generate Rows-icon"></a><div id="Generate Rows" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:120px;&#xA;                      top:30px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#RFC_FUNCTION_SEARCH"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows-text" style="&#xA;                      top:62px;&#xA;                      left:102.66666666666667px;                    &#xA;                  ">Generate Rows</a><a name="Generate Rows 2-icon"></a><div id="Generate Rows 2" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:360px;&#xA;                      top:30px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#BAPI_BILLINGDOC_GETLIST"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows 2-text" style="&#xA;                      top:62px;&#xA;                      left:340px;                    &#xA;                  ">Generate Rows 2</a><a name="Generate Rows 3-icon"></a><div id="Generate Rows 3" class="&#xA;                      step-icon&#xA;                      step-icon-RowGenerator" style="&#xA;                      left:600px;&#xA;                      top:30px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#BAPI_BILLINGDOC_GETDETAIL"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Generate Rows 3-text" style="&#xA;                      top:62px;&#xA;                      left:580px;                    &#xA;                  ">Generate Rows 3</a><a name="RFC_FUNCTION_SEARCH-icon"></a><div id="RFC_FUNCTION_SEARCH" class="&#xA;                      step-icon&#xA;                      step-icon-SapInput" style="&#xA;                      left:120px;&#xA;                      top:150px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Dummy (do nothing)"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#RFC_FUNCTION_SEARCH-text" style="&#xA;                      top:182px;&#xA;                      left:94.66666666666667px;                    &#xA;                  ">RFC_FUNCTION_SEARCH</a>
+            <pre class="note" style="&#xA;            left: 120px;&#xA;            top: 390px;&#xA;            width: 429px;&#xA;            height: px;&#xA;            font-family: Lucida Grande;&#xA;            font-size: 13;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,255&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">Select the dummy steps, right click and select "preview"</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation does not read any variables.</p>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation defines 2 database connections.</p>
+      <h3>Database Connection Summary</h3>
+      <table>
+         <thead>
+            <tr>
+               <th>
+                  Name
+                  
+               </th>
+               <th>
+                  Type
+                  
+               </th>
+               <th>
+                  Access
+                  
+               </th>
+               <th>
+                  Host
+                  
+               </th>
+               <th>
+                  Port
+                  
+               </th>
+               <th>
+                  User
+                  
+               </th>
+               <th>
+                  Used in Steps
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th><a href="#connection.Kinamu">Kinamu</a></th>
+               <td>SAPR3</td>
+               <td>Plugin</td>
+               <td>192.168.9.50</td>
+               <td>1521</td>
+               <td>EXT_KUBICKAM</td>
+               <td><a href="#BAPI_BILLINGDOC_GETDETAIL">BAPI_BILLINGDOC_GETDETAIL</a>, <a href="#BAPI_BILLINGDOC_GETLIST">BAPI_BILLINGDOC_GETLIST</a>, <a href="#RFC_FUNCTION_SEARCH">RFC_FUNCTION_SEARCH</a></td>
+            </tr>
+            <tr>
+               <th><a href="#connection.Sampledata">Sampledata</a></th>
+               <td>H2</td>
+               <td>JNDI</td>
+               <td></td>
+               <td>1521</td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3>Database Connection Details</h3>
+      <h4><a name="connection.Kinamu">Kinamu</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>Kinamu</td>
+            </tr>
+            <tr>
+               <td>server</td>
+               <td>192.168.9.50</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>SAPR3</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>Plugin</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>username</td>
+               <td>EXT_KUBICKAM</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted 2be98afc86aa7f2e4aa0aaa76df81abdc</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h4><a name="connection.Sampledata">Sampledata</a></h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Property</th>
+               <th>Value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>name</td>
+               <td>Sampledata</td>
+            </tr>
+            <tr>
+               <td>type</td>
+               <td>H2</td>
+            </tr>
+            <tr>
+               <td>access</td>
+               <td>JNDI</td>
+            </tr>
+            <tr>
+               <td>database</td>
+               <td>SampleData</td>
+            </tr>
+            <tr>
+               <td>port</td>
+               <td>1521</td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td>Encrypted</td>
+            </tr>
+            <tr>
+               <td>attributes</td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SapInput"></div>
+      <h3 class="step-heading"><a name="BAPI_BILLINGDOC_GETDETAIL-text" href="#BAPI_BILLINGDOC_GETDETAIL-icon">BAPI_BILLINGDOC_GETDETAIL</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows 3-text">Generate Rows 3</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 3-text">Dummy (do nothing) 3</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>sap_type</th>
+               <th>table_name</th>
+               <th>new_name</th>
+               <th>target_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>BILLINGDOC</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILLINGDOC</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>BILL_TYPE</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILL_TYPE</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>BILLCATEG</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILLCATEG</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>SD_DOC_CAT</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>SD_DOC_CAT</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>CURRENCY</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CURRENCY</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>CURRENCY_ISO</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CURRENCY_ISO</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>ACCTSTATUS</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>ACCTSTATUS</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>NET_VALUE</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>NET_VALUE</td>
+               <td>BigNumber</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>TAX_VALUE</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>TAX_VALUE</td>
+               <td>BigNumber</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>CANCELLED</td>
+               <td>STRUCTURE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CANCELLED</td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SapInput"></div>
+      <h3 class="step-heading"><a name="BAPI_BILLINGDOC_GETLIST-text" href="#BAPI_BILLINGDOC_GETLIST-icon">BAPI_BILLINGDOC_GETLIST</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows 2-text">Generate Rows 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing) 2-text">Dummy (do nothing) 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>sap_type</th>
+               <th>table_name</th>
+               <th>new_name</th>
+               <th>target_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>BILLINGDOC</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILLINGDOC</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>BILL_TYPE</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILL_TYPE</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>BILLCATEG</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>BILLCATEG</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>SD_DOC_CAT</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>SD_DOC_CAT</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>CURRENCY</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CURRENCY</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>CURRENCY_ISO</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CURRENCY_ISO</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>ACCTSTATUS</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>ACCTSTATUS</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>NET_VALUE</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>NET_VALUE</td>
+               <td>BigNumber</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>TAX_VALUE</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>TAX_VALUE</td>
+               <td>BigNumber</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>CANCELLED</td>
+               <td>TABLE</td>
+               <td>BILLINGDOCUMENTDETAIL</td>
+               <td>CANCELLED</td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing)-text" href="#Dummy (do nothing)-icon">Dummy (do nothing)</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#RFC_FUNCTION_SEARCH-text">RFC_FUNCTION_SEARCH</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 2-text" href="#Dummy (do nothing) 2-icon">Dummy (do nothing) 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#BAPI_BILLINGDOC_GETLIST-text">BAPI_BILLINGDOC_GETLIST</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Dummy"></div>
+      <h3 class="step-heading"><a name="Dummy (do nothing) 3-text" href="#Dummy (do nothing) 3-icon">Dummy (do nothing) 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#BAPI_BILLINGDOC_GETDETAIL-text">BAPI_BILLINGDOC_GETDETAIL</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows-text" href="#Generate Rows-icon">Generate Rows</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#RFC_FUNCTION_SEARCH-text">RFC_FUNCTION_SEARCH</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>FUNCNAME</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>RFC_*</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>GROUPNAME</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>LANGUAGE</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows 2-text" href="#Generate Rows 2-icon">Generate Rows 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#BAPI_BILLINGDOC_GETLIST-text">BAPI_BILLINGDOC_GETLIST</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>SIGN</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>I</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>OPTION</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>BT</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>LOW</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0010000002</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>HIGH</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0080000003</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-RowGenerator"></div>
+      <h3 class="step-heading"><a name="Generate Rows 3-text" href="#Generate Rows 3-icon">Generate Rows 3</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#BAPI_BILLINGDOC_GETDETAIL-text">BAPI_BILLINGDOC_GETDETAIL</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>nullif</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>BILLINGDOCUMENT</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>0090000025</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SapInput"></div>
+      <h3 class="step-heading"><a name="RFC_FUNCTION_SEARCH-text" href="#RFC_FUNCTION_SEARCH-icon">RFC_FUNCTION_SEARCH</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Generate Rows-text">Generate Rows</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Dummy (do nothing)-text">Dummy (do nothing)</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>sap_type</th>
+               <th>table_name</th>
+               <th>new_name</th>
+               <th>target_type</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>FUNCNAME</td>
+               <td>TABLE</td>
+               <td>FUNCTIONS</td>
+               <td>FUNCNAME</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>GROUPNAME</td>
+               <td>TABLE</td>
+               <td>FUNCTIONS</td>
+               <td>GROUPNAME</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>APPL</td>
+               <td>TABLE</td>
+               <td>FUNCTIONS</td>
+               <td>APPL</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>HOST</td>
+               <td>TABLE</td>
+               <td>FUNCTIONS</td>
+               <td>HOST</td>
+               <td>String</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>STEXT</td>
+               <td>TABLE</td>
+               <td>FUNCTIONS</td>
+               <td>STEXT</td>
+               <td>String</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

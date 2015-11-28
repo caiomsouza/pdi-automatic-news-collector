@@ -1,0 +1,449 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Execute a job in a transformation.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/Execute a job in a transformation.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>Execute a job in a transformation</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2011/01/26 14:21:05.493</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td></td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (2)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Data Grid-text">Data Grid</a></div>
+                  <div><a href="#Data Grid 2-text">Data Grid 2</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 445px;&#xA;          height: 219px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 445px;&#xA;              height: 219px;&#xA;          "><a name="Data Grid-icon"></a><div id="Data Grid" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:111px;&#xA;                      top:76px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-disabled&#xA;                                      step-hop-distribute-data " href="#Set field value to a constant"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Data Grid-text" style="&#xA;                      top:108px;&#xA;                      left:99px;                    &#xA;                  ">Data Grid</a><a name="Data Grid 2-icon"></a><div id="Data Grid 2" class="&#xA;                      step-icon&#xA;                      step-icon-DataGrid" style="&#xA;                      left:105px;&#xA;                      top:167px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Set field value to a constant 2"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Data Grid 2-text" style="&#xA;                      top:199px;&#xA;                      left:90.33333333333333px;                    &#xA;                  ">Data Grid 2</a><a name="Set field value to a constant-icon"></a><div id="Set field value to a constant" class="&#xA;                      step-icon&#xA;                      step-icon-SetValueConstant" style="&#xA;                      left:269px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-disabled&#xA;                                      step-hop-distribute-data " href="#User Defined Java Class"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Set field value to a constant-text" style="&#xA;                      top:109px;&#xA;                      left:230.33333333333334px;                    &#xA;                  ">Set field value to a constant</a><a name="Set field value to a constant 2-icon"></a><div id="Set field value to a constant 2" class="&#xA;                      step-icon&#xA;                      step-icon-SetValueConstant" style="&#xA;                      left:272px;&#xA;                      top:167px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#User Defined Java Class"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Set field value to a constant 2-text" style="&#xA;                      top:199px;&#xA;                      left:230.66666666666666px;                    &#xA;                  ">Set field value to a constant 2</a><a name="User Defined Java Class-icon"></a><div id="User Defined Java Class" class="&#xA;                      step-icon&#xA;                      step-icon-UserDefinedJavaClass" style="&#xA;                      left:422px;&#xA;                      top:77px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#User Defined Java Class-text" style="&#xA;                      top:109px;&#xA;                      left:391.3333333333333px;                    &#xA;                  ">User Defined Java Class</a>
+            
+         </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Data Grid">Data Grid</a>, <a href="#Data Grid 2">Data Grid 2</a>, <a href="#Set field value to a constant">Set field value to a constant</a>, <a href="#Set field value to a constant 2">Set field value to a constant 2</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Data Grid-text" href="#Data Grid-icon">Data Grid</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Set field value to a constant-text">Set field value to a constant</a></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-DataGrid"></div>
+      <h3 class="step-heading"><a name="Data Grid 2-text" href="#Data Grid 2-icon">Data Grid 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#Set field value to a constant 2-text">Set field value to a constant 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SetValueConstant"></div>
+      <h3 class="step-heading"><a name="Set field value to a constant-text" href="#Set field value to a constant-icon">Set field value to a constant</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Data Grid-text">Data Grid</a></td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#User Defined Java Class-text">User Defined Java Class</a></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>value</th>
+               <th>mask</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>${Internal.Transformation.Filename.Directory}/files/test-job.kjb</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SetValueConstant"></div>
+      <h3 class="step-heading"><a name="Set field value to a constant 2-text" href="#Set field value to a constant 2-icon">Set field value to a constant 2</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Data Grid 2-text">Data Grid 2</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#User Defined Java Class-text">User Defined Java Class</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>value</th>
+               <th>mask</th>
+               <th>set_empty_string</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>filename</td>
+               <td>${Internal.Transformation.Filename.Directory}/../jobs/evaluate-result-rows/Evaluate result rows.kjb</td>
+               <td></td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-UserDefinedJavaClass"></div>
+      <h3 class="step-heading"><a name="User Defined Java Class-text" href="#User Defined Java Class-icon">User Defined Java Class</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Set field value to a constant-text">Set field value to a constant</a></td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>From</td>
+               <td><a href="#Set field value to a constant 2-text">Set field value to a constant 2</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Java Class Source Code</h4>
+      <h5>Processor</h5><pre class="brush: java;">import org.pentaho.di.job.*;
+import org.pentaho.di.core.*;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    r = createOutputRow(r, data.outputRowMeta.size());
+	
+	// What is the job filename?
+ 	//
+    String jobFile = get(Fields.In, getParameter("FILENAME_FIELD")).getString(r);
+
+    // Execute the job
+    //
+	JobMeta jobMeta = new JobMeta(jobFile, null);
+	Job job = new Job(null, jobMeta, getTrans());
+    job.start();
+    job.waitUntilFinished();
+    Result result = job.getResult();    
+    
+    // Set a value in a new output field
+    get(Fields.Out, "result").setValue(r, Boolean.valueOf(result.getResult()));
+    get(Fields.Out, "errors").setValue(r, Long.valueOf(result.getNrErrors()));
+
+	// Send the row on to the next step.
+    putRow(data.outputRowMeta, r);
+
+	return true;
+}
+</pre><h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>field_type</th>
+               <th>field_length</th>
+               <th>field_precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>result</td>
+               <td>Boolean</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>errors</td>
+               <td>Integer</td>
+               <td>-1</td>
+               <td>-1</td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>

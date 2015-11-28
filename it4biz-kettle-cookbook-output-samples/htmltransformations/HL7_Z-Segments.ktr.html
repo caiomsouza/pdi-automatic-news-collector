@@ -1,0 +1,531 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="Generator" content="kettle-cookbook - see http://code.google.com/p/kettle-cookbook/">
+      <!--
+            Debugging info - please ignore
+            param_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/HL7_Z-Segments.ktr"
+            normalized_filename: "/Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/samples/transformations/HL7_Z-Segments.ktr"
+            file: 1
+            document: 1
+            document-element: transformation
+            name: 
+            relative-path: "transformations"
+            documentation-root: ".."
+        -->
+      <title>Kettle Documentation: transformation ""</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/spoon.">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="stylesheet" type="text/css" href="../css/kettle.css">
+      <link rel="stylesheet" type="text/css" href="../css/transformation.css">
+      <link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css">
+   </head>
+   <body class="kettle-file">
+      <div class="quicklinks"><a href="#diagram">Diagram</a>
+         |   <a href="#Steps">Steps</a>
+         |   <a href="#parameters">Parameters</a>
+         |   <a href="#variables">Variables</a>
+         |   <a href="#connections">Database Connections</a></div>
+      <h1>HL7_Z-Segments</h1>
+      <table>
+         <thead>
+            <tr>
+               <th>What?</th>
+               <th>Who?</th>
+               <th>When?</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Created</th>
+               <td>-</td>
+               <td>2012/01/18 16:03:07.273</td>
+            </tr>
+            <tr>
+               <th>Modified</th>
+               <td>-</td>
+               <td>2015/06/14 15:35:22.000</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <th>Version</th>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Status</th>
+               <td>0</td>
+            </tr>
+         </tfoot>
+      </table>
+      <p>
+         This transformation does not have a description.
+         
+      </p>
+      <h2><a name="parameters">Parameters</a></h2>
+      <p>
+         This transformation does not define any parameters.
+         
+      </p>
+      <h2>High Level Data Flow Diagram</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Input (1)</th>
+               <th>Transform</th>
+               <th>Output (0)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <div><a href="#Load file content in memory-text">Load file content in memory</a></div>
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="diagram">Diagram</a></h2>
+      <div class="diagram" id="canvas" style="&#xA;          width: 930px;&#xA;          height: 463px;&#xA;      ">
+         <div class="diagram" id="thediagram" style="&#xA;              width: 930px;&#xA;              height: 463px;&#xA;          "><a name="HL7 Input-icon"></a><div id="HL7 Input" class="&#xA;                      step-icon&#xA;                      step-icon-HL7Input" style="&#xA;                      left:314px;&#xA;                      top:176px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Select values"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#HL7 Input-text" style="&#xA;                      top:208px;&#xA;                      left:302px;                    &#xA;                  ">HL7 Input</a><a name="Handle Z Segments: fill FieldName &amp; FieldDescription-icon"></a><div id="Handle Z Segments: fill FieldName &amp; FieldDescription" class="&#xA;                      step-icon&#xA;                      step-icon-Janino" style="&#xA;                      left:684px;&#xA;                      top:176px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Value Mapper example for ZBE"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Handle Z Segments: fill FieldName &amp; FieldDescription-text" style="&#xA;                      top:208px;&#xA;                      left:614.6666666666666px;                    &#xA;                  ">Handle Z Segments: fill FieldName &amp; FieldDescription</a><a name="Load file content in memory-icon"></a><div id="Load file content in memory" class="&#xA;                      step-icon&#xA;                      step-icon-LoadFileInput" style="&#xA;                      left:133px;&#xA;                      top:173px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#HL7 Input"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Load file content in memory-text" style="&#xA;                      top:205px;&#xA;                      left:97px;                    &#xA;                  ">Load file content in memory</a><a name="Select values-icon"></a><div id="Select values" class="&#xA;                      step-icon&#xA;                      step-icon-SelectValues" style="&#xA;                      left:464px;&#xA;                      top:176px;&#xA;                  ">
+               <div class="step-hops"><a class="&#xA;                                  step-hop&#xA;                                  &#xA;                                      step-hop-enabled&#xA;                                      step-hop-distribute-data " href="#Handle Z Segments: fill FieldName &amp; FieldDescription"></a></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Select values-text" style="&#xA;                      top:208px;&#xA;                      left:446.6666666666667px;                    &#xA;                  ">Select values</a><a name="Value Mapper example for ZBE-icon"></a><div id="Value Mapper example for ZBE" class="&#xA;                      step-icon&#xA;                      step-icon-ValueMapper" style="&#xA;                      left:687px;&#xA;                      top:282px;&#xA;                  ">
+               <div class="step-hops"></div>
+            </div><a class="&#xA;                      step-label&#xA;                      " href="#Value Mapper example for ZBE-text" style="&#xA;                      top:314px;&#xA;                      left:649.6666666666666px;                    &#xA;                  ">Value Mapper example for ZBE</a>
+            <pre class="note" style="&#xA;            left: 15px;&#xA;            top: 19px;&#xA;            width: 1196px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">HL7 sample for user defined Z-Segments.
+
+Z-Segment values are written to the data stream with an empty FieldName, a question mark ("?") for the FieldDescription and with an "UNKNOWN" HL7DataType.
+Due to the fact, that the Coordinates field gives the level within each Segment, these values can be analyzed according to the user defined Z-Segment definition: Segment.Terser.Component.SubComponent </pre>
+            <pre class="note" style="&#xA;            left: 817px;&#xA;            top: 273px;&#xA;            width: 379px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">This example is derived from
+http://www.hl7.de/komitees/konformitaet/zsegmente/segzbe.php</pre>
+            <pre class="note" style="&#xA;            left: 617px;&#xA;            top: 354px;&#xA;            width: 406px;&#xA;            height: px;&#xA;            font-family: Microsoft Sans Serif;&#xA;            font-size: 8;&#xA;            &#xA;            color: rgb(0&#xA;                    ,0&#xA;                    ,0);&#xA;            background-color: rgb(255&#xA;                    ,165&#xA;                    ,0);&#xA;            border-color: rgb(100&#xA;                    ,100&#xA;                    ,100);&#xA;        ">The handling of the fields can also be handled as shown in example
+HL7_test_multiple_files.ktr
+only using the code=StructureName+Coordinates</pre>
+            </div>
+      </div>
+      <h2><a name="variables">Variables</a></h2>
+      <p>This transformation reads the following variables:</p>
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Value</th>
+               <th>Connections</th>
+               <th>Steps</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>Internal.Transformation.Filename.Directory</th>
+               <td></td>
+               <td></td>
+               <td><a href="#Load file content in memory">Load file content in memory</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="connections">Database Connections</a></h2>
+      <p>This transformation does not define any database connections.</p>
+      <h2><a name="Steps">Steps</a></h2>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-HL7Input"></div>
+      <h3 class="step-heading"><a name="HL7 Input-text" href="#HL7 Input-icon">HL7 Input</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Load file content in memory-text">Load file content in memory</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-Janino"></div>
+      <h3 class="step-heading"><a name="Handle Z Segments: fill FieldName &amp; FieldDescription-text" href="#Handle Z Segments: fill FieldName &amp; FieldDescription-icon">Handle Z Segments: fill FieldName &amp; FieldDescription</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Select values-text">Select values</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Value Mapper example for ZBE-text">Value Mapper example for ZBE</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>formula</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>field_name</th>
+               <th>formula_string</th>
+               <th>value_type</th>
+               <th>value_length</th>
+               <th>value_precision</th>
+               <th>replace_field</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>FieldName</td>
+               <td>(FieldName == null) ? StructureName+Coordinates : FieldName</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>FieldName</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>FieldDescription</td>
+               <td>(FieldDescription == null || FieldDescription.equals("?")) ? StructureName+Coordinates : FieldDescription</td>
+               <td>String</td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>FieldDescription</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-LoadFileInput"></div>
+      <h3 class="step-heading"><a name="Load file content in memory-text" href="#Load file content in memory-icon">Load file content in memory</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>To</td>
+               <td><a href="#HL7 Input-text">HL7 Input</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>element_type</th>
+               <th>type</th>
+               <th>format</th>
+               <th>currency</th>
+               <th>decimal</th>
+               <th>group</th>
+               <th>length</th>
+               <th>precision</th>
+               <th>trim_type</th>
+               <th>repeat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>File content</td>
+               <td>content</td>
+               <td>String</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>File size</td>
+               <td>size</td>
+               <td>Integer</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>-1</td>
+               <td>-1</td>
+               <td>none</td>
+               <td>N</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-SelectValues"></div>
+      <h3 class="step-heading"><a name="Select values-text" href="#Select values-icon">Select values</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#HL7 Input-text">HL7 Input</a></td>
+               <td>Y</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>To</td>
+               <td><a href="#Handle Z Segments: fill FieldName &amp; FieldDescription-text">Handle Z Segments: fill FieldName &amp; FieldDescription</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>name</th>
+               <th>rename</th>
+               <th>length</th>
+               <th>precision</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>File content</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>File size</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>filename</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>ID</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>ParentGroup</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>Group</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>HL7Version</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>8</th>
+               <td>StructureName</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>9</th>
+               <td>StructureNumber</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>10</th>
+               <td>FieldName</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>11</th>
+               <td>Coordinates</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>12</th>
+               <td>HL7DataType</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>13</th>
+               <td>FieldDescription</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+            <tr>
+               <th>14</th>
+               <td>Value</td>
+               <td></td>
+               <td>-2</td>
+               <td>-2</td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="&#xA;            step-icon&#xA;            step-icon-ValueMapper"></div>
+      <h3 class="step-heading"><a name="Value Mapper example for ZBE-text" href="#Value Mapper example for ZBE-icon">Value Mapper example for ZBE</a></h3>
+      <p>
+         This step does not have a description.
+         
+      </p>
+      <h4>Hops</h4>
+      <table>
+         <thead>
+            <tr>
+               <th></th>
+               <th>Type</th>
+               <th>Step</th>
+               <th>Enabled</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>From</td>
+               <td><a href="#Handle Z Segments: fill FieldName &amp; FieldDescription-text">Handle Z Segments: fill FieldName &amp; FieldDescription</a></td>
+               <td>Y</td>
+            </tr>
+         </tbody>
+      </table>
+      <h4>Fields</h4>
+      <table>
+         <thead>
+            <tr>
+               <th>Position</th>
+               <th>source_value</th>
+               <th>target_value</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>1</th>
+               <td>ZBE1.1.1.1</td>
+               <td>Bewegungs-ID_SubComponent1</td>
+            </tr>
+            <tr>
+               <th>2</th>
+               <td>ZBE1.1.2.1</td>
+               <td>Bewegungs-ID_SubComponent2</td>
+            </tr>
+            <tr>
+               <th>3</th>
+               <td>ZBE1.2.1.1</td>
+               <td>Bewegungs-ID_SubComponent3</td>
+            </tr>
+            <tr>
+               <th>4</th>
+               <td>ZBE1.2.2.1</td>
+               <td>Bewegungs-ID_SubComponent4</td>
+            </tr>
+            <tr>
+               <th>5</th>
+               <td>ZBE2.1.1.1</td>
+               <td>Bewegungsbeginn</td>
+            </tr>
+            <tr>
+               <th>6</th>
+               <td>ZBE3.1.1.1</td>
+               <td>Bewegungsende</td>
+            </tr>
+            <tr>
+               <th>7</th>
+               <td>ZBE4.1.1.1</td>
+               <td>AktionscodeZBE </td>
+            </tr>
+         </tbody>
+      </table><script type="text/javascript" src="../js/wz_jsgraphics.js"></script><script type="text/javascript" src="../js/kettle.js"></script><script type="text/javascript" src="../js/shCore.js"></script><script type="text/javascript" src="../js/shBrushBash.js"></script><script type="text/javascript" src="../js/shBrushJava.js"></script><script type="text/javascript" src="../js/shBrushJScript.js"></script><script type="text/javascript" src="../js/shBrushSql.js"></script><script type="text/javascript" src="../js/shBrushMdx.js"></script><script type="text/javascript" src="../js/shBrushXml.js"></script><script type="text/javascript">
+            SyntaxHighlighter.all();drawHops();
+        </script></body>
+</html>
