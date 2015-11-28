@@ -1,0 +1,192 @@
+Run IT4biz Kettle Cookbook
+2015/11/28 15:39:22 - Kitchen - Start of run.
+2015/11/28 15:39:33 - document-folder - Start of job execution
+2015/11/28 15:39:33 - document-folder - Starting entry [substitute-variables-in-parameters.ktr]
+2015/11/28 15:39:33 - substitute-variables-in-parameters.ktr - Loading transformation from XML file [file:///Applications/Pentaho/5.4.0/it4biz-kettle-cookbook/pdi/substitute-variables-in-parameters.ktr]
+2015/11/28 15:39:33 - substitute-variables-in-parameters - Dispatching started for transformation [substitute-variables-in-parameters]
+2015/11/28 15:39:33 - Get job parameters.0 - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+2015/11/28 15:39:33 - Substitute variable references and set variables.0 - Optimization level not specified.  Using default of 9.
+2015/11/28 15:39:34 - Substitute variable references and set variables.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2015/11/28 15:39:34 - document-folder - Starting entry [Create ${OUTPUT_DIR} and Copy Template]
+2015/11/28 15:39:34 - Create ${OUTPUT_DIR} and Copy Template - Starting ...
+2015/11/28 15:39:34 - Create ${OUTPUT_DIR} and Copy Template - Processing row source File/folder source : [${Internal.Job.Filename.Directory}/../template] ... destination file/folder : [${OUTPUT_DIR}]... wildcard : [.+]
+2015/11/28 15:39:34 - document-folder - Starting entry [process-files.ktr]
+2015/11/28 15:39:34 - process-files.ktr - Loading transformation from XML file [file:///Applications/Pentaho/5.4.0/it4biz-kettle-cookbook/pdi/process-files.ktr]
+2015/11/28 15:39:34 - process-files - Dispatching started for transformation [process-files]
+2015/11/28 15:39:34 - compare-files - Dispatching started for transformation [compare-files]
+2015/11/28 15:39:34 - post-process-files - Dispatching started for transformation [post-process-files]
+2015/11/28 15:39:34 - create-transform-script - Dispatching started for transformation [create-transform-script]
+2015/11/28 15:39:34 - create-index - Dispatching started for transformation [create-index]
+2015/11/28 15:39:34 - get-files - Dispatching started for transformation [get-files]
+2015/11/28 15:39:34 - get-files - Dispatching started for transformation [get-files]
+2015/11/28 15:39:34 - get-directories - Dispatching started for transformation [get-directories]
+2015/11/28 15:39:34 - get-directories - Dispatching started for transformation [get-directories]
+2015/11/28 15:39:34 - Get ${INPUT_DIR} and ${OUTPUT_DIR}.0 - Finished processing (I=0, O=0, R=1, W=4, U=0, E=0)
+2015/11/28 15:39:34 - input_dir / output_dir.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - input_dir / output_dir.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - get runtime info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - input_dir / output_dir.0 - Finished processing (I=0, O=0, R=1, W=3, U=0, E=0)
+2015/11/28 15:39:34 - file_separator.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - file separator.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - match windows.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - file_separator.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - is windows?.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - .sh.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - input_dir / output_dir.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Get Saxon Jar.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - html dir.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - file name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - filename -> saxon.jar.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - frontpage.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - connections_file_name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - join streams.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - fix paths.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - output file_name_regex.0 - Finished processing (I=0, O=0, R=1, W=5, U=0, E=0)
+2015/11/28 15:39:34 - toc.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - system date.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - dir input.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - saxon lines .0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - output-dir -> dir.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Select values.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - dir input.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - dir input.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - dir info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Get SubFolder names.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=0)
+2015/11/28 15:39:34 - dir input.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Get SubFolder names.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=0)
+2015/11/28 15:39:34 - remove file specific fields.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - relative_path.0 - Optimization level not specified.  Using default of 9.
+2015/11/28 15:39:34 - dir info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - relative_path.0 - Optimization level not specified.  Using default of 9.
+2015/11/28 15:39:34 - remove file specific fields.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - join streams.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Hidden?.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - join streams.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Hidden?.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - <connections>.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - <index>.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - relative_path.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - relative_path.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Sort rows.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Sort rows.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Mapping output specification.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Mapping output specification.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - get-directories.ktr.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - get-directories.ktr.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - get directories Mapping output.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - get directories Mapping output.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - directories Mapping output.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - directories Mapping output.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - input dir Mapping output.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - input dir.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - folder Mapping input.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - fix folder paths.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - <folder>.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:34 - index / folder.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Combine streams.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Combine streams.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Compare Directories.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:34 - Get File Names.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Get File Names.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Rename file fields.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Rename file fields.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Sort rows.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - Sort rows.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - files Mapping output.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - get-files.ktr (input).0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:34 - files Mapping output.0 - Finished processing (I=0, O=0, R=2, W=4, U=0, E=0)
+2015/11/28 15:39:34 - get-files.ktr (output).0 - Finished processing (I=0, O=0, R=1, W=4, U=0, E=0)
+2015/11/28 15:39:34 - Receive.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - ouput file Mapping output.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:34 - output file.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Combine Streams 2.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Directories to create.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - dir diff Mapping output.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - dir diff.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Combine streams 1.0 - Finished processing (I=0, O=0, R=3, W=2, U=0, E=0)
+2015/11/28 15:39:35 - new directory?.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - output file extension.0 - Finished processing (I=0, O=0, R=2, W=4, U=0, E=0)
+2015/11/28 15:39:35 - input file Mapping output.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - output_file_short_name -> file_short_name.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Not a new directory.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - input file.0 - Finished processing (I=0, O=0, R=2, W=6, U=0, E=0)
+2015/11/28 15:39:35 - files input specification.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - file Mapping input.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Switch / Case on extension.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - fix file paths.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - ktr files.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - <file>.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - */connection.0 - Finished processing (I=6, O=0, R=2, W=6, U=0, E=0)
+2015/11/28 15:39:35 - connection-key.0 - Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2015/11/28 15:39:35 - Sort connections.0 - Finished processing (I=0, O=0, R=6, W=12, U=0, E=0)
+2015/11/28 15:39:35 - Unique rows (HashSet).0 - Finished processing (I=0, O=0, R=6, W=3, U=0, E=3)
+2015/11/28 15:39:35 - connection_id.0 - Finished processing (I=0, O=0, R=3, W=6, U=0, E=0)
+2015/11/28 15:39:35 - <connection>.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2015/11/28 15:39:35 - Compare files.0 - Finished processing (I=0, O=0, R=4, W=2, U=0, E=0)
+2015/11/28 15:39:35 - index / file.0 - Finished processing (I=0, O=0, R=3, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Write to log.0 - 
+2015/11/28 15:39:35 - Write to log.0 - ------------> Linenr 1------------------------------
+2015/11/28 15:39:35 - Write to log.0 - file separator for index file
+2015/11/28 15:39:35 - Write to log.0 - 
+2015/11/28 15:39:35 - Write to log.0 - file_separator = /
+2015/11/28 15:39:35 - Write to log.0 - 
+2015/11/28 15:39:35 - Write to log.0 - ====================
+2015/11/28 15:39:35 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - index.xml.0 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Mapping output specification.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - create-index.ktr.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - index.xml.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Stream lookup.0 - Finished processing (I=0, O=0, R=9, W=6, U=0, E=0)
+2015/11/28 15:39:35 - join connections / connection.0 - Finished processing (I=0, O=0, R=4, W=1, U=0, E=0)
+2015/11/28 15:39:35 - <file>.0 - Finished processing (I=0, O=0, R=6, W=6, U=0, E=0)
+2015/11/28 15:39:35 - Combine streams 3.0 - Finished processing (I=0, O=0, R=3, W=2, U=0, E=0)
+2015/11/28 15:39:35 - output files.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - file diff Mapping output.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - compare-files.ktr.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:35 - file diff.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Switch / Case.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Lookup input lastmodified.0 - Finished processing (I=0, O=0, R=4, W=2, U=0, E=0)
+2015/11/28 15:39:35 - File updated?.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Not updated.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - Join streams 2.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:35 - IS_WINDOWS, FULL_TRANSFORM_SCRIPT.0 - Setting environment variables...
+2015/11/28 15:39:35 - IS_WINDOWS, FULL_TRANSFORM_SCRIPT.0 - Set variable IS_WINDOWS to value [N]
+2015/11/28 15:39:35 - IS_WINDOWS, FULL_TRANSFORM_SCRIPT.0 - Set variable FULL_TRANSFORM_SCRIPT to value [/Users/caiomsouza/git/github.com/pdi-automatic-news-collector/etl-management/it4biz-kettle-cookbook/it4biz-kettle-cookbook-output//transform.sh]
+2015/11/28 15:39:35 - join connection / file.0 - Finished processing (I=0, O=0, R=7, W=1, U=0, E=0)
+2015/11/28 15:39:35 - connections.xml.0 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - files Mapping output specification.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:35 - post-process-files.ktr.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2015/11/28 15:39:35 - Join Rows (cartesian product) 2.0 - Finished processing (I=0, O=0, R=4, W=1, U=0, E=0)
+2015/11/28 15:39:35 - command lines / scripts.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2015/11/28 15:39:35 - IS_WINDOWS, FULL_TRANSFORM_SCRIPT.0 - Finished after 1 rows.
+2015/11/28 15:39:35 - IS_WINDOWS, FULL_TRANSFORM_SCRIPT.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2015/11/28 15:39:36 - Combine streams.0 - Finished processing (I=0, O=0, R=3, W=2, U=0, E=0)
+2015/11/28 15:39:36 - Calculator.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:36 - fix path.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:36 - transform script.0 - Finished processing (I=0, O=2, R=2, W=2, U=0, E=0)
+2015/11/28 15:39:36 - create-transform-script.ktr.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=0)
+2015/11/28 15:39:36 - document-folder - Starting entry [create-output-subdir]
+2015/11/28 15:39:36 - document-folder - Starting entry [transform script exists?]
+2015/11/28 15:39:36 - document-folder - Starting entry [is windows?]
+2015/11/28 15:39:36 - document-folder - Starting entry [Make Executable]
+2015/11/28 15:39:36 - Make Executable - Running on platform : Mac OS X
+2015/11/28 15:39:36 - Make Executable - Executing command : /Applications/Pentaho/5.4.0/pdi-ce-5.4.0.1-130/data-integration/null/kettle_d8bdb40e-95dd-11e5-ab05-a92f01e01989shell
+2015/11/28 15:39:36 - document-folder - Starting entry [Execute transform script]
+2015/11/28 15:39:36 - document-folder - Running on platform : Mac OS X
+2015/11/28 15:39:36 - document-folder - Executing command : /Users/caiomsouza/git/github.com/pdi-automatic-news-collector/etl-management/it4biz-kettle-cookbook/it4biz-kettle-cookbook-output/transform.sh
+2015/11/28 15:39:37 - document-folder - Finished job entry [Execute transform script] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [Make Executable] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [is windows?] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [transform script exists?] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [create-output-subdir] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [process-files.ktr] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [Create ${OUTPUT_DIR} and Copy Template] (result=[true])
+2015/11/28 15:39:37 - document-folder - Finished job entry [substitute-variables-in-parameters.ktr] (result=[true])
+2015/11/28 15:39:37 - document-folder - Job execution finished
+2015/11/28 15:39:37 - Kitchen - Finished!
+2015/11/28 15:39:37 - Kitchen - Start=2015/11/28 15:39:22.018, Stop=2015/11/28 15:39:37.193
+2015/11/28 15:39:37 - Kitchen - Processing ended after 15 seconds.

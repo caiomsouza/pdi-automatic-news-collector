@@ -80,3 +80,10 @@ http://localhost:8080/jenkins/rssFailed<BR>
 
 All last builds only<BR>
 http://localhost:8080/jenkins/rssLatest<BR>
+
+### Linha de comando para gravar o log em arquivo texto
+```
+sh run-it4biz-kettle-cookbook.sh > log_pdi.log
+``` 
+
+
