@@ -33,6 +33,24 @@ A próxima aula será no dia 28/11 às 9:00hs até as 13:00hs.<BR>
 
 Todos os exercícios são opcionais e não valem nota, eles são importantes para o aprendizado do aluno;<BR>
 
+### O que será ensinado na semana 3, 4, 5 e 6.
+* Criação de um Data Mart com o PDI;
+* Modelagem Dimensional;
+* Criação de transformações de Dimensões, Fato, Stage, etc;
+* Agendamento da carga do Data Mart;
+
+### Ementa do curso:
+* Rotina de ETL (Transformações e Jobs) criadas com base em casos reais;
+* Modelagem Dimensional usando o Kettle (PDI);
+* ETL (Extração, Transformação e Carga de Dados) utilizando o Kettle (PDI);
+* Recursos Avançados tais como: WebServices e Clustler;
+* Melhores práticas de desempenho em DW, rotinas de ETL;
+
+http://www.it4biz.com.br/novosite/treinamentos/treinamentos/curso-de-etl-e-data-warehouse-usando-o-kettlepdi-pentaho-data-integration/
+
+
+### Task - 
+
 
 ### Tips
 
