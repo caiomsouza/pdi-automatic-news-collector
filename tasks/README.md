@@ -19,6 +19,8 @@ A próxima aula será no dia 28/11 às 9:00hs até as 13:00hs.
 ### Task - Week 02
 * Pesquisar melhor interface grafica para o MongoDB;
 * Gravar notícias no MongoDB;
+* Estudar o site http://www.kimballgroup.com e pesquisar sobre Modelagem Dimensional, ETL, DW, Data Mart;
+
 
 
 ### Tips
